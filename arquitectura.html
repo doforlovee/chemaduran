@@ -1,14 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#171717">
-<title>SPACE & FORM — Chema Durán | Arquitectura</title>
-<meta name="description" content="Archivo de arquitectura, representación y herramientas de trabajo de Chema Durán.">
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#F5B8CB" name="theme-color"/>
+<title>SPACE &amp; FORM — Chema Durán | Arquitectura — V35</title>
+<meta content="Archivo de arquitectura, representación y herramientas de trabajo de Chema Durán." name="description"/>
 <style>
-:root{--paper:#eeeae2;--ink:#171717;--red:#1877F2;--mono:'Courier New',Courier,monospace;--head:Impact,'Arial Narrow','Arial Black',sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:4px}button{cursor:pointer}
+:root{--paper:#eeeae2;--ink:#171717;--accent:#F5B8CB;--accent-ink:#B64A78;--accent-soft:#FFE4ED;--mono:'Courier New',Courier,monospace;--head:Impact,'Arial Narrow','Arial Black',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button{cursor:pointer}
 .header{min-height:75px;padding:16px clamp(19px,4vw,62px);display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:2px solid var(--ink);background:var(--paper)}
 .brand{font:900 17px var(--mono);letter-spacing:.03em}.links{display:flex;gap:clamp(12px,2vw,28px);align-items:center;font:900 11px var(--mono);letter-spacing:.06em}.links a:hover{text-decoration:underline;text-underline-offset:5px}.links button{border:0;background:transparent;font:inherit;padding:7px 2px;color:var(--ink)}.links button[aria-pressed=true]{text-decoration:underline;text-underline-offset:5px}
-.cover{background:var(--ink);color:var(--paper);padding:40px clamp(19px,4vw,62px) 52px}.folio{display:flex;justify-content:space-between;gap:20px;font:900 11px var(--mono);letter-spacing:.06em}.cover h1{font:900 clamp(83px,14vw,220px)/.8 var(--head);letter-spacing:-.015em;margin:56px 0 40px}.cover h1 em{font-style:normal;color:#1877F2}.lead{display:flex;justify-content:space-between;gap:35px;border-top:1px solid #89847a;padding-top:20px;align-items:end}.lead p{max-width:46ch;font:500 clamp(15px,1.55vw,20px)/1.5 var(--mono);margin:0}.leadnav{display:flex;gap:9px;flex-wrap:wrap}
+.cover{background:var(--ink);color:var(--paper);padding:40px clamp(19px,4vw,62px) 52px}.folio{display:flex;justify-content:space-between;gap:20px;font:900 11px var(--mono);letter-spacing:.06em}.cover h1{font:900 clamp(83px,14vw,220px)/.8 var(--head);letter-spacing:-.015em;margin:56px 0 40px}.cover h1 em{font-style:normal;color:#F5B8CB}.lead{display:flex;justify-content:space-between;gap:35px;border-top:1px solid #89847a;padding-top:20px;align-items:end}.lead p{max-width:46ch;font:500 clamp(15px,1.55vw,20px)/1.5 var(--mono);margin:0}.leadnav{display:flex;gap:9px;flex-wrap:wrap}
 .cta{position:relative;isolation:isolate;overflow:hidden;background:#e9e4d9;color:#121212;border:1px solid #e9e4d9;min-width:125px;min-height:47px;display:inline-flex;justify-content:center;align-items:center;padding:12px 18px;font:900 12px var(--mono);letter-spacing:.04em}.cta.dark{background:#181818;color:#e9e4d9;border-color:#bbb6ac}.cta::before{content:'';position:absolute;top:-35%;left:0;height:170%;width:42%;background:linear-gradient(90deg,transparent,#fff2,#fff9,#fff2,transparent);filter:blur(5px);transform:translateX(-180%) skewX(-20deg);animation:sheen 4.2s linear infinite}.cta span{z-index:1;position:relative}@keyframes sheen{0%{transform:translateX(-190%) skewX(-20deg)}65%,100%{transform:translateX(450%) skewX(-20deg)}}
 .heroimg{display:block;width:100%;height:auto;max-height:670px;object-fit:cover;background:#080808}.imgcaption{background:var(--ink);color:#bab3a8;display:flex;justify-content:space-between;gap:15px;padding:13px clamp(19px,4vw,62px);font:900 10px var(--mono)}
 .block{padding:clamp(55px,8vw,125px) clamp(19px,4vw,62px);scroll-margin-top:20px}.kicker{display:flex;justify-content:space-between;gap:20px;border-top:2px solid currentColor;padding-top:13px;font:900 11px var(--mono);letter-spacing:.05em}.block h2{font:900 clamp(66px,11vw,170px)/.87 var(--head);letter-spacing:-.018em;margin:40px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(25px,5vw,80px)}.large{font:700 clamp(19px,2.3vw,29px)/1.3 var(--mono);max-width:32ch}.copy{font:500 clamp(13px,1.35vw,18px)/1.6 var(--mono)}.case{border-top:1px solid #928d82;padding:20px 0;display:flex;justify-content:space-between;gap:12px;font:900 13px var(--mono)}.case small{color:#6d685f;font-size:11px}.skills{background:#d6d3c9}.skill{padding:20px 0;border-top:1px solid #868077}.skill h3{font:900 clamp(18px,2vw,25px)/1.2 var(--mono);margin:0 0 10px}.skill p{font:500 14px/1.65 var(--mono);margin:0}.footer{background:var(--ink);color:var(--paper);padding:26px clamp(19px,4vw,62px);display:flex;justify-content:space-between;gap:15px;font:900 11px var(--mono)}
@@ -20,11 +21,11 @@
 .render-open .heroimg{transition:transform .75s cubic-bezier(.2,.75,.2,1);max-height:670px}
 .render-open:hover .heroimg{transform:scale(1.018)}
 .render-label{position:absolute;left:clamp(19px,4vw,62px);bottom:24px;display:flex;gap:26px;align-items:center;justify-content:space-between;background:var(--paper);color:var(--ink);padding:14px 17px;font:900 11px var(--mono);letter-spacing:.055em;box-shadow:0 0 0 1px rgba(0,0,0,.45);max-width:calc(100% - 40px)}
-.render-label span:last-child{color:var(--red);font-size:18px;line-height:1}
+.render-label span:last-child{color:var(--accent);font-size:18px;line-height:1}
 .archive-project{margin-top:clamp(75px,10vw,145px)}
 .project-story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,90px);padding:35px 0 60px}
 .project-story h3,.draw-head h3{font:900 clamp(65px,10vw,152px)/.85 var(--head);letter-spacing:-.016em;margin:0}
-.project-story em,.draw-head em{font-style:normal;color:var(--red)}
+.project-story em,.draw-head em{font-style:normal;color:var(--accent-ink)}
 .project-deck{font:700 clamp(20px,2.5vw,35px)/1.26 var(--mono);max-width:29ch;margin:0 0 26px}
 .doc-cta{margin-top:20px;min-width:220px}
 .drawing-collection{margin-top:80px;padding-top:15px}
@@ -37,9 +38,9 @@
 .drawing-stage img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;filter:contrast(1.06);display:block}
 .drawing-card figcaption{margin-top:11px;border-top:1px solid #a7a096;padding-top:13px;display:flex;align-items:start;gap:12px;justify-content:space-between;font:800 11px/1.4 var(--mono)}
 .drawing-card figcaption>div{display:flex;flex-direction:column;gap:6px}
-.drawing-number{color:var(--red);font-size:10px}
+.drawing-number{color:var(--accent-ink);font-size:10px}
 .drawing-card figcaption>a{font-size:10px;white-space:nowrap;text-decoration:underline;text-underline-offset:4px}
-.drawing-card figcaption>a:hover{color:var(--red)}
+.drawing-card figcaption>a:hover{color:var(--accent-ink)}
 .cuts .drawing-stage{aspect-ratio:1.1}
 .pdf-dialog{background:#111;color:#f3f0e9;border:1px solid #656565;width:min(96vw,1460px);height:min(94dvh,1000px);max-width:none;max-height:none;padding:0;margin:auto;overflow:hidden}
 .pdf-dialog::backdrop{background:rgba(5,9,17,.88);backdrop-filter:blur(6px)}
@@ -48,32 +49,179 @@
 .pdf-toolbar-group{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .pdf-toolbar a,.pdf-toolbar button{font:900 10px var(--mono);border:1px solid #777;background:transparent;color:#f3f0e9;padding:9px 12px;text-decoration:none;white-space:nowrap}
 .pdf-toolbar button{font-size:18px;padding:5px 11px;line-height:1}
-.pdf-toolbar a:hover,.pdf-toolbar button:hover{background:var(--red);border-color:var(--red)}
+.pdf-toolbar a:hover,.pdf-toolbar button:hover{background:var(--accent);border-color:var(--accent)}
 .pdf-dialog iframe{display:block;width:100%;height:calc(100% - 62px);border:0;background:#eeeae2}
 @media(max-width:700px){.project-story,.draw-head{grid-template-columns:1fr}.draw-grid{grid-template-columns:1fr}.draw-head h3{font-size:clamp(58px,14vw,105px)}.archive-project{margin-top:70px}.drawing-collection{margin-top:70px}.pdf-toolbar strong{font-size:10px}.pdf-toolbar a{font-size:9px;padding:7px}.pdf-dialog{width:100vw;height:100dvh;border:0}.pdf-dialog iframe{height:calc(100% - 62px)}.render-label{bottom:15px;padding:12px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){.render-open .heroimg{transition:none}}
+
+/* V35 — SWAG II pastel pink / neutral reflected light / project-ready carousel */
+:root{--rose:#F5B8CB;--rose-deep:#B64A78}
+.render-open .render-label{overflow:hidden;isolation:isolate;border:1px solid rgba(245,184,203,.35);background:#161616;color:#f7f1e7;box-shadow:0 13px 35px rgba(0,0,0,.28);transition:transform .35s ease,border-color .35s ease}
+.render-open:hover .render-label{transform:translateY(-3px);border-color:var(--rose)}
+.render-label::before{content:'';position:absolute;inset:-50% auto -50% 0;width:33%;background:linear-gradient(94deg,transparent 0%,rgba(255,255,255,.05) 23%,rgba(255,255,255,.62) 48%,rgba(255,255,255,.06) 73%,transparent 100%);filter:blur(8px);transform:translateX(-240%) skewX(-19deg);animation:arch-silver-flow 4.7s linear infinite;pointer-events:none}
+.render-label>span{position:relative;z-index:2}
+@keyframes arch-silver-flow{0%{transform:translateX(-240%) skewX(-19deg)}65%,100%{transform:translateX(580%) skewX(-19deg)}}
+.project-hero-carousel{position:relative;background:#0b0b0b}
+.project-hero-controls{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px clamp(19px,4vw,62px);background:#151515;border-top:1px solid #343131;color:#f7f1e7;font:900 11px var(--mono);letter-spacing:.07em}
+.project-hero-controls[hidden]{display:none!important}
+.project-hero-actions{display:flex;align-items:center;gap:10px}
+.project-hero-actions button{background:#191919;color:#f8f1ea;border:1px solid #888;font:900 11px var(--mono);min-width:42px;min-height:39px;transition:background .25s ease,transform .25s ease}
+.project-hero-actions button:hover{background:var(--rose-deep);transform:translateY(-2px)}
+.project-hero-actions button:disabled{opacity:.35;cursor:default}
+#hero-index{color:var(--rose)}
+.arch-action{position:relative;overflow:hidden;isolation:isolate;background:#171717;color:#f5f0e9;border:1px solid #373132;display:inline-flex;align-items:center;justify-content:center;min-height:51px;padding:14px 19px;font:900 12px var(--mono);letter-spacing:.055em;transition:transform .32s ease,background .3s ease,border-color .3s ease;text-decoration:none}
+.arch-action:hover{transform:translateY(-3px);border-color:var(--rose-deep)}
+.arch-action::before{content:'';position:absolute;top:-40%;bottom:-40%;left:0;width:37%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),rgba(255,255,255,.65),rgba(255,255,255,.07),transparent);filter:blur(7px);transform:translateX(-250%) skewX(-22deg);animation:arch-silver-flow 4.7s linear infinite;pointer-events:none}
+.arch-action>span{position:relative;z-index:1}
+.doc-cta{margin-top:20px;min-width:235px}
+.drawing-cta-wrap{display:flex;align-items:center;justify-content:flex-end;padding-top:26px;margin-top:10px;border-top:1px solid #a7a096}
+.drawing-card figcaption{align-items:start}
+.drawing-card figcaption>a{display:none!important}
+.drawing-card .drawing-stage img{transition:transform .55s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.drawing-card:hover .drawing-stage img{transform:scale(1.015)}
+.arch-pink-pill{background:var(--rose);color:#191919;font:900 10px var(--mono);letter-spacing:.05em;padding:7px 10px}
+.pdf-toolbar strong span.accent-sep{color:var(--rose)}
+.pdf-toolbar a:hover,.pdf-toolbar button:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+@media(max-width:700px){.drawing-cta-wrap{justify-content:stretch}.drawing-cta-wrap .arch-action{width:100%}.arch-action{font-size:11px}.render-label{max-width:calc(100% - 36px)}}
+@media(prefers-reduced-motion:reduce){.render-label::before,.arch-action::before{animation:none}.arch-action,.render-open .render-label,.drawing-card .drawing-stage img{transition:none}}
 </style></head>
 <body>
-<header class="header"><a class="brand" href="index.html#work">CHEMA DURÁN / SPACE &amp; FORM</a><nav class="links"><a href="index.html#work" data-es="VOLVER" data-en="BACK">VOLVER</a><a href="#archivo" data-es="ARCHIVO" data-en="ARCHIVE">ARCHIVO</a><a href="#skills">SKILLS</a><button data-lang="es" aria-pressed="true">ES</button><button data-lang="en" aria-pressed="false">EN</button></nav></header>
+<header class="header"><a class="brand" href="index.html#work">CHEMA DURÁN / SPACE &amp; FORM</a><nav class="links"><a data-en="BACK" data-es="VOLVER" href="index.html#work">VOLVER</a><a data-en="ARCHIVE" data-es="ARCHIVO" href="#archivo">ARCHIVO</a><a href="#skills">SKILLS</a><button aria-pressed="true" data-lang="es">ES</button><button aria-pressed="false" data-lang="en">EN</button></nav></header>
 <main>
-<section class="cover"><div class="folio"><span>003 / SELECTED WORK</span><span>ARCHITECTURE — 2026</span></div><h1>SPACE<br><em>&amp; FORM.</em></h1><div class="lead"><p data-es="Me interesa entender cómo se construyen los espacios, cómo se representan y cómo terminan formando parte de una experiencia." data-en="I’m interested in how spaces are built, represented and ultimately become part of an experience.">Me interesa entender cómo se construyen los espacios, cómo se representan y cómo terminan formando parte de una experiencia.</p><div class="leadnav"><a class="cta" href="#archivo"><span data-es="ARCHIVO" data-en="ARCHIVE">ARCHIVO</span></a><a class="cta dark" href="#skills"><span>SKILLS</span></a></div></div></section>
-<button class="render-open" id="open-dossier" type="button" aria-haspopup="dialog" aria-controls="dossier-dialog" aria-label="Abrir documento de arquitectura THE EYE HUB, 35 páginas"><img class="heroimg" src="assets/space-form-render-original.webp" alt="Render nocturno original de Chema Durán: edificio de concreto con armaduras metálicas en una avenida lluviosa"><span class="render-label"><span data-es="EXPLORAR PROYECTO — 35 PÁGINAS" data-en="EXPLORE PROJECT — 35 PAGES">EXPLORAR PROYECTO — 35 PÁGINAS</span><span aria-hidden="true">↗</span></span></button><div class="imgcaption"><span>SPACE &amp; FORM / THE EYE HUB</span><span data-es="HAZ CLIC EN EL RENDER PARA VER EL DOCUMENTO" data-en="CLICK THE RENDER TO READ THE DOCUMENT">HAZ CLIC EN EL RENDER PARA VER EL DOCUMENTO</span></div>
-<section class="block" id="archivo"><div class="kicker"><span>01 / ARCHIVO</span><span data-es="PROYECTOS Y PROCESOS" data-en="PROJECTS AND PROCESS">PROYECTOS Y PROCESOS</span></div><h2 data-es="EL<br>ARCHIVO." data-en="THE<br>ARCHIVE.">EL<br>ARCHIVO.</h2><div class="grid"><div><p class="large" data-es="La arquitectura se entiende mejor cuando también vemos lo que hay detrás de la imagen." data-en="Architecture becomes clearer when we can see the process behind an image.">La arquitectura se entiende mejor cuando también vemos lo que hay detrás de la imagen.</p></div><div><p class="copy" data-es="Este archivo comienza con THE EYE HUB: una investigación urbana y arquitectónica con estudio de contexto, diagramas, plantas y cortes. Haz clic en el render para explorar el dossier completo." data-en="This archive begins with THE EYE HUB: an urban and architectural study with contextual research, diagrams, floor plans and sections. Click the rendering to explore the full dossier.">Este archivo comienza con THE EYE HUB: una investigación urbana y arquitectónica con estudio de contexto, diagramas, plantas y cortes. Haz clic en el render para explorar el dossier completo.</p><div class="case"><span>001 / THE EYE HUB</span><small data-es="RENDER + DOSSIER" data-en="RENDER + DOSSIER">RENDER + DOSSIER</small></div><div class="case"><span>002 / <a href="#planos" data-es="PLANTAS Y CORTES" data-en="PLANS AND SECTIONS">PLANTAS Y CORTES</a></span><small data-es="6 LÁMINAS" data-en="6 SHEETS">6 LÁMINAS</small></div></div></div>
-<div class="archive-project" id="eye-hub"><div class="kicker"><span data-es="PROYECTO 001 / THE EYE HUB" data-en="PROJECT 001 / THE EYE HUB">PROYECTO 001 / THE EYE HUB</span><span data-es="PUEBLA, MÉXICO · EN DESARROLLO" data-en="PUEBLA, MEXICO · IN DEVELOPMENT">PUEBLA, MÉXICO · EN DESARROLLO</span></div><div class="project-story"><h3>THE EYE<br><em>HUB.</em></h3><div><p class="project-deck" data-es="De un bar de barrio a un espacio flexible para encontrarse." data-en="From a neighborhood bar to a flexible space for gathering.">De un bar de barrio a un espacio flexible para encontrarse.</p><p class="copy" data-es="Esta propuesta explora la transformación de RJ Bar, en Puebla, mediante una estructura que permite distintos programas a lo largo del día. El proyecto estudia la relación entre el edificio y la calle, el espacio público, la comunidad y la flexibilidad arquitectónica." data-en="This proposal explores the transformation of RJ Bar in Puebla through a structure designed to support different programs throughout the day. It examines the relationship between building and street, public space, community and architectural flexibility.">Esta propuesta explora la transformación de RJ Bar, en Puebla, mediante una estructura que permite distintos programas a lo largo del día. El proyecto estudia la relación entre el edificio y la calle, el espacio público, la comunidad y la flexibilidad arquitectónica.</p><button class="cta dark doc-cta" id="open-dossier-secondary" type="button"><span data-es="LEER DOCUMENTO COMPLETO ↗" data-en="READ FULL DOCUMENT ↗">LEER DOCUMENTO COMPLETO ↗</span></button></div></div></div>
-<div class="drawing-collection" id="planos"><div class="kicker"><span data-es="02 / DOCUMENTACIÓN GRÁFICA" data-en="02 / DRAWING ARCHIVE">02 / DOCUMENTACIÓN GRÁFICA</span><span data-es="EXTRAÍDO DEL PDF ORIGINAL" data-en="EXTRACTED FROM ORIGINAL PDF">EXTRAÍDO DEL PDF ORIGINAL</span></div><div class="draw-head"><h3 data-es="PLANTAS<br><em>(en capas).</em>" data-en="FLOOR PLANS<br><em>(in layers).</em>">PLANTAS<br><em>(en capas).</em></h3><p class="copy" data-es="Cuatro niveles de un mismo sistema: las áreas de servicio permanecen, mientras los espacios centrales y laterales se transforman. Los dibujos conservan sus líneas y anotaciones, ahora sin el fondo de papel del PDF." data-en="Four levels of one system: service areas remain, while central and lateral spaces evolve. The drawings retain their original linework and annotations, with the PDF paper background removed.">Cuatro niveles de un mismo sistema: las áreas de servicio permanecen, mientras los espacios centrales y laterales se transforman. Los dibujos conservan sus líneas y anotaciones, ahora sin el fondo de papel del PDF.</p></div><div class="draw-grid"><figure class="drawing-card"><div class="drawing-stage"><img src="assets/the-eye-hub-planta-baja-sin-fondo.webp" loading="lazy" decoding="async" alt="PLANTA BAJA de THE EYE HUB, extraído del documento original, sin fondo de página"></div><figcaption><div><span class="drawing-number" data-es="LÁMINA 41" data-en="SHEET 41">LÁMINA 41</span><strong data-es="PLANTA BAJA" data-en="GROUND FLOOR">PLANTA BAJA</strong></div><a href="assets/the-eye-hub-dossier-35-paginas.pdf#page=27" target="_blank" rel="noopener" data-es="VER LÁMINA ↗" data-en="VIEW SHEET ↗">VER LÁMINA ↗</a></figcaption></figure>
-<figure class="drawing-card"><div class="drawing-stage"><img src="assets/the-eye-hub-planta-primera-sin-fondo.webp" loading="lazy" decoding="async" alt="PRIMER NIVEL de THE EYE HUB, extraído del documento original, sin fondo de página"></div><figcaption><div><span class="drawing-number" data-es="LÁMINA 42" data-en="SHEET 42">LÁMINA 42</span><strong data-es="PRIMER NIVEL" data-en="FIRST FLOOR">PRIMER NIVEL</strong></div><a href="assets/the-eye-hub-dossier-35-paginas.pdf#page=28" target="_blank" rel="noopener" data-es="VER LÁMINA ↗" data-en="VIEW SHEET ↗">VER LÁMINA ↗</a></figcaption></figure>
-<figure class="drawing-card"><div class="drawing-stage"><img src="assets/the-eye-hub-planta-segunda-sin-fondo.webp" loading="lazy" decoding="async" alt="SEGUNDO NIVEL de THE EYE HUB, extraído del documento original, sin fondo de página"></div><figcaption><div><span class="drawing-number" data-es="LÁMINA 43" data-en="SHEET 43">LÁMINA 43</span><strong data-es="SEGUNDO NIVEL" data-en="SECOND FLOOR">SEGUNDO NIVEL</strong></div><a href="assets/the-eye-hub-dossier-35-paginas.pdf#page=29" target="_blank" rel="noopener" data-es="VER LÁMINA ↗" data-en="VIEW SHEET ↗">VER LÁMINA ↗</a></figcaption></figure>
-<figure class="drawing-card"><div class="drawing-stage"><img src="assets/the-eye-hub-planta-azotea-sin-fondo.webp" loading="lazy" decoding="async" alt="AZOTEA de THE EYE HUB, extraído del documento original, sin fondo de página"></div><figcaption><div><span class="drawing-number" data-es="LÁMINA 45" data-en="SHEET 45">LÁMINA 45</span><strong data-es="AZOTEA" data-en="ROOFTOP">AZOTEA</strong></div><a href="assets/the-eye-hub-dossier-35-paginas.pdf#page=31" target="_blank" rel="noopener" data-es="VER LÁMINA ↗" data-en="VIEW SHEET ↗">VER LÁMINA ↗</a></figcaption></figure></div></div>
-<div class="drawing-collection cuts"><div class="kicker"><span data-es="03 / SECCIONES" data-en="03 / SECTIONS">03 / SECCIONES</span><span data-es="ESTRUCTURA · ESPACIO · ESCALA" data-en="STRUCTURE · SPACE · SCALE">ESTRUCTURA · ESPACIO · ESCALA</span></div><div class="draw-head"><h3 data-es="CORTES<br><em>(del espacio).</em>" data-en="SECTIONS<br><em>(through space).</em>">CORTES<br><em>(del espacio).</em></h3><p class="copy" data-es="Dos lecturas del proyecto en sección. Los niveles, la armadura y las circulaciones se explican a través de los cortes originales del dossier." data-en="Two sectional readings of the project. Its levels, trusses and circulation are shown through the original dossier drawings.">Dos lecturas del proyecto en sección. Los niveles, la armadura y las circulaciones se explican a través de los cortes originales del dossier.</p></div><div class="draw-grid"><figure class="drawing-card"><div class="drawing-stage"><img src="assets/the-eye-hub-corte-derecho-sin-fondo.webp" loading="lazy" decoding="async" alt="CORTE LATERAL DERECHO de THE EYE HUB, extraído del documento original, sin fondo de página"></div><figcaption><div><span class="drawing-number" data-es="LÁMINA 47" data-en="SHEET 47">LÁMINA 47</span><strong data-es="CORTE LATERAL DERECHO" data-en="RIGHT SECTION">CORTE LATERAL DERECHO</strong></div><a href="assets/the-eye-hub-dossier-35-paginas.pdf#page=34" target="_blank" rel="noopener" data-es="VER LÁMINA ↗" data-en="VIEW SHEET ↗">VER LÁMINA ↗</a></figcaption></figure>
-<figure class="drawing-card"><div class="drawing-stage"><img src="assets/the-eye-hub-corte-izquierdo-sin-fondo.webp" loading="lazy" decoding="async" alt="CORTE LATERAL IZQUIERDO de THE EYE HUB, extraído del documento original, sin fondo de página"></div><figcaption><div><span class="drawing-number" data-es="LÁMINA 48" data-en="SHEET 48">LÁMINA 48</span><strong data-es="CORTE LATERAL IZQUIERDO" data-en="LEFT SECTION">CORTE LATERAL IZQUIERDO</strong></div><a href="assets/the-eye-hub-dossier-35-paginas.pdf#page=35" target="_blank" rel="noopener" data-es="VER LÁMINA ↗" data-en="VIEW SHEET ↗">VER LÁMINA ↗</a></figcaption></figure></div></div>
+<section class="cover"><div class="folio"><span>003 / SELECTED WORK</span><span>ARCHITECTURE — 2026</span></div><h1>SPACE<br/><em>&amp; FORM.</em></h1><div class="lead"><p data-en="I’m interested in how spaces are built, represented and ultimately become part of an experience." data-es="Me interesa entender cómo se construyen los espacios, cómo se representan y cómo terminan formando parte de una experiencia.">Me interesa entender cómo se construyen los espacios, cómo se representan y cómo terminan formando parte de una experiencia.</p><div class="leadnav"><a class="cta" href="#archivo"><span data-en="ARCHIVE" data-es="ARCHIVO">ARCHIVO</span></a><a class="cta dark" href="#skills"><span>SKILLS</span></a></div></div></section>
+<div aria-label="Archivo de proyectos — vistas principales" class="project-hero-carousel" id="project-hero-carousel"><button aria-controls="dossier-dialog" aria-haspopup="dialog" aria-label="Abrir dossier del proyecto arquitectónico seleccionado" class="render-open" id="open-dossier" type="button"><img alt="Render nocturno original de Chema Durán: edificio de concreto con armaduras metálicas en una avenida lluviosa" class="heroimg" data-project-id="eye-hub" src="assets/space-form-render-original.webp"/><span class="render-label"><span data-en="EXPLORE THE EYE HUB · DOSSIER" data-es="EXPLORAR THE EYE HUB · DOSSIER">EXPLORAR THE EYE HUB · DOSSIER</span></span></button><div class="project-hero-controls" hidden="" id="project-hero-controls"><span id="hero-project-name">THE EYE HUB</span><div class="project-hero-actions"><span id="hero-index">01 / 01</span><button aria-label="Proyecto anterior" id="hero-prev" type="button">←</button><button aria-label="Proyecto siguiente" id="hero-next" type="button">→</button></div></div></div><div class="imgcaption"><span>SPACE &amp; FORM / THE EYE HUB</span><span data-en="CLICK THE RENDER TO READ THE DOCUMENT" data-es="HAZ CLIC EN EL RENDER PARA VER EL DOCUMENTO">HAZ CLIC EN EL RENDER PARA VER EL DOCUMENTO</span></div>
+<section class="block" id="archivo"><div class="kicker"><span>01 / ARCHIVO</span><span data-en="PROJECTS AND PROCESS" data-es="PROYECTOS Y PROCESOS">PROYECTOS Y PROCESOS</span></div><h2 data-en="THE&lt;br&gt;ARCHIVE." data-es="EL&lt;br&gt;ARCHIVO.">EL<br/>ARCHIVO.</h2><div class="grid"><div><p class="large" data-en="Architecture becomes clearer when we can see the process behind an image." data-es="La arquitectura se entiende mejor cuando también vemos lo que hay detrás de la imagen.">La arquitectura se entiende mejor cuando también vemos lo que hay detrás de la imagen.</p></div><div><p class="copy" data-en="This archive begins with THE EYE HUB: an urban and architectural study with contextual research, diagrams, floor plans and sections. Click the rendering to explore the full dossier." data-es="Este archivo comienza con THE EYE HUB: una investigación urbana y arquitectónica con estudio de contexto, diagramas, plantas y secciones. Haz clic en el render para explorar el dossier completo.">Este archivo comienza con THE EYE HUB: una investigación urbana y arquitectónica con estudio de contexto, diagramas, plantas y secciones. Haz clic en el render para explorar el dossier completo.</p><div class="case"><span>001 / THE EYE HUB</span><small data-en="RENDER + DOSSIER" data-es="RENDER + DOSSIER">RENDER + DOSSIER</small></div><div class="case"><span>002 / <a data-en="PLANS AND SECTIONS" data-es="PLANTAS Y SECCIONES" href="#planos">PLANTAS Y SECCIONES</a></span><small data-en="6 SHEETS" data-es="6 LÁMINAS">6 LÁMINAS</small></div></div></div>
+<div class="archive-project" id="eye-hub"><div class="kicker"><span data-en="PROJECT 001 / THE EYE HUB" data-es="PROYECTO 001 / THE EYE HUB" id="project-story-folio">PROYECTO 001 / THE EYE HUB</span><span data-en="PUEBLA, MEXICO · IN DEVELOPMENT" data-es="PUEBLA, MÉXICO · EN DESARROLLO" id="project-story-location">PUEBLA, MÉXICO · EN DESARROLLO</span></div><div class="project-story"><h3 data-project-id="eye-hub" id="project-story-title">THE EYE<br/><em>HUB.</em></h3><div><p class="project-deck" data-en="From a neighborhood bar to a flexible space for gathering." data-es="De un bar de barrio a un espacio flexible para encontrarse." id="project-story-deck">De un bar de barrio a un espacio flexible para encontrarse.</p><p class="copy" data-en="This proposal explores the transformation of RJ Bar in Puebla through a structure designed to support different programs throughout the day. It examines the relationship between building and street, public space, community and architectural flexibility." data-es="Esta propuesta explora la transformación de RJ Bar, en Puebla, mediante una estructura que permite distintos programas a lo largo del día. El proyecto estudia la relación entre el edificio y la calle, el espacio público, la comunidad y la flexibilidad arquitectónica." id="project-story-copy">Esta propuesta explora la transformación de RJ Bar, en Puebla, mediante una estructura que permite distintos programas a lo largo del día. El proyecto estudia la relación entre el edificio y la calle, el espacio público, la comunidad y la flexibilidad arquitectónica.</p><button class="arch-action doc-cta" id="open-dossier-secondary" type="button"><span data-en="EXPLORE FULL DOCUMENT" data-es="EXPLORAR DOCUMENTO COMPLETO">EXPLORAR DOCUMENTO COMPLETO</span></button></div></div></div>
+<div class="drawing-collection" data-project-id="eye-hub" id="planos"><div class="kicker"><span data-en="02 / DRAWING ARCHIVE" data-es="02 / DOCUMENTACIÓN GRÁFICA">02 / DOCUMENTACIÓN GRÁFICA</span><span data-en="DRAWING ARCHIVE / PROJECT 001" data-es="ARCHIVO GRÁFICO / PROYECTO 001">ARCHIVO GRÁFICO / PROYECTO 001</span></div><div class="draw-head"><h3 data-en="FLOOR PLANS&lt;br&gt;&lt;em&gt;(in layers).&lt;/em&gt;" data-es="PLANTAS&lt;br&gt;&lt;em&gt;(en capas).&lt;/em&gt;">PLANTAS<br/><em>(en capas).</em></h3><p class="copy" data-en="Four levels of one system: service areas remain, while central and lateral spaces evolve. The drawings retain their original linework and annotations, with the PDF paper background removed." data-es="Cuatro niveles de un mismo sistema: las áreas de servicio permanecen, mientras los espacios centrales y laterales se transforman. Los dibujos conservan sus líneas y anotaciones, ahora sin el fondo de papel del PDF.">Cuatro niveles de un mismo sistema: las áreas de servicio permanecen, mientras los espacios centrales y laterales se transforman. Los dibujos conservan sus líneas y anotaciones, ahora sin el fondo de papel del PDF.</p></div><div class="draw-grid" id="project-plans-grid"><figure class="drawing-card"><div class="drawing-stage"><img alt="PLANTA BAJA de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="lazy" src="assets/the-eye-hub-planta-baja-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 41" data-es="LÁMINA 41">LÁMINA 41</span><strong data-en="GROUND FLOOR" data-es="PLANTA BAJA">PLANTA BAJA</strong></div></figcaption></figure>
+<figure class="drawing-card"><div class="drawing-stage"><img alt="PRIMER NIVEL de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="lazy" src="assets/the-eye-hub-planta-primera-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 42" data-es="LÁMINA 42">LÁMINA 42</span><strong data-en="FIRST FLOOR" data-es="PRIMER NIVEL">PRIMER NIVEL</strong></div></figcaption></figure>
+<figure class="drawing-card"><div class="drawing-stage"><img alt="SEGUNDO NIVEL de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="lazy" src="assets/the-eye-hub-planta-segunda-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 43" data-es="LÁMINA 43">LÁMINA 43</span><strong data-en="SECOND FLOOR" data-es="SEGUNDO NIVEL">SEGUNDO NIVEL</strong></div></figcaption></figure>
+<figure class="drawing-card"><div class="drawing-stage"><img alt="AZOTEA de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="lazy" src="assets/the-eye-hub-planta-azotea-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 45" data-es="LÁMINA 45">LÁMINA 45</span><strong data-en="ROOFTOP" data-es="AZOTEA">AZOTEA</strong></div></figcaption></figure></div><div class="drawing-cta-wrap"><button class="arch-action" id="open-plans-pdf" type="button"><span data-en="VIEW FINAL PLANS · PDF" data-es="VER PLANTAS FINALES · PDF">VER PLANTAS FINALES · PDF</span></button></div></div>
+<div class="drawing-collection cuts" data-project-id="eye-hub"><div class="kicker"><span data-en="03 / SECTIONS" data-es="03 / SECCIONES">03 / SECCIONES</span><span data-en="STRUCTURE · SPACE · SCALE" data-es="ESTRUCTURA · ESPACIO · ESCALA">ESTRUCTURA · ESPACIO · ESCALA</span></div><div class="draw-head"><h3 data-en="SECTIONS&lt;br&gt;&lt;em&gt;(through space).&lt;/em&gt;" data-es="SECCIONES&lt;br&gt;&lt;em&gt;(del espacio).&lt;/em&gt;">SECCIONES<br/><em>(del espacio).</em></h3><p class="copy" data-en="Two sectional views of the building. Its levels, trusses and circulation reveal its spatial structure and flexibility. Explore dimensions and details in the final technical document." data-es="Dos lecturas del edificio en sección. Los niveles, las armaduras y las circulaciones revelan su estructura espacial y su flexibilidad. Consulta las cotas y detalles en el documento técnico final.">Dos lecturas del edificio en sección. Los niveles, las armaduras y las circulaciones revelan su estructura espacial y su flexibilidad. Consulta las cotas y detalles en el documento técnico final.</p></div><div class="draw-grid" id="project-sections-grid"><figure class="drawing-card"><div class="drawing-stage"><img alt="CORTE LATERAL DERECHO de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="lazy" src="assets/the-eye-hub-corte-derecho-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 47" data-es="LÁMINA 47">LÁMINA 47</span><strong data-en="RIGHT SECTION" data-es="SECCIÓN LATERAL DERECHA">SECCIÓN LATERAL DERECHA</strong></div></figcaption></figure>
+<figure class="drawing-card"><div class="drawing-stage"><img alt="CORTE LATERAL IZQUIERDO de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="lazy" src="assets/the-eye-hub-corte-izquierdo-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 48" data-es="LÁMINA 48">LÁMINA 48</span><strong data-en="LEFT SECTION" data-es="SECCIÓN LATERAL IZQUIERDA">SECCIÓN LATERAL IZQUIERDA</strong></div></figcaption></figure></div><div class="drawing-cta-wrap"><button class="arch-action" id="open-sections-pdf" type="button"><span data-en="VIEW FINAL SECTIONS · PDF" data-es="VER SECCIONES FINALES · PDF">VER SECCIONES FINALES · PDF</span></button></div></div>
 </section>
-<section class="block skills" id="skills"><div class="kicker"><span>04 / SKILLS</span><span data-es="HERRAMIENTAS Y PROCESOS" data-en="TOOLS AND PROCESS">HERRAMIENTAS Y PROCESOS</span></div><h2>SKILLS.</h2><div class="grid"><p class="large" data-es="Dibujo, modelo y representación. Las herramientas cambian; el criterio es lo que quiero seguir desarrollando." data-en="Drawing, modeling and representation. Tools change; creative judgment is what I want to keep developing.">Dibujo, modelo y representación. Las herramientas cambian; el criterio es lo que quiero seguir desarrollando.</p><div><div class="skill"><h3 data-es="DIBUJO Y MODELADO" data-en="DRAWING &amp; MODELING">DIBUJO Y MODELADO</h3><p>AutoCAD / Rhino / SketchUp</p></div><div class="skill"><h3 data-es="REPRESENTACIÓN VISUAL" data-en="VISUAL REPRESENTATION">REPRESENTACIÓN VISUAL</h3><p>Photoshop / Illustrator</p></div><div class="skill"><h3 data-es="FORMA DE TRABAJAR" data-en="WORKING APPROACH">FORMA DE TRABAJAR</h3><p data-es="Exploración espacial / Desarrollo conceptual / Representación / Aprendizaje continuo" data-en="Spatial exploration / Concept development / Representation / Continuous learning">Exploración espacial / Desarrollo conceptual / Representación / Aprendizaje continuo</p></div></div></div><p style="font:500 11px/1.5 var(--mono);margin-top:40px;opacity:.7" data-es="Primer esquema de herramientas y habilidades; pendiente de ampliar y verificar niveles de dominio antes de usarlo en postulaciones." data-en="Initial outline of tools and skills; proficiency levels will be expanded and verified before use in applications.">Primer esquema de herramientas y habilidades; pendiente de ampliar y verificar niveles de dominio antes de usarlo en postulaciones.</p></section>
-</main><footer class="footer"><span>CHEMA DURÁN © 2026</span><a href="index.html#work" data-es="VOLVER A SELECTED WORK" data-en="BACK TO SELECTED WORK">VOLVER A SELECTED WORK</a></footer>
+<section class="block skills" id="skills"><div class="kicker"><span>04 / SKILLS</span><span data-en="TOOLS AND PROCESS" data-es="HERRAMIENTAS Y PROCESOS">HERRAMIENTAS Y PROCESOS</span></div><h2>SKILLS.</h2><div class="grid"><p class="large" data-en="Drawing, modeling and representation. Tools change; creative judgment is what I want to keep developing." data-es="Dibujo, modelo y representación. Las herramientas cambian; el criterio es lo que quiero seguir desarrollando.">Dibujo, modelo y representación. Las herramientas cambian; el criterio es lo que quiero seguir desarrollando.</p><div><div class="skill"><h3 data-en="DRAWING &amp; MODELING" data-es="DIBUJO Y MODELADO">DIBUJO Y MODELADO</h3><p>AutoCAD / Rhino / SketchUp</p></div><div class="skill"><h3 data-en="VISUAL REPRESENTATION" data-es="REPRESENTACIÓN VISUAL">REPRESENTACIÓN VISUAL</h3><p>Photoshop / Illustrator</p></div><div class="skill"><h3 data-en="WORKING APPROACH" data-es="FORMA DE TRABAJAR">FORMA DE TRABAJAR</h3><p data-en="Spatial exploration / Concept development / Representation / Continuous learning" data-es="Exploración espacial / Desarrollo conceptual / Representación / Aprendizaje continuo">Exploración espacial / Desarrollo conceptual / Representación / Aprendizaje continuo</p></div></div></div><p data-en="Initial outline of tools and skills; proficiency levels will be expanded and verified before use in applications." data-es="Primer esquema de herramientas y habilidades; pendiente de ampliar y verificar niveles de dominio antes de usarlo en postulaciones." style="font:500 11px/1.5 var(--mono);margin-top:40px;opacity:.7">Primer esquema de herramientas y habilidades; pendiente de ampliar y verificar niveles de dominio antes de usarlo en postulaciones.</p></section>
+</main><footer class="footer"><span>CHEMA DURÁN © 2026</span><a data-en="BACK TO SELECTED WORK" data-es="VOLVER A SELECTED WORK" href="index.html#work">VOLVER A SELECTED WORK</a></footer>
 <script>(()=>{let bs=document.querySelectorAll('[data-lang]');bs.forEach(b=>b.addEventListener('click',()=>{const l=b.dataset.lang;document.documentElement.lang=l;document.querySelectorAll('[data-es][data-en]').forEach(el=>el.innerHTML=el.dataset[l]);bs.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));}));})();</script>
-<dialog class="pdf-dialog" id="dossier-dialog" aria-label="THE EYE HUB — dossier de arquitectura"><div class="pdf-toolbar"><strong>THE EYE HUB <span style="color:#1877F2">/</span> <span data-es="35 PÁGINAS" data-en="35 PAGES">35 PÁGINAS</span></strong><div class="pdf-toolbar-group"><a href="assets/the-eye-hub-dossier-35-paginas.pdf" target="_blank" rel="noopener" data-es="ABRIR PDF ↗" data-en="OPEN PDF ↗">ABRIR PDF ↗</a><button type="button" id="close-dossier" aria-label="Cerrar visor de PDF">×</button></div></div><iframe id="dossier-frame" title="Documento arquitectónico THE EYE HUB, 35 páginas" loading="lazy" data-src="assets/the-eye-hub-dossier-35-paginas.pdf#toolbar=1&amp;view=FitH"></iframe></dialog><script>
-(()=>{const d=document.getElementById('dossier-dialog'),fr=document.getElementById('dossier-frame');
-const open=()=>{if(!fr.getAttribute('src'))fr.setAttribute('src',fr.dataset.src);if(typeof d.showModal==='function')d.showModal();else window.open('assets/the-eye-hub-dossier-35-paginas.pdf','_blank','noopener');};
-['open-dossier','open-dossier-secondary'].forEach(id=>document.getElementById(id)?.addEventListener('click',open));
-document.getElementById('close-dossier').addEventListener('click',()=>d.close());
-d.addEventListener('click',event=>{if(event.target===d)d.close();});
+<dialog aria-label="THE EYE HUB — dossier de arquitectura" class="pdf-dialog" id="dossier-dialog"><div class="pdf-toolbar"><strong><span id="pdf-title">THE EYE HUB</span><span class="accent-sep"> / </span><span data-en="FULL DOSSIER" data-es="DOSSIER COMPLETO" id="pdf-subtitle">DOSSIER COMPLETO</span></strong><div class="pdf-toolbar-group"><a data-en="OPEN PDF" data-es="ABRIR PDF" href="assets/the-eye-hub-dossier-35-paginas.pdf" id="pdf-open-external" rel="noopener" target="_blank">ABRIR PDF</a><button aria-label="Cerrar visor de PDF" id="close-dossier" type="button">×</button></div></div><iframe data-src="assets/the-eye-hub-dossier-35-paginas.pdf#toolbar=1&amp;view=FitH" id="dossier-frame" loading="lazy" title="Documento arquitectónico THE EYE HUB, 35 páginas"></iframe></dialog><script>(()=>{
+'use strict';
+const projects=[{
+ id:'eye-hub', name:'THE EYE HUB',
+ image:'assets/space-form-render-original.webp',
+ alt:'Render nocturno original de THE EYE HUB',
+ pdf:'assets/the-eye-hub-dossier-35-paginas.pdf',
+ plants:'assets/the-eye-hub-plantas-finales.pdf',
+ sections:'assets/the-eye-hub-secciones-finales.pdf',
+ label:{es:'EXPLORAR THE EYE HUB · DOSSIER',en:'EXPLORE THE EYE HUB · DOSSIER'},
+ location:{es:'PUEBLA, MÉXICO · EN DESARROLLO',en:'PUEBLA, MEXICO · IN DEVELOPMENT'},
+ title:'THE EYE HUB',titleTop:'THE EYE',titleBottom:'HUB.',
+ plans:[
+  {img:'assets/the-eye-hub-planta-baja-sin-fondo.webp',label:'41',es:'PLANTA BAJA',en:'GROUND FLOOR'},
+  {img:'assets/the-eye-hub-planta-primera-sin-fondo.webp',label:'42',es:'PRIMER NIVEL',en:'FIRST FLOOR'},
+  {img:'assets/the-eye-hub-planta-segunda-sin-fondo.webp',label:'43',es:'SEGUNDO NIVEL',en:'SECOND FLOOR'},
+  {img:'assets/the-eye-hub-planta-azotea-sin-fondo.webp',label:'45',es:'AZOTEA',en:'ROOFTOP'}
+ ],
+ sectionsDrawings:[
+  {img:'assets/the-eye-hub-corte-derecho-sin-fondo.webp',label:'47',es:'SECCIÓN LATERAL DERECHA',en:'RIGHT SECTION'},
+  {img:'assets/the-eye-hub-corte-izquierdo-sin-fondo.webp',label:'48',es:'SECCIÓN LATERAL IZQUIERDA',en:'LEFT SECTION'}
+ ],
+ deck:{es:'De un bar de barrio a un espacio flexible para encontrarse.',en:'From a neighborhood bar to a flexible space for gathering.'},
+ copy:{es:'Esta propuesta explora la transformación de RJ Bar, en Puebla, mediante una estructura que permite distintos programas a lo largo del día. El proyecto estudia la relación entre el edificio y la calle, el espacio público, la comunidad y la flexibilidad arquitectónica.',en:'This proposal explores the transformation of RJ Bar in Puebla through a structure designed to support different programs throughout the day. It examines the relationship between building and street, public space, community and architectural flexibility.'}
+}];
+// To add another project later, append its real render and PDF paths to projects.
+let active=0;
+const $=id=>document.getElementById(id);
+const d=$('dossier-dialog'),fr=$('dossier-frame'),link=$('pdf-open-external');
+const lang=()=>document.documentElement.lang==='en'?'en':'es';
+const variants={
+ dossier:{es:'DOSSIER COMPLETO',en:'FULL DOSSIER'},
+ plants:{es:'PLANTAS FINALES · CON COTAS',en:'FINAL PLANS · DIMENSIONS'},
+ sections:{es:'SECCIONES FINALES · CON COTAS',en:'FINAL SECTIONS · DIMENSIONS'}
+};
+function displayPDF(kind){
+ const p=projects[active]; if(!p)return;
+ const path=kind==='dossier'?p.pdf:p[kind]; if(!path)return;
+ const title=$('pdf-title'),sub=$('pdf-subtitle');
+ title.textContent=p.name;
+ sub.dataset.es=variants[kind].es;sub.dataset.en=variants[kind].en;
+ sub.textContent=variants[kind][lang()];
+ link.href=path;fr.src=path+'#toolbar=1&view=FitH';
+ fr.title=p.name+' — '+sub.textContent;
+ if(typeof d.showModal==='function'){if(!d.open)d.showModal()}
+ else window.open(path,'_blank','noopener');
+}
+function updateDrawingList(collectionId,gridId,items,p){
+ const collection=$(collectionId),grid=$(gridId);if(!collection||!grid)return;
+ collection.hidden=items.length===0;
+ if(collection.dataset.projectId===p.id)return;
+ grid.replaceChildren();
+ for(const item of items){
+  const figure=document.createElement('figure');figure.className='drawing-card';
+  const stage=document.createElement('div');stage.className='drawing-stage';
+  const img=document.createElement('img');img.src=item.img;img.alt=item.es+' — '+p.name;
+  img.loading='lazy';img.decoding='async';stage.appendChild(img);
+  const cap=document.createElement('figcaption');
+  const text=document.createElement('div');
+  const number=document.createElement('span');number.className='drawing-number';
+  number.dataset.es='LÁMINA '+item.label;number.dataset.en='SHEET '+item.label;
+  number.textContent=number.dataset[lang()];
+  const name=document.createElement('strong');name.dataset.es=item.es;name.dataset.en=item.en;
+  name.textContent=name.dataset[lang()];text.append(number,name);cap.appendChild(text);
+  figure.append(stage,cap);grid.appendChild(figure);
+ }
+ collection.dataset.projectId=p.id;
+}
+function renderTechnical(p){
+ updateDrawingList('planos','project-plans-grid',p.plans||[],p);
+ const cuts=document.querySelector('.drawing-collection.cuts');
+ if(cuts && !cuts.id)cuts.id='project-cuts';
+ updateDrawingList('project-cuts','project-sections-grid',p.sectionsDrawings||[],p);
+ $('open-plans-pdf').hidden=!p.plants;
+ $('open-sections-pdf').hidden=!p.sections;
+}
+function renderHero(){
+ const p=projects[active]; if(!p)return;
+ const img=document.querySelector('#open-dossier .heroimg');
+ if(img.dataset.projectId!==p.id){img.src=p.image;img.dataset.projectId=p.id;}
+ img.alt=p.alt;
+ const label=document.querySelector('#open-dossier .render-label [data-es]');
+ label.dataset.es=p.label.es;label.dataset.en=p.label.en;label.textContent=p.label[lang()];
+ $('hero-project-name').textContent=p.name;
+ $('hero-index').textContent=String(active+1).padStart(2,'0')+' / '+String(projects.length).padStart(2,'0');
+ $('project-hero-controls').hidden=projects.length<2;
+ const title=$('project-story-title'),deck=$('project-story-deck'),copy=$('project-story-copy'),loc=$('project-story-location');
+ if(title && title.dataset.projectId!==p.id){title.innerHTML=p.title.replace(/\s+/g,' ');title.dataset.projectId=p.id;}
+ for(const [el,v] of [[deck,p.deck],[copy,p.copy],[loc,p.location]]){
+  if(!el)continue;el.dataset.es=v.es;el.dataset.en=v.en;el.textContent=v[lang()];
+ }
+}
+let suppressClick=false;
+$('open-dossier')?.addEventListener('click',e=>{
+ if(suppressClick){e.preventDefault();suppressClick=false;return;}
+ displayPDF('dossier');
+});
+$('open-dossier-secondary')?.addEventListener('click',()=>displayPDF('dossier'));
+$('open-plans-pdf')?.addEventListener('click',()=>displayPDF('plants'));
+$('open-sections-pdf')?.addEventListener('click',()=>displayPDF('sections'));
+function step(delta){if(projects.length<2)return;active=(active+delta+projects.length)%projects.length;renderHero();}
+$('hero-prev')?.addEventListener('click',()=>step(-1));
+$('hero-next')?.addEventListener('click',()=>step(1));
+let touchX=null;
+$('project-hero-carousel')?.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});
+$('project-hero-carousel')?.addEventListener('touchend',e=>{
+ if(touchX===null||projects.length<2)return;
+ const dx=e.changedTouches[0].clientX-touchX;touchX=null;
+ if(Math.abs(dx)>50){suppressClick=true;step(dx<0?1:-1);}
+},{passive:true});
+$('project-hero-carousel')?.addEventListener('keydown',e=>{
+ if(projects.length<2)return;
+ if(e.key==='ArrowLeft'){e.preventDefault();step(-1)}
+ if(e.key==='ArrowRight'){e.preventDefault();step(1)}
+});
+if(projects.length>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+ setInterval(()=>{if(!document.hidden&&!$('project-hero-carousel').matches(':hover')&&!$('project-hero-carousel').contains(document.activeElement))step(1)},7200);
+}
+$('close-dossier')?.addEventListener('click',()=>d.close());
+d?.addEventListener('click',event=>{if(event.target===d)d.close()});
+for(const b of document.querySelectorAll('[data-lang]'))b.addEventListener('click',()=>renderHero());
+renderHero();
 })();</script></body></html>
