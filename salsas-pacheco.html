@@ -1,8 +1,8 @@
-<!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light"><meta name="theme-color" content="#EEEAE2">
-<meta name="description" content="Salsas Pacheco: un proyecto de marca, producto e identidad de Chema Durán. Fotografía y proceso creativo.">
-<title>Salsas Pacheco — Chema Durán / Selected Work 002</title>
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light" name="color-scheme"/><meta content="#EEEAE2" name="theme-color"/>
+<meta content="Salsas Pacheco: salsa macha con aceite de oliva, inspiración caribeña, la historia de Johnny Pacheco, identidad gráfica, fotografías y video." data-meta-en="Salsa Pacheco: olive-oil salsa macha, Caribbean influence, the story of Johnny Pacheco, graphic identity, real photography and video." data-meta-es="Salsas Pacheco: salsa macha con aceite de oliva, inspiración caribeña, la historia de Johnny Pacheco, identidad gráfica, fotografías y video." name="description"/>
+<title data-en="Salsa Pacheco — Identity, flavor &amp; rhythm / Chema Durán" data-es="Salsa Pacheco — Identidad, sabor y ritmo / Chema Durán">Salsa Pacheco — Identidad, sabor y ritmo / Chema Durán</title>
 <style>
 :root{--ivory:#EEEAE2;--ink:#171717;--red:#BA0203;--accent:#D82F1F;--grey:#817C74;--mono:'Courier New',Courier,monospace;--head:Impact,'Arial Narrow','Arial Black',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Arial,Helvetica,sans-serif}button,a{font:inherit;color:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}::selection{background:var(--accent);color:#fff}
@@ -17,38 +17,570 @@
 @media(max-width:850px){.site-header{height:65px}.logo{font-size:33px}.logo b{font-size:30px}.primary-nav{gap:16px}.navlink{font-size:10px}.chapter-hero{min-height:0;grid-template-columns:1fr}.hero-copy{padding:38px 5% 47px;min-height:555px}.hero-title{font-size:clamp(100px,19vw,170px);margin:65px 0 20px}.hero-sub{max-width:760px}.hero-sub blockquote{font-size:clamp(30px,5vw,47px)}.hero-art{min-height:430px;height:65vw}.hero-art img{width:min(32%,330px)}.narrative{grid-template-columns:1fr}.narrative h2{margin-bottom:12px}.narrative p{margin:15px 0}.carousel-layout,.film{grid-template-columns:1fr}.carousel-stage{min-height:unset}.carousel-info h3{max-width:unset}.film{gap:40px}.mobile-menu{inset:65px 0 0}}
 @media(max-width:600px){.site-header{height:58px;padding:0 5%}.primary-nav>.navlink,.nav-divider{display:none}.menu-trigger{display:inline-block}.mobile-menu{inset:58px 0 0}.hero-copy{min-height:500px;padding:30px 5% 38px}.hero-title{font-size:clamp(83px,21vw,130px);margin:65px 0 12px}.hero-sub{grid-template-columns:1fr;gap:18px}.hero-sub blockquote{font-size:clamp(32px,8vw,43px)}.hero-sub p{font-size:11px}.hero-art{height:105vw;min-height:400px}.hero-art img{width:min(52%,260px)}.chapter{padding:62px 5%}.photo-section{padding-top:0}.photo-heading{display:block}.photo-heading p{margin-top:0}.photo-heading h2{margin-bottom:17px}.mosaic{gap:20px 10px;margin-top:20px}.mosaic figure,.mosaic figure:nth-child(2),.mosaic figure:nth-child(3),.mosaic figure:nth-child(4),.mosaic figure:nth-child(5),.mosaic figure:nth-child(6){grid-column:span 12}.mosaic img{max-height:none}.carousel-section{padding-top:65px}.carousel-stage img{max-height:480px}.carousel-foot{margin-top:10px}.film h2{font-size:clamp(66px,16vw,110px)}.film-figure{max-width:315px}.last{flex-direction:column;align-items:start}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before{animation:none!important;transition:none!important}}
+
+/* V19 / SOLO CAPITULO SALSAS PACHECO. Se conservan header y navegación originales. */
+:root { --coast-red:#BA0203;--sun:#E8B658;--warm:#F3E9DC; }
+body{overflow-x:hidden}
+body img{max-width:100%}
+.chapter-hero{min-height:620px}
+.hero-art:before,.hero-art:after{pointer-events:none}
+.coastal-groove{position:absolute;width:min(80%,540px);aspect-ratio:1;border:1px solid rgba(247,238,224,.34);border-radius:50%;z-index:0;transform:translate(9%,7%);pointer-events:none}
+.coastal-groove:before,.coastal-groove:after{content:'';position:absolute;border:1px solid rgba(247,238,224,.2);border-radius:50%;inset:9%}
+.coastal-groove:after{inset:20%;border-style:dashed}
+.coast-drawing{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.30;z-index:0}
+.hero-art .emblem-art{position:relative;z-index:1}
+.rhythm-ribbon{background:var(--ink);color:var(--ivory);border-bottom:2px solid var(--ink);overflow:hidden;padding:12px 0}
+.rhythm-content{display:flex;width:max-content;gap:42px;white-space:nowrap;font-family:var(--head);font-size:clamp(21px,3vw,42px);letter-spacing:.02em;animation:rumba 23s linear infinite}
+.rhythm-content b{font-family:Georgia,serif;font-style:italic;font-weight:400;color:#E8B658}
+@keyframes rumba{to{transform:translateX(-50%)}}
+.purpose{background:var(--ivory)}
+.purpose .statement{font-size:clamp(19px,1.55vw,24px);font-weight:500;line-height:1.53;max-width:44ch;margin:20px 0 24px}
+.flavor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:38px;border-top:1px solid #9a9187;border-bottom:1px solid #9a9187}
+.flavor-grid>div{padding:17px 15px;border-right:1px solid #9a9187}
+.flavor-grid>div:first-child{padding-left:0}.flavor-grid>div:last-child{border-right:0}
+.flavor-grid strong{display:block;font:900 clamp(15px,1.4vw,24px)/1.12 var(--head);margin-top:7px}
+.flavor-grid span{font:800 10px/1.4 var(--mono);color:#7e756b}
+.story-section{background:var(--ink);color:var(--ivory);padding-top:83px;position:relative;overflow:hidden}
+.story-section:before{content:'';position:absolute;right:-17vw;top:8%;width:44vw;aspect-ratio:1;border:1px solid rgba(238,234,226,.1);border-radius:50%;box-shadow:0 0 0 38px rgba(238,234,226,.02),0 0 0 85px rgba(238,234,226,.02);pointer-events:none}
+.story-section .chapter-kicker{border-color:#c9bcb1}
+.story-section .carousel-title{font-size:clamp(61px,9.3vw,134px);margin:25px 0 17px;letter-spacing:-.015em}
+.story-section .carousel-title em{font-size:.60em;color:var(--sun)}
+.story-intro{font:600 clamp(14px,1.3vw,17px)/1.5 var(--mono);color:#c9c1b8;max-width:57ch;margin:0 0 38px}
+.story-layout{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(270px,.82fr);gap:clamp(22px,6vw,90px);align-items:stretch}
+.story-stage{min-width:0;background:#070707;display:flex;align-items:center;justify-content:center;border:1px solid #44403a;padding:13px;position:relative}
+.story-stage img{display:block;width:auto;max-width:100%;height:auto;max-height:min(68vw,690px);object-fit:contain;box-shadow:0 11px 30px rgba(0,0,0,.35)}
+.story-aside{display:flex;flex-direction:column;justify-content:space-between;gap:35px;border-top:1px solid #8e847b;padding-top:18px;min-width:0}
+.story-issue{font:900 11px/1.5 var(--mono);letter-spacing:.075em;color:#d3b36c}
+.story-aside h3{font:900 clamp(31px,3.4vw,56px)/1.02 var(--head);margin:22px 0 20px;letter-spacing:-.025em}
+.story-aside p{font:500 clamp(14px,1.2vw,17px)/1.6 var(--mono);color:#dbd1c4;max-width:36ch}
+.story-progress{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;border-top:1px solid #8e847b;padding-top:18px}
+.story-counter{font:900 clamp(26px,3.4vw,43px)/1 var(--mono)}
+.story-controls{display:flex;gap:9px}
+.story-controls button{background:transparent;color:var(--ivory);border:1px solid #a9a096;min-width:62px;min-height:48px;font:900 20px var(--mono);transition:background .2s,color .2s}
+.story-controls button:hover{background:var(--ivory);color:var(--ink)}
+.story-dots{display:flex;gap:7px;flex-wrap:wrap;margin-top:19px}
+.story-dots button{width:24px;height:5px;padding:0;border:0;background:#716961;transition:background .2s,width .2s;font-size:0}
+.story-dots button[aria-current=true]{background:var(--sun);width:48px}
+.story-bottom{display:flex;justify-content:space-between;gap:20px;margin-top:23px;padding-top:13px;border-top:1px solid #70675e;font:800 10px/1.5 var(--mono);color:#b8a99b;letter-spacing:.07em}
+.stickers-section{background:var(--ivory);overflow:hidden}
+.stickers-top{display:grid;grid-template-columns:1fr .67fr;gap:5%;align-items:end;margin-bottom:34px}
+.stickers-top h2{font-size:clamp(65px,9.4vw,144px);margin:30px 0 0}
+.stickers-top h2 em{font-family:Georgia,serif;font-weight:400;font-size:.57em;color:var(--accent)}
+.stickers-top p{font:600 clamp(13px,1.1vw,16px)/1.7 var(--mono);max-width:41ch;margin:0 0 8px}
+.sticker-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.sticker-tile{margin:0;min-width:0;background:#e0d9cb;border:1px solid #171717;display:flex;flex-direction:column}
+.sticker-tile:nth-child(2),.sticker-tile:nth-child(5){background:#ba0203}
+.sticker-tile:nth-child(3){background:#e5ded1}
+.sticker-visual{aspect-ratio:1/1;min-height:170px;display:flex;align-items:center;justify-content:center;padding:9%}
+.sticker-visual img{max-height:100%;max-width:100%;width:100%;height:100%;object-fit:contain;display:block}
+.sticker-tile:nth-child(2) .sticker-visual img{mix-blend-mode:multiply}
+.sticker-meta{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #171717;padding:11px 13px;font:900 10px/1.4 var(--mono);background:var(--ivory);color:var(--ink)}
+.sticker-intro-bar{margin-top:26px;border-top:2px solid var(--ink);padding-top:17px;display:flex;gap:15px;justify-content:space-between;align-items:center;font:900 11px/1.5 var(--mono)}
+.sticker-intro-bar b{color:var(--accent)}
+.photo-section{padding-top:84px}
+.gallery-headline{margin:32px 0 31px;display:flex;align-items:end;justify-content:space-between;gap:20px}
+.gallery-headline h2{font-size:clamp(64px,10vw,140px);margin:0}
+.gallery-headline p{font:600 13px/1.6 var(--mono);max-width:36ch}
+.film{border-top:2px solid #1a1715}
+@media(max-width:850px){.story-layout{grid-template-columns:1fr}.story-stage img{max-height:660px}.stickers-top{grid-template-columns:1fr}.stickers-top h2{margin-bottom:18px}.stickers-top p{max-width:58ch}.sticker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.hero-art .emblem-art{width:min(52%,260px)}.rhythm-content{gap:20px}.flavor-grid{grid-template-columns:1fr}.flavor-grid>div{border-right:0;border-bottom:1px solid #9a9187;padding:12px 0}.flavor-grid>div:last-child{border-bottom:0}.story-section{padding-top:62px}.story-layout{gap:23px}.story-stage{padding:8px}.story-stage img{max-height:69vh}.story-aside{gap:20px}.story-aside h3{font-size:35px;margin:12px 0}.story-progress{gap:12px}.story-controls button{min-width:60px}.sticker-grid{gap:9px}.sticker-visual{min-height:120px;padding:8%}.sticker-meta{font-size:8px;padding:9px}.sticker-intro-bar{flex-direction:column;align-items:start}.gallery-headline{display:block}.gallery-headline p{margin-top:15px}}
+@media(prefers-reduced-motion:reduce){.rhythm-content{animation:none}}
+
+/* V20 — Edición de identidad. Materiales costeños cotidianos, no clichés turísticos. */
+:root {--blue-tile:#B5D2D1;--blue-deep:#20383A;--chair:#D43822;--sand:#F1E9D9;--cobalt:#29505E;}
+.coast-interlude{background:var(--sand);color:var(--ink);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);display:grid;grid-template-columns:51% 49%;min-height:680px;overflow:hidden}
+.coast-image{position:relative;background-color:var(--blue-tile);border-right:2px solid var(--ink);min-height:680px;overflow:hidden;isolation:isolate}
+.coast-image:before{content:'';position:absolute;inset:0;background-image:linear-gradient(to right,rgba(38,78,84,.26) 1px,transparent 1px),linear-gradient(to bottom,rgba(38,78,84,.26) 1px,transparent 1px);background-size:92px 92px;opacity:.58;z-index:-1}
+.coast-image:after{content:'';position:absolute;inset:0;opacity:.18;pointer-events:none;background-image:url('data:image/svg+xml,%3Csvg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="3" seed="4"/%3E%3C/filter%3E%3Crect width="180" height="180" filter="url(%23n)" opacity=".48"/%3E%3C/svg%3E');mix-blend-mode:multiply}
+.palm-ghost{position:absolute;width:90%;height:75%;left:-15%;top:-14%;opacity:.21;transform:rotate(-6deg);pointer-events:none}
+.coast-image .scene{display:block;width:100%;height:100%;min-height:680px;object-fit:cover;position:relative;z-index:2;}
+.coast-caption{position:absolute;bottom:20px;left:25px;z-index:4;background:var(--ivory);border:1px solid var(--ink);padding:9px 13px;font:900 10px/1.3 var(--mono);letter-spacing:.05em}
+.coast-essay{padding:clamp(45px,6.2vw,95px) clamp(24px,4.2vw,75px) clamp(45px,5vw,75px);display:flex;flex-direction:column;justify-content:space-between;gap:38px}
+.coast-essay .hairline{border-top:1px solid var(--ink);padding-top:13px;display:flex;justify-content:space-between;gap:12px;font:900 10px var(--mono);letter-spacing:.06em}
+.coast-essay h2{font-size:clamp(67px,7.3vw,119px);margin:20px 0 30px;letter-spacing:-.03em}
+.coast-essay h2 em{display:block;font:italic 400 clamp(50px,5.0vw,86px)/.91 Georgia,serif;color:var(--red);letter-spacing:-.07em;margin-top:10px}
+.coast-essay p{font:700 clamp(15px,1.5vw,21px)/1.7 var(--mono);max-width:31ch;margin:0}
+.coast-objects{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.coast-objects span{border:1px solid var(--ink);padding:9px 12px;font:900 10px var(--mono);white-space:nowrap}
+.coast-note{color:#6B6156;border-top:1px solid #a79c8d;padding-top:17px;font:800 10px/1.5 var(--mono);display:flex;justify-content:space-between;gap:18px}
+.stickers-section{background:#511019!important;color:var(--ivory);padding-top:100px;padding-bottom:110px}
+.stickers-section .chapter-kicker{border-color:#ba7776}
+.stickers-top{grid-template-columns:1fr minmax(300px,.6fr);margin-bottom:40px}
+.stickers-top h2{font-size:clamp(70px,9.5vw,150px);line-height:.87}
+.stickers-top h2 em{color:#f3d8cb;font-size:.57em}
+.stickers-top p{max-width:36ch;color:#f0cbc6;font-size:clamp(13px,1.2vw,17px)}
+.sticker-stage{padding:clamp(18px,3.1vw,50px);background:#ebc1b8;color:var(--ink);border:1px solid #f4d6d0}
+.sticker-stage-label{border-bottom:1px solid #8c4548;padding-bottom:13px;margin-bottom:24px;font:900 11px/1.5 var(--mono);display:flex;justify-content:space-between;gap:10px;letter-spacing:.07em}
+.sticker-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.5vw,38px);background:transparent}
+.sticker-tile,.sticker-tile:nth-child(2),.sticker-tile:nth-child(5),.sticker-tile:nth-child(3){background:transparent!important;border:0;overflow:visible!important;min-width:0;display:flex;flex-direction:column}
+.sticker-visual{height:auto;min-height:0;aspect-ratio:4/5!important;padding:0!important;background:#CC0001!important;border:1px solid rgba(83,10,18,.22);display:block!important;overflow:visible!important;box-shadow:10px 10px 0 rgba(86,12,23,.13)}
+.sticker-visual img,.sticker-tile:nth-child(2) .sticker-visual img{width:100%;height:100%;display:block;max-width:100%;max-height:100%;object-fit:contain!important;object-position:center;mix-blend-mode:normal!important;filter:none!important;transform:none!important;clip-path:none!important}
+.sticker-meta{padding:15px 0 4px;border-top:0!important;background:transparent!important;color:#54151c!important;display:flex;align-items:start;font-size:10px;gap:12px}
+.sticker-meta span:last-child{opacity:.72;text-align:right}
+.sticker-intro-bar{border-top:1px solid #d59b98;color:#f6d8d2}
+.sticker-intro-bar b{color:#ffd6cc}
+.sticker-motto{border-top:2px solid #7d3237;margin-top:38px;padding:14px 0 0;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#55121b;font:900 11px var(--mono)}
+.sticker-motto strong{font-family:var(--head);font-size:clamp(25px,3vw,49px);letter-spacing:-.015em}
+@media(max-width:920px){.coast-interlude{grid-template-columns:1fr}.coast-image{min-height:520px;border-right:0;border-bottom:2px solid var(--ink)}.coast-image .scene{min-height:520px;max-height:640px}.coast-essay{min-height:510px}.stickers-top{grid-template-columns:1fr}.sticker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.coast-image{min-height:350px}.coast-image .scene{min-height:360px;max-height:450px}.coast-essay{min-height:450px;padding:35px 6% 43px}.coast-essay h2{font-size:clamp(58px,16vw,88px)}.coast-essay h2 em{font-size:.66em}.coast-note{flex-direction:column}.stickers-section{padding-top:62px;padding-bottom:75px}.sticker-stage{padding:14px}.sticker-stage-label{font-size:8px}.sticker-grid{gap:14px}.sticker-visual{box-shadow:4px 4px 0 rgba(86,12,23,.13)}.sticker-meta{font-size:8px;flex-wrap:wrap}.sticker-motto{align-items:start;flex-direction:column}.coast-objects span{font-size:9px}}
+
+/* V22: INTERVENCIÓN ÚNICA — TINTA ROJA ORIGINAL Y SIN FONDO NI ORNAMENTOS */
+.chapter-hero .hero-art{background:transparent!important;background-image:none!important;border-left:0!important;overflow:hidden!important;isolation:isolate;min-width:0}
+.chapter-hero .hero-art::before,.chapter-hero .hero-art::after{content:none!important;display:none!important}
+.chapter-hero .hero-art>.emblem-art{display:block;position:relative;width:min(96%,590px)!important;max-width:100%;height:auto;object-fit:contain;filter:none!important;box-shadow:none!important;transform:none!important;margin:auto}
+@media(max-width:850px){.chapter-hero .hero-art{min-height:445px;height:auto!important;padding:20px 0 24px}.chapter-hero .hero-art>.emblem-art{width:min(95%,520px)!important}}
+@media(max-width:600px){.chapter-hero .hero-art{min-height:395px;padding:0}.chapter-hero .hero-art>.emblem-art{width:min(100%,445px)!important}}
+
+/* V23 — Nuevo carrusel fotográfico editorial de portada. Sin alterar ningún otro capítulo. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.chapter-hero .hero-art.hero-gallery{display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;gap:clamp(11px,1.45vw,21px);background:#DED8CD!important;padding:clamp(18px,2.35vw,35px)!important;border-left:1px solid #b2a99e!important;min-width:0;min-height:690px;height:auto!important;overflow:hidden!important;isolation:isolate}
+.chapter-hero .hero-art.hero-gallery:before,.chapter-hero .hero-art.hero-gallery:after{content:none!important;display:none!important}
+.hero-gallery-top{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:2px solid var(--ink);padding-top:12px;color:#423d38;font-size:clamp(9px,.75vw,11px);line-height:1.4}
+.hero-photo-frame{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;flex:1 1 auto;min-height:310px;max-height:520px;overflow:hidden;background:#C8C0B3;border:1px solid #ada397;box-shadow:12px 12px 0 rgba(23,23,23,.10);cursor:default;outline-offset:4px}
+.chapter-hero .hero-art.hero-gallery .hero-photo-frame>img{display:block;width:100%!important;max-width:100%!important;height:100%!important;max-height:100%!important;min-height:0;object-fit:contain!important;object-position:center;position:absolute;inset:0;z-index:1;filter:none!important;transform:none!important;box-shadow:none!important;margin:0!important;background:#D9D1C5;transition:opacity .22s ease}
+.photo-corner{position:absolute;right:11px;bottom:11px;z-index:3;background:rgba(238,234,226,.97);color:var(--ink);border:1px solid var(--ink);padding:7px 9px;font:900 10px/1 var(--mono);letter-spacing:.05em;pointer-events:none}
+.hero-gallery-footer{display:flex;justify-content:space-between;align-items:center;gap:14px;min-width:0;border-top:1px solid #867d73;padding-top:15px}
+.hero-gallery-brand{display:flex;align-items:center;gap:12px;min-width:0;flex:1}
+.chapter-hero .hero-art.hero-gallery .hero-small-logo{display:block;flex:none;width:clamp(70px,6.2vw,94px)!important;height:auto!important;max-height:96px!important;object-fit:contain;position:static;margin:0!important;filter:none!important;transform:none!important}
+.hero-photo-caption{display:flex;flex-direction:column;gap:8px;min-width:0}.hero-photo-caption strong{font:900 clamp(16px,1.5vw,23px)/1.12 var(--head);letter-spacing:-.01em}.hero-photo-caption strong em{font-family:Georgia,serif;font-weight:400;color:var(--red);font-size:1.02em;white-space:nowrap}.hero-photo-caption>span{font:800 clamp(8px,.73vw,10px)/1.55 var(--mono);letter-spacing:.025em;color:#6e675e}
+.hero-gallery-nav{display:flex;gap:7px;flex:none;align-self:center}.hero-gallery-nav button{display:flex;align-items:center;justify-content:center;width:49px;height:49px;background:var(--ink);border:1px solid var(--ink);color:var(--ivory);font:900 23px/1 var(--mono);position:relative;overflow:hidden;transition:background .18s ease}.hero-gallery-nav button:before{content:'';position:absolute;width:45%;height:120%;top:-10%;left:-65%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.24),transparent);transform:skewX(-18deg);transition:left .43s ease}.hero-gallery-nav button:hover:before{left:120%}.hero-gallery-nav button:hover{background:#3d3b38}
+.hero-gallery-track{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;width:100%}.hero-gallery-track button{position:relative;border:0;background:#b4a99c;height:4px;padding:0;min-width:0;cursor:pointer}.hero-gallery-track button[aria-current="true"]{background:var(--red)}.hero-gallery-track button:focus-visible{outline-offset:5px}.hero-gallery-track button:after{content:'';position:absolute;inset:-12px -2px}
+@media(max-width:850px){.chapter-hero .hero-art.hero-gallery{min-height:610px;height:auto!important;padding:24px 5%!important;border-left:0!important;border-top:1px solid var(--ink)!important}.hero-photo-frame{min-height:350px;max-height:500px}.hero-gallery-top{font-size:10px}.chapter-hero .hero-art.hero-gallery .hero-small-logo{width:82px!important}}
+@media(max-width:600px){.chapter-hero .hero-copy{min-height:0;padding:25px 5% 29px;gap:20px}.chapter-hero .hero-title{margin:27px 0 10px;font-size:clamp(78px,20.5vw,104px)}.chapter-hero .hero-sub{margin-top:16px;gap:12px}.chapter-hero .hero-sub blockquote{font-size:31px}.chapter-hero .hero-label{margin-top:23px;padding-top:12px}.chapter-hero .hero-art.hero-gallery{min-height:492px;padding:18px 5% 22px!important;gap:14px}.hero-photo-frame{min-height:275px;max-height:345px;box-shadow:7px 7px 0 rgba(23,23,23,.11)}.hero-gallery-top{font-size:9px}.hero-gallery-top span:last-child{font-size:8px}.hero-gallery-footer{padding-top:11px}.hero-gallery-brand{gap:9px}.chapter-hero .hero-art.hero-gallery .hero-small-logo{width:64px!important;max-height:75px!important}.hero-photo-caption strong{font-size:18px}.hero-photo-caption>span{font-size:8px;max-width:21ch}.hero-gallery-nav button{width:38px;height:42px;font-size:19px}}
+@media(prefers-reduced-motion:reduce){.chapter-hero .hero-art.hero-gallery .hero-photo-frame>img{transition:none}}
+
+/* V24: el archivo original de Johnny permanece intacto; se anima únicamente mediante CSS. */
+.chapter-hero .hero-title .first-line{display:flex;align-items:flex-end;justify-content:space-between;gap:4px;width:100%;min-width:0;line-height:.84}
+.chapter-hero .hero-title .brand-word{display:block;flex:0 1 auto;min-width:0;line-height:.84}
+.chapter-hero .hero-title .johnny-dance{
+ display:block;flex:0 0 auto;width:clamp(102px,9.15vw,136px);height:auto;
+ align-self:flex-end;margin-bottom:3px;position:relative;z-index:2;
+ transform-origin:49% 82%;animation:johnny-baila 3.45s ease-in-out infinite;
+ will-change:transform
+}
+.chapter-hero .hero-title .johnny-dance img{display:block;width:100%;height:auto;max-width:none;filter:none;transform:none;object-fit:contain}
+@keyframes johnny-baila{
+ 0%,100%{transform:translate3d(0,0,0) rotate(-1.5deg)}
+ 15%{transform:translate3d(2px,-5px,0) rotate(1.5deg)}
+ 32%{transform:translate3d(-1px,-9px,0) rotate(2.7deg)}
+ 49%{transform:translate3d(0,-2px,0) rotate(-1deg)}
+ 68%{transform:translate3d(2px,-7px,0) rotate(-2.8deg)}
+ 84%{transform:translate3d(0,-2px,0) rotate(1deg)}
+}
+@media (min-width:851px){
+ .chapter-hero .hero-title{margin-top:32px}
+}
+@media(max-width:850px){
+ .chapter-hero .hero-title .johnny-dance{width:clamp(100px,17vw,140px)}
+ .chapter-hero .hero-title{margin-top:36px}
+}
+@media(max-width:600px){
+ .chapter-hero .hero-title .first-line{gap:4px}
+ .chapter-hero .hero-title .brand-word{font-size:.91em}
+ .chapter-hero .hero-title .second{font-size:min(.85em,17.2vw)}
+ .chapter-hero .hero-title .johnny-dance{width:clamp(69px,19.5vw,90px);margin-bottom:0}
+ .chapter-hero .hero-title{margin-top:20px}
+}
+@media (prefers-reduced-motion:reduce){
+ .chapter-hero .hero-title .johnny-dance{animation:none;will-change:auto;transform:none}
+}
+
+/* V25 — Corrección puntual aprobada: fotografías sin recuadro ni franjas sobrantes. */
+.chapter-hero .hero-art.hero-gallery{
+  background:var(--ivory)!important;
+  border-left:0!important;
+  padding:clamp(14px,1.6vw,25px)!important;
+  min-height:620px;
+  gap:clamp(12px,1.35vw,18px);
+}
+.hero-photo-frame{
+  width:100%;height:auto;min-height:0;max-height:none;
+  flex:0 0 auto;aspect-ratio:1079/721;
+  overflow:hidden;background:transparent!important;
+  border:0!important;box-shadow:none!important;
+}
+.chapter-hero .hero-art.hero-gallery .hero-photo-frame>img{
+  width:100%!important;height:100%!important;
+  object-fit:contain!important;object-position:center;
+  background:transparent!important;border:0!important;
+  box-shadow:none!important;
+}
+.photo-corner{display:none!important}
+.chapter-hero .hero-label{justify-content:flex-end}
+@media(max-width:850px){
+  .chapter-hero .hero-art.hero-gallery{min-height:0;padding:20px 5% 26px!important;border-top:1px solid var(--ink)!important}
+  .hero-photo-frame{min-height:0;max-height:none}
+}
+@media(max-width:600px){
+  .chapter-hero .hero-art.hero-gallery{min-height:0;padding:13px 5% 22px!important;gap:14px}
+  .hero-photo-frame{min-height:0;max-height:none;box-shadow:none!important}
+}
+
+/* V26 — díptico editorial: fotografía original + carrusel histórico. V25 permanece intacta. */
+.story-spread-section{background:#171717;color:#eeeae2;overflow:hidden}
+.story-spread-section::before{opacity:.45}
+.story-heading-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.56fr);gap:clamp(24px,5vw,74px);align-items:end;margin:18px 0 39px}
+.story-heading-row .carousel-title{margin:0;font-size:clamp(64px,9.2vw,136px);line-height:.9}
+.story-heading-row .story-intro{margin:0 0 5px;max-width:37ch;font-size:clamp(13px,1.15vw,16px);line-height:1.6}
+.story-spread-section .story-diptych{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2.6vw,42px);align-items:start}
+.story-cover,.story-carousel-column{margin:0;min-width:0}
+.story-cover-image,.story-spread-section .story-stage{width:100%;aspect-ratio:4/5;display:block;overflow:hidden;min-height:0;background:#0c0c0c;border:0;padding:0;position:relative}
+.story-cover-image img,.story-spread-section .story-stage img{display:block;width:100%;height:100%;max-height:none;max-width:none;object-fit:cover;object-position:center;box-shadow:none;border:0;margin:0}
+.story-spread-section .story-stage img{object-fit:contain}
+.story-cover-meta{border-top:1px solid #78746f;margin-top:13px;padding-top:13px;display:flex;align-items:center;justify-content:space-between;gap:10px;font:900 10px/1.5 var(--mono);letter-spacing:.05em;color:#c9c2b8}
+.story-cover-meta span:first-child{display:flex;align-items:center;gap:10px}
+.story-red-square{display:inline-block;width:9px;height:9px;background:var(--red);flex:none}
+.story-carousel-footer{margin-top:13px;border-top:1px solid #78746f;padding-top:13px}
+.story-frame-topline{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.story-frame-topline .story-issue{color:#d0c9bf;font-size:10px}
+.story-frame-topline .story-counter{font-size:12px;letter-spacing:.08em;white-space:nowrap}
+.story-frame-bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:clamp(12px,1.8vw,25px);margin-top:18px}
+.story-frame-copy{min-width:0}
+.story-frame-copy h3{font:900 clamp(21px,2.4vw,38px)/.98 var(--head);margin:0 0 8px;letter-spacing:-.015em}
+.story-frame-copy p{font:600 clamp(11px,.94vw,14px)/1.48 var(--mono);color:#c9c2ba;max-width:51ch;margin:0}
+.story-carousel-actions{display:flex;flex-direction:column;align-items:end;gap:14px;flex:none}
+.story-spread-section .story-controls{display:flex;gap:8px}
+.story-spread-section .story-controls button{min-width:49px;min-height:49px;background:transparent;border:1px solid #b8b0a8;color:var(--ivory);font:900 20px var(--mono)}
+.story-spread-section .story-controls button:hover{background:var(--ivory);color:#171717}
+.story-spread-section .story-dots{margin:0;gap:4px;justify-content:flex-end}
+.story-spread-section .story-dots button{width:13px;height:5px}
+.story-spread-section .story-dots button[aria-current=true]{width:26px;background:#d42a20}
+.story-spread-section .story-bottom{margin-top:55px}
+@media(max-width:850px){.story-heading-row{grid-template-columns:1fr;gap:14px;margin-top:28px;margin-bottom:25px}.story-heading-row .story-intro{max-width:60ch}.story-spread-section .story-diptych{gap:14px}.story-frame-bottom{grid-template-columns:1fr}.story-carousel-actions{flex-direction:row;align-items:center;justify-content:space-between}.story-spread-section .story-cover-meta{font-size:8px}}
+@media(max-width:640px){.story-spread-section{padding-top:61px}.story-heading-row .carousel-title{font-size:clamp(65px,15vw,102px)}.story-spread-section .story-diptych{grid-template-columns:1fr;gap:26px}.story-cover-meta{font-size:9px}.story-frame-bottom{grid-template-columns:minmax(0,1fr) auto;gap:10px}.story-frame-copy h3{font-size:clamp(22px,6vw,30px)}.story-frame-copy p{font-size:11px;line-height:1.4}.story-carousel-actions{flex-direction:column;align-items:end;gap:14px}.story-spread-section .story-controls button{min-width:43px;min-height:44px}.story-spread-section .story-bottom{margin-top:35px}}
+@media(max-width:350px){.story-frame-bottom{grid-template-columns:1fr}.story-carousel-actions{flex-direction:row;justify-content:space-between;align-items:center}}
+
+
+/* V27 — Cambios no destructivos: solo carrusel de portada + fotografía del producto. */
+/* Los siete JPG originales permanecen intactos; el aspecto analógico es CSS. */
+#inicio .hero-art.hero-gallery .hero-photo-frame > img#heroPhoto{
+ filter:grayscale(1) contrast(1.12) brightness(.96)!important;
+}
+/* La fotografía del frasco acompaña el título existente, sin duplicar el capítulo. */
+#que-es.purpose{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(32px,6vw,100px)}
+.purpose-editorial-cover{min-width:0}
+.purpose-product-photo{margin:clamp(19px,2.2vw,36px) 0 0;max-width:650px}
+.purpose-product-photo img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;filter:none;border:0}
+.purpose-product-photo figcaption{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--ink);padding:11px 0 0;font:800 clamp(8px,.72vw,11px)/1.45 var(--mono);letter-spacing:.035em}
+.purpose-product-photo figcaption span:last-child{text-align:right;color:#716a62}
+@media(max-width:850px){
+ #que-es.purpose{grid-template-columns:1fr;gap:clamp(25px,4vw,48px)}
+ .purpose-product-photo{margin-top:25px;max-width:700px}
+}
+@media(max-width:600px){
+ .purpose-product-photo{margin-top:20px}
+ .purpose-product-photo figcaption{font-size:8px;gap:8px}
+}
+
+/* V28 — only new copy and vertical alignment for PACHECO SIEMPRE en tu mesa */
+#que-es.purpose .purpose-copy{align-self:center;display:flex;flex-direction:column;justify-content:center;min-width:0;padding:0 0 0 clamp(0px,1vw,12px)}
+#que-es.purpose .purpose-editorial-cover h2{font-size:clamp(57px,7.8vw,119px);line-height:.90;letter-spacing:-.025em;white-space:normal}
+#que-es.purpose .purpose-editorial-cover h2 em{display:block;font-size:.56em;line-height:1.18;letter-spacing:-.055em;margin-top:.14em}
+#que-es.purpose .purpose-copy > .statement:first-child{margin-top:0}
+#que-es.purpose .purpose-copy > .flavor-grid{margin-top:28px}
+@media(max-width:850px){#que-es.purpose .purpose-copy{align-self:stretch;padding:0}#que-es.purpose .purpose-editorial-cover h2{font-size:clamp(68px,11vw,110px)}}
+@media(max-width:600px){#que-es.purpose .purpose-editorial-cover h2{font-size:clamp(62px,13.5vw,84px)}#que-es.purpose .purpose-editorial-cover h2 em{font-size:.53em}#que-es.purpose .purpose-copy > .statement:first-child{margin-top:6px}}
+
+/* V29 — fotografía documental del sticker dentro del capítulo gráfico, sin recortes. */
+.sticker-street-feature{
+ display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+ align-items:center;gap:clamp(34px,7.8vw,128px);
+ padding-top:clamp(44px,7.5vw,110px);margin-top:clamp(42px,6vw,90px);
+ border-top:1px solid rgba(238,234,226,.34)
+}
+.sticker-street-image{margin:0;min-width:0;max-width:450px;justify-self:center;width:100%}
+.sticker-street-image img{display:block;width:100%;height:auto;object-fit:contain;object-position:center}
+.sticker-street-copy{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(16px,2.5vw,34px)}
+.sticker-street-eyebrow{color:#f1c9c3;border-bottom:1px solid rgba(238,234,226,.4);padding-bottom:14px;width:100%;font-size:10px}
+.sticker-street-copy h3{font-family:var(--head);font-size:clamp(58px,7.3vw,113px);line-height:.91;margin:0;color:var(--ivory);max-width:9ch;letter-spacing:-.025em}
+.sticker-street-copy h3 em{display:block;font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:.57em;line-height:1.15;color:#f2d4c7;text-transform:none;letter-spacing:-.045em;margin-top:8px}
+.sticker-street-copy p{font:600 clamp(13px,1.2vw,17px)/1.65 var(--mono);color:#f0cbc6;max-width:33ch;margin:0}
+.sticker-street-index{margin-top:clamp(16px,4vw,60px);border-top:1px solid rgba(238,234,226,.35);padding-top:14px;width:100%;color:#dfc0b5;font-size:10px}
+#carrusel .story-cover-meta{justify-content:flex-start}
+@media(max-width:850px){.sticker-street-feature{grid-template-columns:1fr;gap:32px}.sticker-street-image{justify-self:start;max-width:440px}.sticker-street-copy h3{font-size:clamp(66px,11vw,110px);max-width:12ch}}
+@media(max-width:600px){.sticker-street-feature{padding-top:44px;margin-top:44px}.sticker-street-image{max-width:none;width:100%}.sticker-street-copy h3{font-size:clamp(67px,15vw,99px)}.sticker-street-copy{gap:21px}}
+
+/* V30: Identidad gráfica en rojos. Solo cambia el color de superficies, no los stickers. */
+/* La imagen, animación y tipografía de los demás capítulos permanecen intactas. */
+#video .film-copy h2{font-size:clamp(59px,7.25vw,112px);line-height:.89;letter-spacing:-.025em;overflow-wrap:normal}
+#video .film-copy h2 em{display:block;font-size:.56em;line-height:1.08;margin-top:8px;letter-spacing:-.035em}
+@media(max-width:600px){#video .film-copy h2{font-size:clamp(56px,14vw,87px)}#video .film-copy h2 em{font-size:.63em}}
+
+/* V31 / ÚNICA CORRECCIÓN: ROJO PACHECO + EFECTOS EN LOS SEIS STICKERS.
+   La ilustración, las imágenes, la navegación y los otros capítulos se conservan. */
+.stickers-section{
+ background:#990002!important; /* oscuro del mismo tono rojo que #CC0001 */
+}
+.stickers-section .chapter-kicker{border-color:rgba(255,220,215,.65)}
+.stickers-top h2 em{color:#ffded6}
+.stickers-top p{color:#ffe5df}
+.sticker-stage{background:#f2c4bd;border-color:#f7d6d0}
+.sticker-stage-label{border-bottom-color:#b04640}
+.stickers-section .sticker-visual{
+ position:relative;isolation:isolate;
+ overflow:hidden!important;
+ border-color:rgba(153,0,2,.25);
+ box-shadow:10px 10px 0 rgba(122,0,1,.20);
+}
+.stickers-section .sticker-visual img{
+ transition:transform .42s cubic-bezier(.18,.7,.19,1)!important;
+ transform:scale(1)!important;
+ transform-origin:center center;
+ will-change:transform;
+}
+/* Reflejo blanco-plata, de izquierda a derecha, como los CTA originales. */
+.stickers-section .sticker-visual::after{
+ content:'';position:absolute;z-index:2;pointer-events:none;
+ width:43%;height:170%;top:-35%;left:0;
+ background:linear-gradient(90deg,
+  transparent 0%,rgba(255,255,255,.04) 22%,
+  rgba(255,255,255,.29) 51%,rgba(255,255,255,.08) 75%,
+  transparent 100%);
+ filter:blur(6px);
+ transform:translateX(-190%) skewX(-20deg);
+ animation:pacheco-sticker-sheen 5.3s linear infinite;
+}
+/* Cada tarjeta recibe la luz en sucesión, sin que se iluminen todas a la vez. */
+.sticker-tile:nth-child(1) .sticker-visual::after{animation-delay:0s}
+.sticker-tile:nth-child(2) .sticker-visual::after{animation-delay:-.8s}
+.sticker-tile:nth-child(3) .sticker-visual::after{animation-delay:-1.6s}
+.sticker-tile:nth-child(4) .sticker-visual::after{animation-delay:-2.4s}
+.sticker-tile:nth-child(5) .sticker-visual::after{animation-delay:-3.2s}
+.sticker-tile:nth-child(6) .sticker-visual::after{animation-delay:-4s}
+@keyframes pacheco-sticker-sheen{
+ 0%{transform:translateX(-190%) skewX(-20deg)}
+ 62%,100%{transform:translateX(450%) skewX(-20deg)}
+}
+/* El zoom nunca recorta el dibujo: sus márgenes originales quedan dentro. */
+@media(hover:hover) and (pointer:fine){
+ .stickers-section .sticker-tile:hover .sticker-visual img{transform:scale(1.055)!important}
+}
+.sticker-meta{color:#750002!important}
+.sticker-intro-bar{border-top-color:rgba(255,221,216,.65);color:#ffe1dc}
+.sticker-intro-bar b{color:#fff0e9}
+.sticker-motto{border-top-color:#ae5550;color:#790002}
+.sticker-street-eyebrow{color:#ffe1dc}
+.sticker-street-copy h3 em{color:#ffe1dc}
+.sticker-street-copy p{color:#ffe7e1}
+.sticker-street-index{color:#ffd8d0}
+@media(max-width:600px){
+ .stickers-section .sticker-visual{box-shadow:4px 4px 0 rgba(122,0,1,.2)}
+}
+@media(prefers-reduced-motion:reduce){
+ .stickers-section .sticker-visual::after{animation:none!important;opacity:0}
+ .stickers-section .sticker-visual img{transition:none!important}
+}
+
+/* V32 / ACENTOS AMARILLOS PACHECO — SOLO TIPOGRAFÍA.
+   Amarillo oficial #FFC700, sobre superficies oscuras para asegurar contraste.
+   Ninguna composición, fotografía, sticker, animación o elemento aprobado cambia. */
+:root{--pacheco-yellow:#FFC700}
+/* Historia del nombre: una palabra protagonista y el contador del carrusel. */
+#carrusel .story-heading-row .carousel-title em{color:var(--pacheco-yellow)}
+#carrusel .story-frame-topline .story-counter{color:var(--pacheco-yellow)}
+/* Identidad gráfica: una nota en el título y otra en la fotografía documental. */
+#stickers .stickers-top h2 em{color:var(--pacheco-yellow)}
+#stickers .sticker-street-copy h3 em{color:var(--pacheco-yellow)}
 </style>
 </head><body>
-<header class="site-header"><a class="logo" href="index.html" aria-label="Chema Durán, página principal">JMD<b>.</b></a><nav class="primary-nav" aria-label="Navegación">
-<a class="navlink" href="index.html#work" data-en="WORK" data-es="PROYECTOS">PROYECTOS</a><a class="navlink" href="index.html#about" data-en="ABOUT" data-es="SOBRE MÍ">SOBRE MÍ</a><a class="navlink" href="index.html#cv">CV</a><a class="navlink" href="index.html#contact" data-en="CONTACT" data-es="CONTACTO">CONTACTO</a><span class="nav-divider"></span><span class="language-toggle"><button id="en" type="button" aria-pressed="false">EN</button><span>/</span><button id="es" type="button" aria-pressed="true">ES</button></span><button class="menu-trigger" id="menu" type="button" aria-controls="mobile-menu" aria-expanded="false">MENU</button></nav></header>
-<nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil"><div class="small">JMD / TABLE OF CONTENTS</div><a href="index.html">00 / COVER</a><a href="index.html#work">01 / WORK</a><a href="index.html#about">02 / ABOUT</a><a href="index.html#cv">03 / CV</a><a href="index.html#contact">04 / CONTACT</a></nav>
-<main><section class="chapter-hero" id="inicio"><div class="hero-copy"><div class="section-meta"><span>SELECTED WORK / 002</span><span>BRAND / 2026</span></div><div><h1 class="hero-title head"><span>SALSAS</span><span class="second">PACHECO.</span></h1><div class="accent-line"></div><div class="hero-sub"><blockquote data-en="An idea.<br><em>(turned into something real).</em>" data-es="Una idea.<br><em>(convertida en algo real).</em>">Una idea.<br><em>(convertida en algo real).</em></blockquote><p data-es="ARQUITECTURA / DISEÑO / EMPRENDIMIENTO / TRABAJO FÍSICO /<br><br>Este proyecto conecta varias cosas que me gusta hacer." data-en="ARCHITECTURE / DESIGN / ENTREPRENEURSHIP / PHYSICAL WORK /<br><br>This project brings together several things I love doing.">ARQUITECTURA / DISEÑO / EMPRENDIMIENTO / TRABAJO FÍSICO /<br><br>Este proyecto conecta varias cosas que me gusta hacer.</p></div></div><div class="section-meta hero-label"><span>CHEMA DURÁN / PORTFOLIO</span><span>PUEBLA, MÉXICO</span></div></div><div class="hero-art"><img src="assets/salsas-pacheco-logo-original.png" alt="Logotipo original de Salsas Pacheco" width="1182" height="1330"/><div class="visual-stamp mono">SALSAS PACHECO / IDENTIDAD ORIGINAL</div></div></section>
-<section class="chapter narrative"><div><div class="chapter-kicker mono"><span>01 / LA IDEA</span><span>PERSONAL PROJECT</span></div><h2 class="head">DE LA<br>IDEA A<br><em>la mesa.</em></h2></div><div><p data-es="Me gusta probar ideas y trabajar en cómo convertirlas en algo que puedas ver, usar o vivir, siempre buscando que la experiencia sea agradable. Salsas Pacheco es una de esas ideas." data-en="I like testing ideas and finding ways to turn them into something you can see, use, or experience—always aiming to make the experience enjoyable. Salsas Pacheco is one of those ideas.">Me gusta probar ideas y trabajar en cómo convertirlas en algo que puedas ver, usar o vivir, siempre buscando que la experiencia sea agradable. Salsas Pacheco es una de esas ideas.</p><p data-es="Quise desarrollar una salsa macha con aceite de oliva y una identidad propia. Desde la receta y el empaque hasta la comunicación y las ventas, me interesa participar en todo el proceso y aprender mientras la marca va tomando forma." data-en="I wanted to develop a salsa macha made with olive oil and a distinct identity. From the recipe and packaging to communication and sales, I enjoy taking part in the process and learning as the brand takes shape.">Quise desarrollar una salsa macha con aceite de oliva y una identidad propia. Desde la receta y el empaque hasta la comunicación y las ventas, me interesa participar en todo el proceso y aprender mientras la marca va tomando forma.</p><p class="note" data-es="PROYECTO INDEPENDIENTE / DESARROLLO DE PRODUCTO / IDENTIDAD VISUAL / EXPERIENCIA" data-en="INDEPENDENT PROJECT / PRODUCT DEVELOPMENT / VISUAL IDENTITY / EXPERIENCE">PROYECTO INDEPENDIENTE / DESARROLLO DE PRODUCTO / IDENTIDAD VISUAL / EXPERIENCIA</p></div></section>
-<section class="chapter photo-section" id="archivo"><div class="chapter-kicker mono"><span>02 / ARCHIVO VISUAL</span><span>07 ORIGINAL PHOTOGRAPHS</span></div><div class="photo-heading"><h2 class="head">EN<br>PERSONA.</h2><p data-es="Las fotografías de Salsas Pacheco son parte de la historia de la marca: personas, momentos y el producto compartido en la vida real." data-en="The photographs are part of the story of Salsas Pacheco: people, moments, and the product shared in real life.">Las fotografías de Salsas Pacheco son parte de la historia de la marca: personas, momentos y el producto compartido en la vida real.</p></div>
-<figure class="photo-feature"><img src="assets/salsa-foto-01.jpg" alt="Dos personas sostienen frascos de Salsas Pacheco junto a la identidad gráfica de la marca" loading="eager"><figcaption><span>001 / 007</span><span>FOTOGRAFÍA ORIGINAL</span></figcaption></figure>
-<div class="mosaic">
-<figure><img src="assets/salsa-foto-02.jpg" alt="Encuentro de personas mostrando frascos de Salsas Pacheco" loading="lazy"><figcaption><span>002 / 007</span><span>ARCHIVO</span></figcaption></figure>
-<figure><img src="assets/salsa-foto-03.jpg" alt="Tres personas muestran frascos de Salsas Pacheco durante un encuentro" loading="lazy"><figcaption><span>003 / 007</span><span>ARCHIVO</span></figcaption></figure>
-<figure><img src="assets/salsa-foto-04.jpg" alt="Dos personas posan sonrientes con frascos de Salsas Pacheco" loading="lazy"><figcaption><span>004 / 007</span><span>ARCHIVO</span></figcaption></figure>
-<figure><img src="assets/salsa-foto-05.jpg" alt="Dos personas muestran frascos de salsa con un cartel de la marca al fondo" loading="lazy"><figcaption><span>005 / 007</span><span>ARCHIVO</span></figcaption></figure>
-<figure><img src="assets/salsa-foto-06.jpg" alt="Dos personas muestran frascos de Salsas Pacheco" loading="lazy"><figcaption><span>006 / 007</span><span>ARCHIVO</span></figcaption></figure>
-<figure><img src="assets/salsa-foto-07.jpg" alt="Tres personas con frascos de Salsas Pacheco" loading="lazy"><figcaption><span>007 / 007</span><span>ARCHIVO</span></figcaption></figure>
-</div></section>
-<section class="chapter carousel-section" id="carrusel"><div class="chapter-kicker mono"><span>03 / SELECTED MOMENTS</span><span>PHOTO SEQUENCE</span></div><h2 class="head carousel-title">SIETE<br><em>(momentos).</em></h2><div class="carousel-layout"><div class="carousel-stage"><img id="carouselImage" src="assets/salsa-foto-01.jpg" alt="Fotografía 1 de Salsas Pacheco"></div><div class="carousel-info"><div><div class="mono">SALSAS PACHECO / ARCHIVO</div><h3 id="carouselHeadline" data-es="Una marca, muchas historias." data-en="One brand, many stories.">Una marca, muchas historias.</h3><p data-es="Siete fotografías originales. No son mockups, ni imágenes creadas con inteligencia artificial. Son encuentros que forman parte del proyecto." data-en="Seven original photographs. These aren't mockups or AI-generated scenes. They are real moments in the project.">Siete fotografías originales. No son mockups, ni imágenes creadas con inteligencia artificial. Son encuentros que forman parte del proyecto.</p></div><div class="carousel-foot"><span class="carousel-counter" id="carouselCounter">01 / 07</span><div class="carousel-controls"><button class="motionbtn" id="prevBtn" type="button" data-es="ANTERIOR" data-en="PREVIOUS">ANTERIOR</button><button class="motionbtn dark" id="nextBtn" type="button" data-es="SIGUIENTE" data-en="NEXT">SIGUIENTE</button></div><div id="dots" class="carousel-dots" aria-label="Seleccionar fotografía"></div></div></div></div></section>
-<section class="chapter film" id="video"><div class="film-copy"><div class="chapter-kicker mono"><span>04 / EN MOVIMIENTO</span><span>VIDEO / 9:16</span></div><h2 class="head">LO QUE<br><em>(se vive).</em></h2><p data-es="Un pequeño registro en video de la marca fuera del diseño. Lo que me interesa de proyectos como este es que las ideas no se quedan en una pantalla: terminan encontrándose con otras personas." data-en="A short video record of the brand beyond its design. What interests me about projects like this is that ideas don't stay on a screen: they end up connecting with other people.">Un pequeño registro en video de la marca fuera del diseño. Lo que me interesa de proyectos como este es que las ideas no se quedan en una pantalla: terminan encontrándose con otras personas.</p><p class="mono" data-es="VIDEO ORIGINAL / FORMATO VERTICAL / AUDIO INCLUIDO" data-en="ORIGINAL VIDEO / VERTICAL FORMAT / AUDIO INCLUDED">VIDEO ORIGINAL / FORMATO VERTICAL / AUDIO INCLUIDO</p></div><figure class="film-figure"><video controls playsinline preload="metadata" poster="assets/salsas-pacheco-video-poster.jpg" aria-label="Video de Salsas Pacheco en formato vertical"><source src="assets/salsas-pacheco-video-original-compatible.mp4" type="video/mp4"><span data-es="Tu navegador no admite este video." data-en="Your browser doesn't support this video.">Tu navegador no admite este video.</span></video><figcaption><span>VIDEO / SALSAS PACHECO</span><span>VERTICAL 9:16</span></figcaption></figure></section></main>
-<footer class="last"><span>CHEMA DURÁN / SELECTED WORK 002</span><a href="index.html#work" data-es="VOLVER A PROYECTOS" data-en="BACK TO WORK">VOLVER A PROYECTOS</a><span>© 2026 / PUEBLA, MÉXICO</span></footer>
+<header class="site-header"><a aria-label="Chema Durán, página principal" class="logo" data-i18n-aria-label-en="Chema Durán, home page" data-i18n-aria-label-es="Chema Durán, página principal" href="index.html">JMD<b>.</b></a><nav aria-label="Navegación" class="primary-nav" data-i18n-aria-label-en="Navigation" data-i18n-aria-label-es="Navegación">
+<a class="navlink" data-en="WORK" data-es="PROYECTOS" href="index.html#work">PROYECTOS</a><a class="navlink" data-en="ABOUT" data-es="SOBRE MÍ" href="index.html#about">SOBRE MÍ</a><a class="navlink" href="index.html#cv">CV</a><a class="navlink" data-en="CONTACT" data-es="CONTACTO" href="index.html#contact">CONTACTO</a><span class="nav-divider"></span><span class="language-toggle"><button aria-pressed="false" id="en" type="button">EN</button><span>/</span><button aria-pressed="true" id="es" type="button">ES</button></span><button aria-controls="mobile-menu" aria-expanded="false" class="menu-trigger" data-en="MENU" data-es="MENÚ" id="menu" type="button">MENÚ</button></nav></header>
+<nav aria-label="Menú móvil" class="mobile-menu" data-i18n-aria-label-en="Mobile menu" data-i18n-aria-label-es="Menú móvil" id="mobile-menu"><div class="small" data-en="JMD / ÍNDICE" data-es="JMD / ÍNDICE">JMD / ÍNDICE</div><a data-en="00 / COVER" data-es="00 / PORTADA" href="index.html">00 / PORTADA</a><a data-en="01 / WORK" data-es="01 / PROYECTOS" href="index.html#work">01 / PROYECTOS</a><a data-en="02 / ABOUT" data-es="02 / SOBRE MÍ" href="index.html#about">02 / SOBRE MÍ</a><a data-en="03 / CV" data-es="03 / CV" href="index.html#cv">03 / CV</a><a data-en="04 / CONTACT" data-es="04 / CONTACTO" href="index.html#contact">04 / CONTACTO</a></nav>
+<main>
+<section class="chapter-hero" id="inicio">
+<div class="hero-copy">
+<div class="section-meta"><span data-en="SELECTED WORK / 002" data-es="OBRA SELECCIONADA / 002">OBRA SELECCIONADA / 002</span><span data-en="BRAND / PUEBLA, MX" data-es="MARCA / PUEBLA, MX">MARCA / PUEBLA, MX</span></div>
+<div><h1 class="hero-title head"><span class="first-line"><span class="brand-word">SALSA</span><span aria-label="Johnny de Salsa Pacheco, bailando mientras sostiene un frasco; ilustración oficial animada" class="johnny-dance" data-i18n-aria-label-en="Johnny from Salsa Pacheco dancing while holding a jar; official animated illustration" data-i18n-aria-label-es="Johnny de Salsa Pacheco, bailando mientras sostiene un frasco; ilustración oficial animada" role="img"><img alt="" decoding="async" height="668" loading="eager" src="assets/johnny-pacheco-sin-firma.png" width="454"/></span></span><span class="second">PACHECO.</span></h1>
+<div class="accent-line"></div>
+<div class="hero-sub"><blockquote data-en="The salsa that&lt;br&gt;&lt;em&gt;(makes you dance).&lt;/em&gt;" data-es="La salsa que&lt;br&gt;&lt;em&gt;(te hace bailar).&lt;/em&gt;">La salsa que<br/><em>(te hace bailar).</em></blockquote>
+<p data-en="FLAVOR / RHYTHM / CULTURE /&lt;br&gt;&lt;br&gt;A spicy salsa created in Mexico, with Caribbean influence." data-es="SABOR / RITMO / CULTURA /&lt;br&gt;&lt;br&gt;Una salsa picante creada en Mexico, con influencia del Caribe.">SABOR / RITMO / CULTURA /<br/><br/>Una salsa picante creada en Mexico, con influencia del Caribe.</p></div>
+</div><div class="section-meta hero-label"><span data-en="EST. 2025" data-es="EST. 2025">EST. 2025</span></div>
+</div>
+<div aria-label="Carrusel fotográfico de Salsa Pacheco" class="hero-art hero-gallery" data-i18n-aria-label-en="Salsa Pacheco photo carousel" data-i18n-aria-label-es="Carrusel fotográfico de Salsa Pacheco">
+<div class="hero-gallery-top mono">
+<span><span data-en="PHOTO ARCHIVE" data-es="ARCHIVO FOTOGRÁFICO">ARCHIVO FOTOGRÁFICO</span> / <span id="heroPhotoCounterTop">01</span> <span data-en="OF 07" data-es="DE 07">DE 07</span></span>
+<span data-en="REAL PHOTOGRAPHS" data-es="FOTOGRAFÍAS REALES">FOTOGRAFÍAS REALES</span>
+</div>
+<div aria-label="Fotografías de la marca" aria-roledescription="carrusel" class="hero-photo-frame" data-i18n-aria-label-en="Brand photography" data-i18n-aria-label-es="Fotografías de la marca" data-i18n-aria-roledescription-en="carousel" data-i18n-aria-roledescription-es="carrusel" id="heroPhotoFrame" tabindex="0">
+<img alt="Dos personas muestran frascos de Salsas Pacheco durante un encuentro; el logotipo está en una mesa" decoding="async" fetchpriority="high" height="721" id="heroPhoto" src="assets/salsa-foto-01.jpg" width="1079"/>
+<span aria-hidden="true" class="photo-corner">P / 001</span>
+</div>
+<div class="hero-gallery-footer">
+<div class="hero-gallery-brand">
+<img alt="Emblema original de Salsa Pacheco, en rojo" class="hero-small-logo" data-i18n-alt-en="Original Salsa Pacheco emblem in red" data-i18n-alt-es="Emblema original de Salsa Pacheco, en rojo" height="1330" src="assets/salsas-pacheco-logo-rojo-original-exacto.png" width="1182"/>
+<div class="hero-photo-caption"><strong data-en="THE BRAND, &lt;em&gt;(in real life).&lt;/em&gt;" data-es="LA MARCA, &lt;em&gt;(en vivo).&lt;/em&gt;">LA MARCA, <em>(en vivo).</em></strong><span data-en="DOCUMENTARY PHOTOGRAPHY / SALSA PACHECO" data-es="FOTOGRAFÍA DOCUMENTAL / SALSA PACHECO">FOTOGRAFÍA DOCUMENTAL / SALSA PACHECO</span></div>
+</div>
+<div aria-label="Controles de fotografía" class="hero-gallery-nav" data-i18n-aria-label-en="Photo controls" data-i18n-aria-label-es="Controles de fotografía">
+<button aria-label="Fotografía anterior" data-i18n-aria-label-en="Previous photo" data-i18n-aria-label-es="Fotografía anterior" id="heroPhotoPrev" type="button"><span aria-hidden="true">←</span></button>
+<button aria-label="Fotografía siguiente" data-i18n-aria-label-en="Next photo" data-i18n-aria-label-es="Fotografía siguiente" id="heroPhotoNext" type="button"><span aria-hidden="true">→</span></button>
+</div>
+</div>
+<div aria-label="Elegir fotografía" class="hero-gallery-track" data-i18n-aria-label-en="Select photo" data-i18n-aria-label-es="Elegir fotografía" id="heroPhotoTrack" role="group"></div>
+<div aria-live="polite" class="sr-only" id="heroPhotoAnnouncement">Fotografía 1 de 7</div>
+</div>
+</section>
+<div aria-hidden="true" class="rhythm-ribbon"><div class="rhythm-content"><span data-en="ADD SOME SALSA" data-es="ÉCHALE SALSA">ÉCHALE SALSA</span><b>✳</b><span data-en="KEEP DANCING" data-es="BAILAR SIEMPRE">BAILAR SIEMPRE</span><b>✳</b><span data-en="FULL OF FLAVOR" data-es="MUCHO SABOR">MUCHO SABOR</span><b>✳</b><span data-en="ADD SOME SALSA" data-es="ÉCHALE SALSA">ÉCHALE SALSA</span><b>✳</b><span data-en="KEEP DANCING" data-es="BAILAR SIEMPRE">BAILAR SIEMPRE</span><b>✳</b><span data-en="FULL OF FLAVOR" data-es="MUCHO SABOR">MUCHO SABOR</span><b>✳</b></div></div>
+<section class="chapter narrative purpose" id="que-es">
+<div class="purpose-editorial-cover"><div class="chapter-kicker mono"><span data-en="01 / WHAT IS SALSA PACHECO?" data-es="01 / ¿QUÉ ES SALSA PACHECO?">01 / ¿QUÉ ES SALSA PACHECO?</span><span data-en="PRODUCT / IDENTITY" data-es="PRODUCTO / IDENTIDAD">PRODUCTO / IDENTIDAD</span></div>
+<h2 class="head" data-en="PACHECO&lt;br/&gt;ALWAYS&lt;br/&gt;&lt;em&gt;at your table&lt;/em&gt;" data-es="PACHECO&lt;br/&gt;SIEMPRE&lt;br/&gt;&lt;em&gt;en tu mesa&lt;/em&gt;">PACHECO<br/>SIEMPRE<br/><em>en tu mesa</em></h2>
+<figure class="purpose-product-photo">
+<img alt="Frasco real de Salsa Pacheco Original sobre un mantel, en fotografía original blanco y negro" data-i18n-alt-en="Original black-and-white photo of a jar of Salsa Pacheco Original on a patterned tablecloth" data-i18n-alt-es="Frasco real de Salsa Pacheco Original sobre un mantel, en fotografía original blanco y negro" decoding="async" height="922" loading="lazy" src="assets/salsa-pacheco-producto-original-bn.jpg" width="922"/>
+
+</figure></div>
+<div class="purpose-copy"><p class="statement" data-en="Salsas Pacheco is an independent brand of &lt;strong&gt;gourmet salsa macha made with olive oil&lt;/strong&gt;, born in Mexico. A project that brings together food, design, music, and people around a table and chairs." data-es="Salsas Pacheco es una marca independiente de &lt;strong&gt;salsa macha gourmet elaborada con aceite de oliva&lt;/strong&gt;, nacida en México. Un proyecto que conecta cocina, diseño, música y encuentros alrededor de una mesa y silla(s).">Salsas Pacheco es una marca independiente de <strong>salsa macha gourmet elaborada con aceite de oliva</strong>, nacida en México. Un proyecto que conecta cocina, diseño, música y encuentros alrededor de una mesa y silla(s).</p>
+<p class="statement" data-en="The brand has two recipes: &lt;strong&gt;Clásica&lt;/strong&gt; and &lt;strong&gt;Mix Semillas&lt;/strong&gt;. Its identity draws on salsa culture, the Caribbean and the energy of dance—not as decoration, but as a way to express how we want people to feel when they open a jar and taste our salsa." data-es="La marca tiene dos recetas: &lt;strong&gt;Clásica&lt;/strong&gt; y &lt;strong&gt;Mix Semillas&lt;/strong&gt;. Su identidad mira hacia la cultura salsera, el Caribe y la energía del baile: no como adorno, sino como una manera de contar qué queremos que se sienta al abrir un frasco y probar nuestra salsa.">La marca tiene dos recetas: <strong>Clásica</strong> y <strong>Mix Semillas</strong>. Su identidad mira hacia la cultura salsera, el Caribe y la energía del baile: no como adorno, sino como una manera de contar qué queremos que se sienta al abrir un frasco y probar nuestra salsa.</p>
+<p class="note" data-en="MADE IN MEXICO / PRODUCT DEVELOPMENT / BRANDING / COMMUNITY" data-es="HECHO EN MÉXICO / DESARROLLO DE PRODUCTO / IDENTIDAD / COMUNIDAD">HECHO EN MÉXICO / DESARROLLO DE PRODUCTO / IDENTIDAD / COMUNIDAD</p>
+<div class="flavor-grid"><div><span data-en="01 / BASE" data-es="01 / BASE">01 / BASE</span><strong data-en="OLIVE&lt;br/&gt;OIL." data-es="ACEITE&lt;br/&gt;DE OLIVA.">ACEITE<br/>DE OLIVA.</strong></div><div><span data-en="02 / FLAVORS" data-es="02 / SABORES">02 / SABORES</span><strong data-en="CLÁSICA +&lt;br/&gt;MIX SEMILLAS." data-es="CLÁSICA +&lt;br/&gt;MIX SEMILLAS.">CLÁSICA +<br/>MIX SEMILLAS.</strong></div><div><span data-en="03 / SPIRIT" data-es="03 / ESPÍRITU">03 / ESPÍRITU</span><strong data-en="FLAVOR +&lt;br/&gt;RHYTHM." data-es="SABOR +&lt;br/&gt;RITMO.">SABOR +<br/>RITMO.</strong></div></div></div>
+</section>
+<section class="chapter story-section story-spread-section" id="carrusel">
+<div class="chapter-kicker mono"><span data-en="02 / THE NAME" data-es="02 / EL NOMBRE">02 / EL NOMBRE</span><span data-en="COVER + 06 ORIGINAL SLIDES" data-es="PORTADA + 06 LÁMINAS ORIGINALES">PORTADA + 06 LÁMINAS ORIGINALES</span></div>
+<div class="story-heading-row">
+<h2 class="head carousel-title" data-en="WHY&lt;br/&gt;&lt;em&gt;(Pacheco)?&lt;/em&gt;" data-es="¿POR QUÉ&lt;br/&gt;&lt;em&gt;(Pacheco)?&lt;/em&gt;">¿POR QUÉ<br/><em>(Pacheco)?</em></h2>
+<p class="story-intro" data-en="The name Pacheco has music in its soul. These six panels explore the rhythms, stories and people who inspired our identity." data-es="El nombre Pacheco lleva música adentro. Estas seis láminas recorren el ritmo, la historia y las personas que inspiraron nuestra identidad.">El nombre Pacheco lleva música adentro. Estas seis láminas recorren el ritmo, la historia y las personas que inspiraron nuestra identidad.</p>
+</div>
+<div class="story-layout story-diptych">
+<figure class="story-cover">
+<div class="story-cover-image"><img alt="Fotografía original en blanco y negro: una mujer sentada a la mesa, entre flores, vajilla y un frasco de Salsa Pacheco" data-i18n-alt-en="Original black-and-white photograph: a woman seated at a table with flowers, tableware and a jar of Salsa Pacheco" data-i18n-alt-es="Fotografía original en blanco y negro: una mujer sentada a la mesa, entre flores, vajilla y un frasco de Salsa Pacheco" decoding="async" height="1402" loading="lazy" src="assets/pacheco-portada-fotografica-bn-original.jpg" width="1122"/></div>
+<figcaption class="story-cover-meta"><span data-en='&lt;i aria-hidden="true" class="story-red-square"&gt;&lt;/i&gt; COVER / SALSA PACHECO' data-es='&lt;i aria-hidden="true" class="story-red-square"&gt;&lt;/i&gt; PORTADA / SALSA PACHECO'><i aria-hidden="true" class="story-red-square"></i> PORTADA / SALSA PACHECO</span></figcaption>
+</figure>
+<div class="story-carousel-column">
+<div class="story-stage"><img alt="Lámina 1: ¿Por qué Pacheco?" decoding="async" height="1350" id="carouselImage" loading="lazy" src="assets/pacheco-historia-01.png" width="1080"/></div>
+<div class="story-carousel-footer">
+<div class="story-frame-topline"><span class="story-issue" id="storyIssue">ARCHIVO / 01 — INTRODUCCIÓN</span><span class="story-counter" id="carouselCounter">01 / 06</span></div>
+<div class="story-frame-bottom">
+<div class="story-frame-copy">
+<h3 id="carouselHeadline">UN NOMBRE.<br/>UNA HISTORIA.</h3>
+<p id="storyCaption">¿Por qué Pacheco? Porque mucho antes de ser una marca, Pacheco ya formaba parte de una historia musical.</p>
+</div>
+<div class="story-carousel-actions">
+<div class="story-controls"><button aria-label="Anterior" data-i18n-aria-label-en="Previous" data-i18n-aria-label-es="Anterior" id="prevBtn" type="button">←</button><button aria-label="Siguiente" data-i18n-aria-label-en="Next" data-i18n-aria-label-es="Siguiente" id="nextBtn" type="button">→</button></div>
+<div aria-label="Elegir lámina" class="story-dots" data-i18n-aria-label-en="Select slide" data-i18n-aria-label-es="Elegir lámina" id="dots"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="story-bottom"><span data-en="ADD SOME SALSA / THE STORY BEHIND THE NAME" data-es="ÉCHALE SALSA / LA HISTORIA DETRÁS DEL NOMBRE">ÉCHALE SALSA / LA HISTORIA DETRÁS DEL NOMBRE</span><span data-en="SWIPE / USE ARROWS" data-es="DESLIZA / USA LAS FLECHAS">DESLIZA / USA LAS FLECHAS</span></div>
+</section>
+<section class="chapter stickers-section" id="stickers">
+<div class="chapter-kicker mono"><span data-en="03 / GRAPHIC IDENTITY" data-es="03 / IDENTIDAD GRÁFICA">03 / IDENTIDAD GRÁFICA</span><span data-en="06 ORIGINAL PIECES" data-es="06 PIEZAS ORIGINALES">06 PIEZAS ORIGINALES</span></div>
+<div class="stickers-top"><h2 class="head" data-en="ART&lt;br/&gt;THAT&lt;br/&gt;&lt;em&gt;(sticks).&lt;/em&gt;" data-es="ARTE&lt;br/&gt;QUE&lt;br/&gt;&lt;em&gt;(se pega).&lt;/em&gt;">ARTE<br/>QUE<br/><em>(se pega).</em></h2>
+<p data-en="Before making it to the street, an image begins as an idea. Six pieces from Pacheco's early graphic universe: red backdrops, black ink and a linocut texture." data-es="Antes de estar en la calle, una imagen empieza como una idea. Seis piezas del primer universo gráfico de Pacheco, con su fondo rojo, su tinta negra y su textura de linograbado.">Antes de estar en la calle, una imagen empieza como una idea. Seis piezas del primer universo gráfico de Pacheco, con su fondo rojo, su tinta negra y su textura de linograbado.</p></div>
+<div class="sticker-stage"><div class="sticker-stage-label"><span data-en="STICKER ARCHIVE / SERIES 001—006" data-es="ARCHIVO DE PEGATINAS / SERIES 001—006">ARCHIVO DE PEGATINAS / SERIES 001—006</span><span data-en="COMPLETE ORIGINALS / NO CROPPING" data-es="ORIGINALES COMPLETOS / SIN RECORTES">ORIGINALES COMPLETOS / SIN RECORTES</span></div>
+<div class="sticker-grid"><figure class="sticker-tile"><div class="sticker-visual"><img alt="Diseño completo de Salsa Pacheco — tipografía globo" data-i18n-alt-en="Full Salsa Pacheco artwork — bubble lettering" data-i18n-alt-es="Diseño completo de Salsa Pacheco — tipografía globo" height="1350" loading="lazy" src="assets/pacheco-sticker-original-01.jpg" width="1080"/></div><figcaption class="sticker-meta"><span data-en="BUBBLE LETTERING" data-es="TIPOGRAFÍA GLOBO">TIPOGRAFÍA GLOBO</span><span data-en="01 / LETTERING" data-es="01 / LETRAS">01 / LETRAS</span></figcaption></figure><figure class="sticker-tile"><div class="sticker-visual"><img alt="Diseño completo de Salsa Pacheco — retrato y letras" data-i18n-alt-en="Full Salsa Pacheco artwork — portrait and lettering" data-i18n-alt-es="Diseño completo de Salsa Pacheco — retrato y letras" height="1350" loading="lazy" src="assets/pacheco-sticker-original-02.jpg" width="1080"/></div><figcaption class="sticker-meta"><span data-en="PORTRAIT + LETTERING" data-es="RETRATO + LETRAS">RETRATO + LETRAS</span><span data-en="02 / ILLUSTRATED CHARACTER" data-es="02 / PERSONAJE GRÁFICO">02 / PERSONAJE GRÁFICO</span></figcaption></figure><figure class="sticker-tile"><div class="sticker-visual"><img alt="Diseño completo de Salsa Pacheco — disco de vinilo" data-i18n-alt-en="Full Salsa Pacheco artwork — vinyl record" data-i18n-alt-es="Diseño completo de Salsa Pacheco — disco de vinilo" height="1350" loading="lazy" src="assets/pacheco-sticker-original-03.jpg" width="1080"/></div><figcaption class="sticker-meta"><span data-en="VINYL RECORD" data-es="DISCO DE VINILO">DISCO DE VINILO</span><span data-en="03 / RHYTHM" data-es="03 / RITMO">03 / RITMO</span></figcaption></figure><figure class="sticker-tile"><div class="sticker-visual"><img alt="Diseño completo de Salsa Pacheco — Bailar Siempre" data-i18n-alt-en="Full Salsa Pacheco artwork — Keep Dancing" data-i18n-alt-es="Diseño completo de Salsa Pacheco — Bailar Siempre" height="1350" loading="lazy" src="assets/pacheco-sticker-original-04.jpg" width="1080"/></div><figcaption class="sticker-meta"><span data-en="KEEP DANCING" data-es="BAILAR SIEMPRE">BAILAR SIEMPRE</span><span data-en="04 / MESSAGE" data-es="04 / MENSAJE">04 / MENSAJE</span></figcaption></figure><figure class="sticker-tile"><div class="sticker-visual"><img alt="Diseño completo de Salsa Pacheco — Johnny con frasco" data-i18n-alt-en="Full Salsa Pacheco artwork — Johnny holding a jar" data-i18n-alt-es="Diseño completo de Salsa Pacheco — Johnny con frasco" height="1350" loading="lazy" src="assets/pacheco-sticker-original-05.jpg" width="1080"/></div><figcaption class="sticker-meta"><span data-en="JOHNNY + JAR" data-es="JOHNNY + FRASCO">JOHNNY + FRASCO</span><span data-en="05 / ILLUSTRATION" data-es="05 / ILUSTRACIÓN">05 / ILUSTRACIÓN</span></figcaption></figure><figure class="sticker-tile"><div class="sticker-visual"><img alt="Diseño completo de Salsa Pacheco — emblema explosivo" data-i18n-alt-en="Full Salsa Pacheco artwork — burst emblem" data-i18n-alt-es="Diseño completo de Salsa Pacheco — emblema explosivo" height="1350" loading="lazy" src="assets/pacheco-sticker-original-06.jpg" width="1080"/></div><figcaption class="sticker-meta"><span data-en="SALSA PACHECO" data-es="SALSA PACHECO">SALSA PACHECO</span><span data-en="06 / BURST" data-es="06 / EXPLOSIÓN">06 / EXPLOSIÓN</span></figcaption></figure></div><div class="sticker-motto"><strong data-en="ADD SOME SALSA." data-es="ÉCHALE SALSA.">ÉCHALE SALSA.</strong><span data-en="BLACK + RED / GRAPHIC ARCHIVE" data-es="NEGRO + ROJO / ARCHIVO GRÁFICO">NEGRO + ROJO / ARCHIVO GRÁFICO</span></div></div><div class="sticker-street-feature" id="identidad-viva">
+<figure class="sticker-street-image"><img alt="Fotografía real de un sticker de Salsa Pacheco aplicado sobre una superficie metálica" data-i18n-alt-en="Real photograph of a Salsa Pacheco sticker applied to a metal surface" data-i18n-alt-es="Fotografía real de un sticker de Salsa Pacheco aplicado sobre una superficie metálica" decoding="async" height="816" loading="lazy" src="assets/pacheco-sticker-en-la-vida-real-original.jpg" width="612"/></figure>
+<div class="sticker-street-copy">
+<span class="sticker-street-eyebrow mono" data-en="IDENTITY / BEYOND THE SCREEN" data-es="IDENTIDAD / FUERA DE LA PANTALLA">IDENTIDAD / FUERA DE LA PANTALLA</span>
+<h3 class="head" data-en="BEYOND PAPER&lt;br&gt;&lt;em&gt;(into the world).&lt;/em&gt;" data-es="DEL PAPEL&lt;br&gt;&lt;em&gt;(a la calle).&lt;/em&gt;">DEL PAPEL<br/><em>(a la calle).</em></h3>
+<p data-en="Pacheco's visual identity also lives beyond the screen." data-es="El universo gráfico de Pacheco también existe fuera de la pantalla.">El universo gráfico de Pacheco también existe fuera de la pantalla.</p>
+<span class="sticker-street-index mono">@SALSA.PACHECO / 001</span>
+</div>
+</div>
+</section><section class="chapter film" id="video"><div class="film-copy"><div class="chapter-kicker mono"><span data-en="04 / IN MOTION" data-es="04 / EN MOVIMIENTO">04 / EN MOVIMIENTO</span></div><h2 class="head" data-en="SALSA&lt;br/&gt;PACHECO&lt;br/&gt;&lt;em&gt;(live).&lt;/em&gt;" data-es="SALSA&lt;br/&gt;PACHECO&lt;br/&gt;&lt;em&gt;(en vivo).&lt;/em&gt;">SALSA<br/>PACHECO<br/><em>(en vivo).</em></h2><p data-en="A short video record of the brand beyond its design. What interests me about projects like this is that ideas don't stay on a screen: they end up connecting with other people." data-es="Un pequeño registro en video de la marca fuera del diseño. Lo que me interesa de proyectos como este es que las ideas no se quedan en una pantalla: terminan encontrándose con otras personas.">Un pequeño registro en video de la marca fuera del diseño. Lo que me interesa de proyectos como este es que las ideas no se quedan en una pantalla: terminan encontrándose con otras personas.</p></div><figure class="film-figure"><video aria-label="Video de Salsa Pacheco en formato vertical" controls="" data-i18n-aria-label-en="Vertical Salsa Pacheco video" data-i18n-aria-label-es="Video de Salsa Pacheco en formato vertical" playsinline="" poster="assets/salsas-pacheco-video-poster.jpg" preload="metadata"><source src="assets/salsas-pacheco-video-original-compatible.mp4" type="video/mp4"/><span data-en="Your browser doesn't support this video." data-es="Tu navegador no admite este video.">Tu navegador no admite este video.</span></video><figcaption><span data-en="VIDEO / SALSA PACHECO" data-es="VIDEO / SALSA PACHECO">VIDEO / SALSA PACHECO</span><span data-en="VERTICAL 9:16" data-es="VERTICAL 9:16">VERTICAL 9:16</span></figcaption></figure></section></main>
+<footer class="last"><span data-en="CHEMA DURÁN / SELECTED WORK 002" data-es="CHEMA DURÁN / OBRA SELECCIONADA 002">CHEMA DURÁN / OBRA SELECCIONADA 002</span><a data-en="BACK TO WORK" data-es="VOLVER A PROYECTOS" href="index.html#work">VOLVER A PROYECTOS</a><span data-en="© 2026 / PUEBLA, MEXICO" data-es="© 2026 / PUEBLA, MÉXICO">© 2026 / PUEBLA, MÉXICO</span></footer>
 <script>
 (()=>{
-const dict={en:0,es:1};let language='es';
+let language='es';
 const menu=document.getElementById('menu'),mobile=document.getElementById('mobile-menu');
-menu.addEventListener('click',()=>{let open=mobile.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'CERRAR':'MENU'});
-mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));
-function changeLanguage(next){language=next;document.documentElement.lang=next;document.querySelectorAll('[data-'+next+']').forEach(el=>{if(el.dataset[next].includes('<'))el.innerHTML=el.dataset[next];else el.textContent=el.dataset[next]});document.getElementById('en').setAttribute('aria-pressed',String(next==='en'));document.getElementById('es').setAttribute('aria-pressed',String(next==='es'));}
+menu.addEventListener('click',()=>{let open=mobile.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?(language==='es'?'CERRAR':'CLOSE'):(language==='es'?'MENÚ':'MENU')});
+mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent=language==='es'?'MENÚ':'MENU'}));
+function changeLanguage(next){
+ language=next;document.documentElement.lang=next;
+ document.querySelectorAll('[data-'+next+']').forEach(el=>{
+  if(el.dataset[next].includes('<'))el.innerHTML=el.dataset[next];else el.textContent=el.dataset[next];
+ });
+ for(const attr of ['aria-label','aria-roledescription','alt']){
+   document.querySelectorAll('[data-i18n-'+attr+'-'+next+']').forEach(el=>el.setAttribute(attr,el.getAttribute('data-i18n-'+attr+'-'+next)));
+ }
+ const mt=document.querySelector('meta[name="description"]');if(mt)mt.content=mt.getAttribute('data-meta-'+next);
+ document.title=document.querySelector('title').getAttribute('data-'+next);
+ const isOpen=mobile.classList.contains('open');menu.textContent=isOpen?(next==='es'?'CERRAR':'CLOSE'):(next==='es'?'MENÚ':'MENU');
+ document.getElementById('en').setAttribute('aria-pressed',String(next==='en'));
+ document.getElementById('es').setAttribute('aria-pressed',String(next==='es'));
+ // Update content produced by JavaScript, including currently selected slides.
+ go(current);heroGo(heroIndex);updateDynamicAccessibility();
+}
+function updateDynamicAccessibility(){
+ [...dots.children].forEach((b,i)=>b.setAttribute('aria-label',(language==='es'?'Lámina ':'Slide ')+(i+1)+' / 6'));
+ [...heroTrack.children].forEach((b,i)=>b.setAttribute('aria-label',(language==='es'?'Fotografía ':'Photo ')+(i+1)+' / 7'));
+}
+
 document.getElementById('en').addEventListener('click',()=>changeLanguage('en'));document.getElementById('es').addEventListener('click',()=>changeLanguage('es'));
-const images=Array.from({length:7},(_,i)=>`assets/salsa-foto-${String(i+1).padStart(2,'0')}.jpg`);
-let current=0;const img=document.getElementById('carouselImage'),counter=document.getElementById('carouselCounter'),dots=document.getElementById('dots');
-function go(i){current=(i+images.length)%images.length;img.src=images[current];img.alt=language==='es'?`Fotografía original ${current+1} de Salsas Pacheco`:`Original Salsas Pacheco photograph ${current+1}`;counter.textContent=`${String(current+1).padStart(2,'0')} / 07`;dots.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-current',String(j===current)));}
-images.forEach((_,i)=>{const b=document.createElement('button');b.textContent=String(i+1).padStart(2,'0');b.type='button';b.setAttribute('aria-label',`Fotografía ${i+1}`);b.addEventListener('click',()=>go(i));dots.appendChild(b);});
-document.getElementById('prevBtn').addEventListener('click',()=>go(current-1));document.getElementById('nextBtn').addEventListener('click',()=>go(current+1));go(0);
+const slides=[
+ {name:'01 — INTRODUCCIÓN',enName:'01 — INTRODUCTION',es:'UN NOMBRE.<br>UNA HISTORIA.',en:'A NAME.<br>A STORY.',esDesc:'La historia detrás de nuestro nombre comienza mucho antes de crear la marca.',enDesc:'The story behind our name begins long before the brand.'},
+ {name:'02 — 1933',enName:'02 — 1933',es:'ÉCHALE<br>SALSITA.',en:'ÉCHALE<br>SALSITA.',esDesc:'En 1933, Ignacio Piñeiro graba «Échale salsita». La palabra salsa ya evocaba ritmo, sabor y alegría.',enDesc:'In 1933 Ignacio Piñeiro recorded «Échale salsita». The word salsa already evoked flavor, rhythm, and joy.'},
+ {name:'03 — NUEVA YORK, 60S',enName:'03 — NEW YORK, 1960s',es:'EL RITMO<br>SE MEZCLA.',en:'RHYTHMS<br>MEET.',esDesc:'Nueva York reúne a músicos latinos y a sus distintas tradiciones. Nace una energía compartida.',enDesc:'New York brings Latin musicians and musical traditions together in a shared energy.'},
+ {name:'04 — FANIA, 1964',enName:'04 — FANIA, 1964',es:'UNA NUEVA<br>FAMILIA.',en:'A NEW<br>FAMILY.',esDesc:'Johnny Pacheco y Jerry Masucci fundan Fania Records; los ritmos y sus intérpretes encuentran un movimiento.',enDesc:'Johnny Pacheco and Jerry Masucci founded Fania Records, bringing rhythms and artists together.'},
+ {name:'05 — LOS SETENTA',enName:'05 — THE SEVENTIES',es:'BAILAR<br>SIN FRONTERAS.',en:'DANCE<br>WITHOUT BORDERS.',esDesc:'La salsa neoyorquina cruza fronteras. La música que convoca a muchos se vuelve internacional.',enDesc:'New York salsa crosses borders and reaches international audiences.'},
+ {name:'06 — EL HOMENAJE',enName:'06 — THE TRIBUTE',es:'POR ESO,<br>PACHECO.',en:'THAT’S WHY,<br>PACHECO.',esDesc:'Un homenaje a Johnny Pacheco y a su legado: mezcla, visión, cultura y sabor.',enDesc:'A tribute to Johnny Pacheco and his legacy: fusion, vision, culture and flavor.'}
+];
+let current=0;
+const img=document.getElementById('carouselImage'),counter=document.getElementById('carouselCounter'),dots=document.getElementById('dots');
+const headline=document.getElementById('carouselHeadline'),caption=document.getElementById('storyCaption'),issue=document.getElementById('storyIssue');
+function go(i){current=(i+slides.length)%slides.length;let s=slides[current];img.src=`assets/pacheco-historia-${String(current+1).padStart(2,'0')}.png`;img.alt=(language==='es'?'Lámina ':'Slide ')+(current+1)+(language==='es'?' de la historia de Salsa Pacheco':' of the Salsa Pacheco name story');counter.textContent=`${String(current+1).padStart(2,'0')} / 06`;issue.textContent=(language==='es'?'ARCHIVO / ':'ARCHIVE / ')+(language==='es'?s.name:s.enName);headline.innerHTML=s[language];caption.textContent=s[language+'Desc'];dots.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-current',String(j===current)));}
+slides.forEach((_,i)=>{let b=document.createElement('button');b.textContent=String(i+1);b.type='button';b.setAttribute('aria-label',`Lámina ${i+1}`);b.addEventListener('click',()=>go(i));dots.appendChild(b)});
+document.getElementById('prevBtn').addEventListener('click',()=>go(current-1));
+document.getElementById('nextBtn').addEventListener('click',()=>go(current+1));
+const storyStage=document.querySelector('.story-stage');let touchX=0;
+storyStage.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});
+storyStage.addEventListener('touchend',e=>{let dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>45)go(current+(dx<0?1:-1));},{passive:true});
+window.addEventListener('keydown',e=>{if(!document.querySelector('#carrusel')?.matches(':hover'))return;if(e.key==='ArrowRight')go(current+1);if(e.key==='ArrowLeft')go(current-1)});
+go(0);
+
+// V23 — Carrusel de portada con fotografías originales; independiente del carrusel histórico.
+const heroPhotos=[
+ {file:'salsa-foto-01.jpg',ratio:'1079/721',alt:'Dos personas muestran frascos de Salsas Pacheco junto al emblema de la marca'},
+ {file:'salsa-foto-02.jpg',ratio:'1616/1080',alt:'Personas compartiendo frascos de Salsas Pacheco en un encuentro'},
+ {file:'salsa-foto-03.jpg',ratio:'1616/1080',alt:'Tres personas muestran sus frascos de Salsas Pacheco junto a un cartel de la marca'},
+ {file:'salsa-foto-04.jpg',ratio:'1616/1080',alt:'Dos personas muestran frascos de Salsas Pacheco'},
+ {file:'salsa-foto-05.jpg',ratio:'1616/1080',alt:'Dos personas sonríen sosteniendo frascos de Salsas Pacheco'},
+ {file:'salsa-foto-06.jpg',ratio:'1616/1080',alt:'Dos personas posan con frascos de Salsas Pacheco'},
+ {file:'salsa-foto-07.jpg',ratio:'1462/924',alt:'Tres personas presentan frascos de Salsas Pacheco'}
+];
+const heroPhotoAltEN=[
+ 'Two people hold Salsa Pacheco jars next to the brand emblem',
+ 'People at a gathering share jars of Salsa Pacheco',
+ 'Three people hold jars of Salsa Pacheco beside the brand poster',
+ 'Two people show Salsa Pacheco jars',
+ 'Two smiling people hold jars of Salsa Pacheco',
+ 'Two people pose with jars of Salsa Pacheco',
+ 'Three people present jars of Salsa Pacheco'
+];
+const heroPhoto=document.getElementById('heroPhoto');
+const heroPhotoFrame=document.getElementById('heroPhotoFrame');
+const heroTrack=document.getElementById('heroPhotoTrack');
+const heroNum=document.getElementById('heroPhotoCounterTop');
+const heroAnnouncement=document.getElementById('heroPhotoAnnouncement');
+const heroCorner=document.querySelector('.photo-corner');
+let heroIndex=0,heroInterval=null,heroOver=false,heroFocus=false;
+function heroGo(index){
+ heroIndex=(index+heroPhotos.length)%heroPhotos.length;
+ const slide=heroPhotos[heroIndex];
+ heroPhotoFrame.style.aspectRatio=slide.ratio;
+ heroPhoto.src='assets/'+slide.file;
+ heroPhoto.alt=(language==='es'?slide.alt:heroPhotoAltEN[heroIndex]);
+ heroNum.textContent=String(heroIndex+1).padStart(2,'0');
+ heroCorner.textContent='P / '+String(heroIndex+1).padStart(3,'0');
+ heroAnnouncement.textContent=(language==='es'?'Fotografía ':'Photo ')+(heroIndex+1)+' '+(language==='es'?'de':'of')+' '+heroPhotos.length;
+ [...heroTrack.children].forEach((el,i)=>el.setAttribute('aria-current',String(i===heroIndex)));
+}
+heroPhotos.forEach((s,i)=>{
+ const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Fotografía '+(i+1)+' de 7');b.addEventListener('click',()=>{heroGo(i);heroStart()});heroTrack.append(b)
+});
+document.getElementById('heroPhotoPrev').addEventListener('click',()=>{heroGo(heroIndex-1);heroStart()});
+document.getElementById('heroPhotoNext').addEventListener('click',()=>{heroGo(heroIndex+1);heroStart()});
+function heroStop(){if(heroInterval!==null){clearInterval(heroInterval);heroInterval=null}}
+function heroStart(){heroStop();if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||heroOver||heroFocus||document.hidden)return;heroInterval=setInterval(()=>heroGo(heroIndex+1),6500)}
+const heroRoot=document.querySelector('.hero-gallery');
+heroRoot.addEventListener('mouseenter',()=>{heroOver=true;heroStop()});
+heroRoot.addEventListener('mouseleave',()=>{heroOver=false;heroStart()});
+heroRoot.addEventListener('focusin',()=>{heroFocus=true;heroStop()});
+heroRoot.addEventListener('focusout',e=>{if(!heroRoot.contains(e.relatedTarget)){heroFocus=false;heroStart()}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)heroStop();else heroStart()});
+let heroSwipeX=null;
+heroPhotoFrame.addEventListener('touchstart',e=>{heroSwipeX=e.changedTouches[0].screenX},{passive:true});
+heroPhotoFrame.addEventListener('touchend',e=>{if(heroSwipeX===null)return;let dx=e.changedTouches[0].screenX-heroSwipeX;if(Math.abs(dx)>35){heroGo(heroIndex+(dx<0?1:-1));heroStart()}heroSwipeX=null},{passive:true});
+heroPhotoFrame.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();heroGo(heroIndex+1);heroStart()}else if(e.key==='ArrowLeft'){e.preventDefault();heroGo(heroIndex-1);heroStart()}});
+heroGo(0);heroStart();updateDynamicAccessibility();
 })();
 </script></body></html>
