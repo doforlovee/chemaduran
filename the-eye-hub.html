@@ -1,0 +1,147 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#F5B8CB"><title>THE EYE HUB / Partes del anteproyecto — CHEMA DURÁN</title><meta name="description" content="THE EYE HUB / Partes del anteproyecto"><style>
+:root{--paper:#eeeae2;--ink:#171717;--accent:#F5B8CB;--accent-ink:#B64A78;--accent-soft:#FFE4ED;--mono:'Courier New',Courier,monospace;--head:Impact,'Arial Narrow','Arial Black',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button{cursor:pointer}
+.header{min-height:75px;padding:16px clamp(19px,4vw,62px);display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:2px solid var(--ink);background:var(--paper)}
+.brand{font:900 17px var(--mono);letter-spacing:.03em}.links{display:flex;gap:clamp(12px,2vw,28px);align-items:center;font:900 11px var(--mono);letter-spacing:.06em}.links a:hover{text-decoration:underline;text-underline-offset:5px}.links button{border:0;background:transparent;font:inherit;padding:7px 2px;color:var(--ink)}.links button[aria-pressed=true]{text-decoration:underline;text-underline-offset:5px}
+.cover{background:var(--ink);color:var(--paper);padding:40px clamp(19px,4vw,62px) 52px}.folio{display:flex;justify-content:space-between;gap:20px;font:900 11px var(--mono);letter-spacing:.06em}.cover h1{font:900 clamp(83px,14vw,220px)/.8 var(--head);letter-spacing:-.015em;margin:56px 0 40px}.cover h1 em{font-style:normal;color:#F5B8CB}.lead{display:flex;justify-content:space-between;gap:35px;border-top:1px solid #89847a;padding-top:20px;align-items:end}.lead p{max-width:46ch;font:500 clamp(15px,1.55vw,20px)/1.5 var(--mono);margin:0}.leadnav{display:flex;gap:9px;flex-wrap:wrap}
+.cta{position:relative;isolation:isolate;overflow:hidden;background:#e9e4d9;color:#121212;border:1px solid #e9e4d9;min-width:125px;min-height:47px;display:inline-flex;justify-content:center;align-items:center;padding:12px 18px;font:900 12px var(--mono);letter-spacing:.04em}.cta.dark{background:#181818;color:#e9e4d9;border-color:#bbb6ac}.cta::before{content:'';position:absolute;top:-35%;left:0;height:170%;width:42%;background:linear-gradient(90deg,transparent,#fff2,#fff9,#fff2,transparent);filter:blur(5px);transform:translateX(-180%) skewX(-20deg);animation:sheen 4.2s linear infinite}.cta span{z-index:1;position:relative}@keyframes sheen{0%{transform:translateX(-190%) skewX(-20deg)}65%,100%{transform:translateX(450%) skewX(-20deg)}}
+.heroimg{display:block;width:100%;height:auto;max-height:670px;object-fit:cover;background:#080808}.imgcaption{background:var(--ink);color:#bab3a8;display:flex;justify-content:space-between;gap:15px;padding:13px clamp(19px,4vw,62px);font:900 10px var(--mono)}
+.block{padding:clamp(55px,8vw,125px) clamp(19px,4vw,62px);scroll-margin-top:20px}.kicker{display:flex;justify-content:space-between;gap:20px;border-top:2px solid currentColor;padding-top:13px;font:900 11px var(--mono);letter-spacing:.05em}.block h2{font:900 clamp(66px,11vw,170px)/.87 var(--head);letter-spacing:-.018em;margin:40px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(25px,5vw,80px)}.large{font:700 clamp(19px,2.3vw,29px)/1.3 var(--mono);max-width:32ch}.copy{font:500 clamp(13px,1.35vw,18px)/1.6 var(--mono)}.case{border-top:1px solid #928d82;padding:20px 0;display:flex;justify-content:space-between;gap:12px;font:900 13px var(--mono)}.case small{color:#6d685f;font-size:11px}.skills{background:#d6d3c9}.skill{padding:20px 0;border-top:1px solid #868077}.skill h3{font:900 clamp(18px,2vw,25px)/1.2 var(--mono);margin:0 0 10px}.skill p{font:500 14px/1.65 var(--mono);margin:0}.footer{background:var(--ink);color:var(--paper);padding:26px clamp(19px,4vw,62px);display:flex;justify-content:space-between;gap:15px;font:900 11px var(--mono)}
+@media(max-width:650px){.header{min-height:60px}.brand{font-size:12px}.links{gap:12px;font-size:10px}.cover{padding-top:30px}.cover h1{font-size:16vw;margin:60px 0 32px}.lead{display:block}.lead p{font-size:14px}.leadnav{margin-top:25px}.cta{min-width:120px}.folio{font-size:9px}.imgcaption{font-size:9px;flex-direction:column}.grid{grid-template-columns:1fr}.block h2{font-size:18vw}.large{font-size:19px}.footer{font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta::before{animation:none}}
+
+/* V34 · Eye Hub dossier and extracted, transparent technical drawings */
+.render-open{position:relative;display:block;width:100%;border:0;padding:0;margin:0;text-align:left;overflow:hidden;background:#080808;cursor:zoom-in;color:var(--paper)}
+.render-open .heroimg{transition:transform .75s cubic-bezier(.2,.75,.2,1);max-height:670px}
+.render-open:hover .heroimg{transform:scale(1.018)}
+.render-label{position:absolute;left:clamp(19px,4vw,62px);bottom:24px;display:flex;gap:26px;align-items:center;justify-content:space-between;background:var(--paper);color:var(--ink);padding:14px 17px;font:900 11px var(--mono);letter-spacing:.055em;box-shadow:0 0 0 1px rgba(0,0,0,.45);max-width:calc(100% - 40px)}
+.render-label span:last-child{color:var(--accent);font-size:18px;line-height:1}
+.archive-project{margin-top:clamp(75px,10vw,145px)}
+.project-story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,90px);padding:35px 0 60px}
+.project-story h3,.draw-head h3{font:900 clamp(65px,10vw,152px)/.85 var(--head);letter-spacing:-.016em;margin:0}
+.project-story em,.draw-head em{font-style:normal;color:var(--accent-ink)}
+.project-deck{font:700 clamp(20px,2.5vw,35px)/1.26 var(--mono);max-width:29ch;margin:0 0 26px}
+.doc-cta{margin-top:20px;min-width:220px}
+.drawing-collection{margin-top:80px;padding-top:15px}
+.draw-head{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:end;margin:38px 0 32px}
+.draw-head h3{font-size:clamp(56px,8vw,116px)}
+.draw-head .copy{max-width:48ch;margin:0 0 10px}
+.draw-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,4vw,55px)}
+.drawing-card{margin:0;min-width:0;border-top:1px solid #9d9991;padding-top:16px}
+.drawing-stage{background:var(--paper);width:100%;display:flex;align-items:center;justify-content:center;aspect-ratio:1.18;overflow:visible}
+.drawing-stage img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;filter:contrast(1.06);display:block}
+.drawing-card figcaption{margin-top:11px;border-top:1px solid #a7a096;padding-top:13px;display:flex;align-items:start;gap:12px;justify-content:space-between;font:800 11px/1.4 var(--mono)}
+.drawing-card figcaption>div{display:flex;flex-direction:column;gap:6px}
+.drawing-number{color:var(--accent-ink);font-size:10px}
+.drawing-card figcaption>a{font-size:10px;white-space:nowrap;text-decoration:underline;text-underline-offset:4px}
+.drawing-card figcaption>a:hover{color:var(--accent-ink)}
+.cuts .drawing-stage{aspect-ratio:1.1}
+.pdf-dialog{background:#111;color:#f3f0e9;border:1px solid #656565;width:min(96vw,1460px);height:min(94dvh,1000px);max-width:none;max-height:none;padding:0;margin:auto;overflow:hidden}
+.pdf-dialog::backdrop{background:rgba(5,9,17,.88);backdrop-filter:blur(6px)}
+.pdf-toolbar{height:62px;padding:10px clamp(12px,2vw,25px);display:flex;gap:14px;align-items:center;justify-content:space-between;background:#141414}
+.pdf-toolbar strong{font:900 13px var(--mono);letter-spacing:.045em}
+.pdf-toolbar-group{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pdf-toolbar a,.pdf-toolbar button{font:900 10px var(--mono);border:1px solid #777;background:transparent;color:#f3f0e9;padding:9px 12px;text-decoration:none;white-space:nowrap}
+.pdf-toolbar button{font-size:18px;padding:5px 11px;line-height:1}
+.pdf-toolbar a:hover,.pdf-toolbar button:hover{background:var(--accent);border-color:var(--accent)}
+.pdf-dialog iframe{display:block;width:100%;height:calc(100% - 62px);border:0;background:#eeeae2}
+@media(max-width:700px){.project-story,.draw-head{grid-template-columns:1fr}.draw-grid{grid-template-columns:1fr}.draw-head h3{font-size:clamp(58px,14vw,105px)}.archive-project{margin-top:70px}.drawing-collection{margin-top:70px}.pdf-toolbar strong{font-size:10px}.pdf-toolbar a{font-size:9px;padding:7px}.pdf-dialog{width:100vw;height:100dvh;border:0}.pdf-dialog iframe{height:calc(100% - 62px)}.render-label{bottom:15px;padding:12px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){.render-open .heroimg{transition:none}}
+
+/* V35 — SWAG II pastel pink / neutral reflected light / project-ready carousel */
+:root{--rose:#F5B8CB;--rose-deep:#B64A78}
+.render-open .render-label{overflow:hidden;isolation:isolate;border:1px solid rgba(245,184,203,.35);background:#161616;color:#f7f1e7;box-shadow:0 13px 35px rgba(0,0,0,.28);transition:transform .35s ease,border-color .35s ease}
+.render-open:hover .render-label{transform:translateY(-3px);border-color:var(--rose)}
+.render-label::before{content:'';position:absolute;inset:-50% auto -50% 0;width:33%;background:linear-gradient(94deg,transparent 0%,rgba(255,255,255,.05) 23%,rgba(255,255,255,.62) 48%,rgba(255,255,255,.06) 73%,transparent 100%);filter:blur(8px);transform:translateX(-240%) skewX(-19deg);animation:arch-silver-flow 4.7s linear infinite;pointer-events:none}
+.render-label>span{position:relative;z-index:2}
+@keyframes arch-silver-flow{0%{transform:translateX(-240%) skewX(-19deg)}65%,100%{transform:translateX(580%) skewX(-19deg)}}
+.project-hero-carousel{position:relative;background:#0b0b0b}
+.project-hero-controls{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px clamp(19px,4vw,62px);background:#151515;border-top:1px solid #343131;color:#f7f1e7;font:900 11px var(--mono);letter-spacing:.07em}
+.project-hero-controls[hidden]{display:none!important}
+.project-hero-actions{display:flex;align-items:center;gap:10px}
+.project-hero-actions button{background:#191919;color:#f8f1ea;border:1px solid #888;font:900 11px var(--mono);min-width:42px;min-height:39px;transition:background .25s ease,transform .25s ease}
+.project-hero-actions button:hover{background:var(--rose-deep);transform:translateY(-2px)}
+.project-hero-actions button:disabled{opacity:.35;cursor:default}
+#hero-index{color:var(--rose)}
+.arch-action{position:relative;overflow:hidden;isolation:isolate;background:#171717;color:#f5f0e9;border:1px solid #373132;display:inline-flex;align-items:center;justify-content:center;min-height:51px;padding:14px 19px;font:900 12px var(--mono);letter-spacing:.055em;transition:transform .32s ease,background .3s ease,border-color .3s ease;text-decoration:none}
+.arch-action:hover{transform:translateY(-3px);border-color:var(--rose-deep)}
+.arch-action::before{content:'';position:absolute;top:-40%;bottom:-40%;left:0;width:37%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),rgba(255,255,255,.65),rgba(255,255,255,.07),transparent);filter:blur(7px);transform:translateX(-250%) skewX(-22deg);animation:arch-silver-flow 4.7s linear infinite;pointer-events:none}
+.arch-action>span{position:relative;z-index:1}
+.doc-cta{margin-top:20px;min-width:235px}
+.drawing-cta-wrap{display:flex;align-items:center;justify-content:flex-end;padding-top:26px;margin-top:10px;border-top:1px solid #a7a096}
+.drawing-card figcaption{align-items:start}
+.drawing-card figcaption>a{display:none!important}
+.drawing-card .drawing-stage img{transition:transform .55s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.drawing-card:hover .drawing-stage img{transform:scale(1.015)}
+.arch-pink-pill{background:var(--rose);color:#191919;font:900 10px var(--mono);letter-spacing:.05em;padding:7px 10px}
+.pdf-toolbar strong span.accent-sep{color:var(--rose)}
+.pdf-toolbar a:hover,.pdf-toolbar button:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+@media(max-width:700px){.drawing-cta-wrap{justify-content:stretch}.drawing-cta-wrap .arch-action{width:100%}.arch-action{font-size:11px}.render-label{max-width:calc(100% - 36px)}}
+@media(prefers-reduced-motion:reduce){.render-label::before,.arch-action::before{animation:none}.arch-action,.render-open .render-label,.drawing-card .drawing-stage img{transition:none}}
+
+/* V36 — second architectural project / two original renders / editorial carousel */
+.project-hero-carousel .render-open .heroimg{transition:transform .75s cubic-bezier(.2,.75,.2,1),opacity .28s ease;width:100%;object-fit:contain;max-height:none;aspect-ratio:1672/941}
+.project-hero-carousel .render-open .heroimg.is-changing{opacity:.12}
+.project-hero-carousel .render-open{background:#101010}
+.project-hero-controls{flex-wrap:wrap}
+.project-hero-dots{display:flex;align-items:center;gap:8px;margin-left:auto;margin-right:18px}
+.project-hero-dots button{width:33px;height:7px;min-width:0;min-height:7px;border:1px solid rgba(245,184,203,.5);background:transparent;padding:0;transition:width .3s ease,background .3s ease}
+.project-hero-dots button[aria-current=true]{width:53px;background:var(--rose);border-color:var(--rose)}
+.project-hero-dots button:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+.project-hero-variation{color:#f7d9e3;font-size:10px}
+#open-dossier[data-kind=gallery]{cursor:pointer}
+#open-dossier[data-kind=gallery] .render-label{border-color:var(--rose)}
+.project02{margin-top:clamp(70px,9vw,130px);padding-top:0;scroll-margin-top:30px}
+.project02 .project-story{padding-bottom:30px}
+.project02-preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.project02-preview-grid figure{margin:0;min-width:0}
+.project02-preview-grid img{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.project02-preview-grid figure:hover img{transform:scale(1.025)}
+.project02-preview-grid figcaption{font:900 10px var(--mono);letter-spacing:.06em;border-top:1px solid #9e9890;margin-top:11px;padding-top:9px;display:flex;justify-content:space-between;gap:8px}
+.project02 .project02-note{color:#6f6c66;font:500 13px/1.55 var(--mono);max-width:70ch;margin:0 0 23px}
+@media(max-width:760px){.project-hero-dots{margin-left:0;margin-right:0;order:3;width:100%;justify-content:center;padding:8px 0}.project-hero-controls{row-gap:6px}.project02-preview-grid{grid-template-columns:1fr}.project-hero-carousel .render-open .heroimg{aspect-ratio:1672/941}.project02-preview-grid figure:hover img{transform:none}}
+@media(prefers-reduced-motion:reduce){.project-hero-carousel .render-open .heroimg,.project02-preview-grid img,.project-hero-dots button{transition:none}}
+
+
+/* V37 — fixed project chapters; each design proposal opens in a separate page */
+#eye-hub,#chack-mool{scroll-margin-top:30px}
+.eye-feature-render{margin:8px 0 0;border-top:1px solid #aaa59b;padding-top:16px}
+.eye-feature-render img{display:block;width:100%;height:auto;max-height:720px;object-fit:contain;background:#111}
+.eye-feature-render figcaption{display:flex;justify-content:space-between;gap:16px;padding:14px 0 10px;border-bottom:1px solid #aaa59b;font:900 11px/1.5 var(--mono);letter-spacing:.05em}
+.eye-feature-render figcaption span:last-child{color:var(--rose-deep)}
+.project-end-action{display:flex;justify-content:flex-end;padding-top:24px;margin-top:10px}
+.project02 .project-story h3{font-size:clamp(56px,8vw,126px)}
+#chack-mool .project-story{padding-bottom:28px}
+.project02{border-top:2px solid var(--ink);padding-top:18px}
+#open-dossier{cursor:pointer}
+#open-dossier:hover .heroimg{transform:scale(1.012)}
+@media(max-width:700px){.eye-feature-render figcaption{font-size:9px}.project-end-action .arch-action{width:100%;text-align:center}.project02 .project-story h3{font-size:clamp(56px,14vw,96px)}.eye-feature-render{margin-top:0}}
+
+/* V37 — details page shared layout */
+.detail-intro{padding:clamp(50px,8vw,125px) clamp(19px,4vw,62px) 45px}
+.detail-intro .kicker{margin-bottom:35px}
+.detail-intro h1{font:900 clamp(62px,11vw,158px)/.85 var(--head);margin:0 0 35px;letter-spacing:-.018em}
+.detail-intro h1 em{font-style:normal;color:var(--rose-deep)}
+.detail-deck{max-width:66ch;font:500 clamp(15px,1.8vw,21px)/1.5 var(--mono)}
+.detail-render{display:block;width:100%;height:auto;object-fit:contain;background:#121212;max-height:760px}
+.detail-render-frame{margin:0}
+.detail-render-frame figcaption{border-bottom:1px solid #aaa59b;display:flex;justify-content:space-between;font:900 10px var(--mono);padding:14px clamp(19px,4vw,62px)}
+.detail-tools{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.detail-tools a{min-width:210px}
+.detail-divider{height:1px;background:#aaa59b;margin:0 clamp(19px,4vw,62px)}
+.detail-gallery{display:grid;grid-template-columns:1fr;gap:24px}
+.detail-gallery img{width:100%;height:auto;object-fit:contain;display:block}
+.detail-gallery figure{margin:0}
+.detail-gallery figcaption{font:900 11px var(--mono);border-top:1px solid #a9a49d;padding:12px 0;margin-top:8px;display:flex;justify-content:space-between}
+.content-note{font:500 12px/1.55 var(--mono);max-width:75ch;color:#5b5651;margin-top:16px}
+@media(max-width:700px){.detail-intro h1{font-size:clamp(57px,14vw,110px)}.detail-tools{flex-direction:column}.detail-tools .arch-action{width:100%}}
+</style></head><body>
+<header class="header"><a class="brand" href="index.html">CHEMA DURÁN / SPACE &amp; FORM</a><nav class="links"><a href="arquitectura.html#archivo" data-es="ARCHIVO" data-en="ARCHIVE">ARCHIVO</a><a href="index.html#work" data-es="INICIO" data-en="HOME">INICIO</a><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></nav></header>
+<main><section class="detail-intro"><div class="kicker"><span data-es="PROYECTO 001 / ARCHIVO DE ANTEPROYECTO" data-en="PROJECT 001 / DESIGN PROPOSAL ARCHIVE">PROYECTO 001 / ARCHIVO DE ANTEPROYECTO</span><span>PUEBLA, MÉXICO</span></div><h1>THE EYE<br><em>HUB.</em></h1><p class="detail-deck" data-es="Una estructura que permite múltiples formas de encuentro. Explora la investigación, las plantas y las secciones de este anteproyecto." data-en="One structure, multiple ways of gathering. Explore the research, plans and sections of this design proposal.">Una estructura que permite múltiples formas de encuentro. Explora la investigación, las plantas y las secciones de este anteproyecto.</p><div class="detail-tools"><a class="arch-action" href="assets/the-eye-hub-dossier-35-paginas.pdf" target="_blank" rel="noopener"><span data-es="ABRIR DOSSIER COMPLETO · 35 PÁGINAS" data-en="OPEN FULL DOSSIER · 35 PAGES">ABRIR DOSSIER COMPLETO · 35 PÁGINAS</span></a></div></section>
+<figure class="detail-render-frame"><img class="detail-render" src="assets/space-form-render-original.webp" alt="THE EYE HUB, render arquitectónico original"><figcaption><span>THE EYE HUB</span><span data-es="REPRESENTACIÓN / PROYECTO 001" data-en="RENDER / PROJECT 001">REPRESENTACIÓN / PROYECTO 001</span></figcaption></figure>
+<section class="block" id="documentacion"><div class="kicker"><span data-es="ARCHIVO TÉCNICO" data-en="TECHNICAL ARCHIVE">ARCHIVO TÉCNICO</span><span data-es="PLANTAS + SECCIONES" data-en="PLANS + SECTIONS">PLANTAS + SECCIONES</span></div><p class="content-note" data-es="Las imágenes de los planos se integran sobre el fondo de la página. Para consultar cotas y especificaciones con precisión, utiliza los PDF finales mediante los botones de cada apartado." data-en="The drawings sit on the page background. To examine dimensions and specifications at full resolution, open the final PDFs using each section’s button.">Las imágenes de los planos se integran sobre el fondo de la página. Para consultar cotas y especificaciones con precisión, utiliza los PDF finales mediante los botones de cada apartado.</p><div class="drawing-collection" id="planos"><div class="kicker"><span data-en="02 / DRAWING ARCHIVE" data-es="02 / DOCUMENTACIÓN GRÁFICA">01 / DOCUMENTACIÓN GRÁFICA</span><span data-en="DRAWING ARCHIVE / PROJECT 001" data-es="ARCHIVO GRÁFICO / PROYECTO 001">ARCHIVO GRÁFICO / PROYECTO 001</span></div><div class="draw-head"><h3 data-en="FLOOR PLANS&lt;br&gt;&lt;em&gt;(in layers).&lt;/em&gt;" data-es="PLANTAS&lt;br&gt;&lt;em&gt;(en capas).&lt;/em&gt;">PLANTAS<br/><em>(en capas).</em></h3><p class="copy" data-en="Four levels of one system: service areas remain, while central and lateral spaces evolve. The drawings retain their original linework and annotations, with the PDF paper background removed." data-es="Cuatro niveles de un mismo sistema: las áreas de servicio permanecen, mientras los espacios centrales y laterales se transforman. Los dibujos conservan sus líneas y anotaciones, ahora sin el fondo de papel del PDF.">Cuatro niveles de un mismo sistema: las áreas de servicio permanecen, mientras los espacios centrales y laterales se transforman. Los dibujos conservan sus líneas y anotaciones, ahora sin el fondo de papel del PDF.</p></div><div class="draw-grid"><figure class="drawing-card"><div class="drawing-stage"><img alt="PLANTA BAJA de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="eager" src="assets/the-eye-hub-planta-baja-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 41" data-es="LÁMINA 41">LÁMINA 41</span><strong data-en="GROUND FLOOR" data-es="PLANTA BAJA">PLANTA BAJA</strong></div></figcaption></figure>
+<figure class="drawing-card"><div class="drawing-stage"><img alt="PRIMER NIVEL de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="eager" src="assets/the-eye-hub-planta-primera-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 42" data-es="LÁMINA 42">LÁMINA 42</span><strong data-en="FIRST FLOOR" data-es="PRIMER NIVEL">PRIMER NIVEL</strong></div></figcaption></figure>
+<figure class="drawing-card"><div class="drawing-stage"><img alt="SEGUNDO NIVEL de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="eager" src="assets/the-eye-hub-planta-segunda-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 43" data-es="LÁMINA 43">LÁMINA 43</span><strong data-en="SECOND FLOOR" data-es="SEGUNDO NIVEL">SEGUNDO NIVEL</strong></div></figcaption></figure>
+<figure class="drawing-card"><div class="drawing-stage"><img alt="AZOTEA de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="eager" src="assets/the-eye-hub-planta-azotea-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 45" data-es="LÁMINA 45">LÁMINA 45</span><strong data-en="ROOFTOP" data-es="AZOTEA">AZOTEA</strong></div></figcaption></figure></div><div class="drawing-cta-wrap"><a class="arch-action" href="assets/the-eye-hub-plantas-finales.pdf" rel="noopener" target="_blank"><span data-en="VIEW FINAL PLANS · PDF" data-es="VER PLANTAS FINALES · PDF">VER PLANTAS FINALES · PDF</span></a></div></div><div class="drawing-collection cuts"><div class="kicker"><span data-en="03 / SECTIONS" data-es="03 / SECCIONES">02 / SECCIONES</span><span data-en="STRUCTURE · SPACE · SCALE" data-es="ESTRUCTURA · ESPACIO · ESCALA">ESTRUCTURA · ESPACIO · ESCALA</span></div><div class="draw-head"><h3 data-en="SECTIONS&lt;br&gt;&lt;em&gt;(through space).&lt;/em&gt;" data-es="SECCIONES&lt;br&gt;&lt;em&gt;(del espacio).&lt;/em&gt;">SECCIONES<br/><em>(del espacio).</em></h3><p class="copy" data-en="Two sectional views of the building. Its levels, trusses and circulation reveal its spatial structure and flexibility. Explore dimensions and details in the final technical document." data-es="Dos lecturas del edificio en sección. Los niveles, las armaduras y las circulaciones revelan su estructura espacial y su flexibilidad. Consulta las cotas y detalles en el documento técnico final.">Dos lecturas del edificio en sección. Los niveles, las armaduras y las circulaciones revelan su estructura espacial y su flexibilidad. Consulta las cotas y detalles en el documento técnico final.</p></div><div class="draw-grid"><figure class="drawing-card"><div class="drawing-stage"><img alt="CORTE LATERAL DERECHO de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="eager" src="assets/the-eye-hub-corte-derecho-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 47" data-es="LÁMINA 47">LÁMINA 47</span><strong data-en="RIGHT SECTION" data-es="SECCIÓN LATERAL DERECHA">SECCIÓN LATERAL DERECHA</strong></div></figcaption></figure>
+<figure class="drawing-card"><div class="drawing-stage"><img alt="CORTE LATERAL IZQUIERDO de THE EYE HUB, extraído del documento original, sin fondo de página" decoding="async" loading="eager" src="assets/the-eye-hub-corte-izquierdo-sin-fondo.webp"/></div><figcaption><div><span class="drawing-number" data-en="SHEET 48" data-es="LÁMINA 48">LÁMINA 48</span><strong data-en="LEFT SECTION" data-es="SECCIÓN LATERAL IZQUIERDA">SECCIÓN LATERAL IZQUIERDA</strong></div></figcaption></figure></div><div class="drawing-cta-wrap"><a class="arch-action" href="assets/the-eye-hub-secciones-finales.pdf" rel="noopener" target="_blank"><span data-en="VIEW FINAL SECTIONS · PDF" data-es="VER SECCIONES FINALES · PDF">VER SECCIONES FINALES · PDF</span></a></div></div></section></main>
+<footer class="footer"><span>CHEMA DURÁN © 2026</span><a href="arquitectura.html#archivo" data-es="VOLVER A SPACE &amp; FORM" data-en="BACK TO SPACE &amp; FORM">VOLVER A SPACE &amp; FORM</a></footer><script>(()=>{const bs=document.querySelectorAll('[data-lang]');bs.forEach(b=>b.addEventListener('click',()=>{const lang=b.dataset.lang;document.documentElement.lang=lang;document.querySelectorAll('[data-es][data-en]').forEach(x=>x.innerHTML=x.dataset[lang]);bs.forEach(y=>y.setAttribute('aria-pressed',String(y===b)))}))})();</script></body></html>
