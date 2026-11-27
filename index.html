@@ -268,6 +268,12 @@
 
 /* CV bilingual downloads: only the section 03 controls */
 .cv-downloads{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}.cv-downloads a{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:12px 18px;border:1px solid currentColor;color:var(--ink);font:900 11px/1.3 var(--mono);letter-spacing:.035em;text-decoration:none;transition:background .2s,color .2s}.cv-downloads a:hover,.cv-downloads a:focus-visible{background:var(--ink);color:#fff}
+
+/* V50 — museo: imagen horizontal con mayor presencia; fotografía original intacta */
+.about-v45 .about-personal-portrait{width:min(540px,100%);margin:clamp(25px,3vw,44px) 0 0}
+.about-v45 .about-personal-portrait img{aspect-ratio: auto;object-fit:contain;height:auto}
+@media(max-width:1050px){.about-v45 .about-personal-portrait{width:100%}}
+@media(max-width:700px){.about-v45 .about-personal-portrait{width:100%;margin:24px auto 0}}
 </style>
 </head>
 <body>
@@ -352,7 +358,7 @@
         <img src="assets/chema-exposicion-arquitectura.png" alt="Chema en una exposición de arquitectura, junto a una maqueta arquitectónica" loading="eager" decoding="async" width="1616" height="1080" style="aspect-ratio: auto">
         <figcaption class="about-photo-meta"><span data-es="01 / LA PERSONA" data-en="01 / THE PERSON">01 / LA PERSONA</span><span>CHEMA DURÁN</span></figcaption>
       </figure>
-      <p class="about-sidemark"><span  data-es="CREATIVE MIND. ENTREPRENEURIAL SPIRIT. ALWAYS LEARNING." data-en="CREATIVE MIND. ENTREPRENEURIAL SPIRIT. ALWAYS LEARNING.">CREATIVE MIND. ENTREPRENEURIAL SPIRIT. ALWAYS LEARNING.</span></p>
+      
     </div>
     <div class="about-manifesto-box">
       <div class="about-manifesto-top"><span>CHEMA DURÁN</span><span>2026 / MX</span></div>
