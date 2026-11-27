@@ -188,6 +188,83 @@
 @media(max-width:480px){.about-giant{font-size:17vw}.about-giant .about-accent{font-size:.8em}.about-manifesto-box{min-height:360px;padding:25px}.about-manifesto-box h3{font-size:12vw}.about-proof-grid{grid-template-columns:1fr}.about-proof-card:nth-child(3){grid-column:auto}.about-proof-image,.about-proof-card:nth-child(3) .about-proof-image{height:345px}.about-proof-heading h3{font-size:14vw}.about-opportunity h3{font-size:10vw;letter-spacing:-.04em}.about-op-actions{flex-direction:column}.about-op-actions .cta{width:100%}.about-v45 .about-eyebrow{align-items:flex-start;flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){.about-manifesto-box:before{animation:none}.about-proof-image img{transition:none}}
 
+
+/* V46: muestran las dos nuevas imágenes completas, sin recortes. */
+.about-proof-card:nth-child(1) .about-proof-image,.about-proof-card:nth-child(2) .about-proof-image{background:#e8e1d5}
+.about-proof-card:nth-child(1) .about-proof-image img,.about-proof-card:nth-child(2) .about-proof-image img{object-fit:contain;object-position:center}
+
+/* V47 / LA PERSONA: dos fotografías originales, composición editorial discreta */
+.about-v45 .about-lead-left{justify-content:flex-start;align-items:stretch}
+.about-personal-portrait{margin:clamp(23px,3vw,43px) auto 0;width:min(305px,65%);min-width:0;position:relative}
+.about-personal-portrait::before{content:'';position:absolute;left:-14px;top:18px;bottom:35px;width:4px;background:var(--accent)}
+.about-personal-portrait img{display:block;width:100%;height:auto;aspect-ratio:9 / 16;object-fit:contain}
+.about-photo-meta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:11px;padding-top:8px;border-top:1px solid currentColor;font:900 9px/1.45 var(--mono);letter-spacing:.055em;text-transform:uppercase;white-space:normal}
+.about-v45 .about-sidemark{margin:23px 0 3px;max-width:46ch}
+.about-story{grid-template-columns:minmax(160px,.26fr) minmax(0,.48fr) minmax(190px,.26fr);gap:clamp(24px,3.2vw,55px);align-items:start}
+.about-story-body{display:flex;flex-direction:column;gap:clamp(20px,2vw,30px);min-width:0}
+.about-story-body p{grid-column:auto;margin:0;font-size:clamp(14px,1.26vw,18px);line-height:1.6}
+.about-story-body p:first-child{font-size:clamp(19px,1.85vw,27px);line-height:1.36;margin:0}
+.about-work-portrait{margin:5px 0 0;align-self:start;min-width:0}
+.about-work-photo-frame{padding:10px;background:#dcd7cc;border:1px solid #c3beb5}
+.about-work-portrait img{display:block;width:100%;height:auto;aspect-ratio:9 / 16;object-fit:contain}
+.about-work-portrait .about-photo-meta{border-color:#73706c}
+@media(max-width:1050px){
+ .about-personal-portrait{width:min(265px,65%)}
+ .about-story{grid-template-columns:minmax(125px,.22fr) minmax(0,.48fr) minmax(165px,.3fr);gap:22px}
+ .about-story-body p{font-size:14px}
+}
+@media(max-width:700px){
+ .about-personal-portrait{width:min(285px,76%);margin-top:20px}
+ .about-v45 .about-sidemark{margin-top:17px}
+ .about-story{grid-template-columns:minmax(0,1fr);gap:25px}
+ .about-story-body{gap:22px}
+ .about-story-body p{font-size:15px}
+ .about-work-portrait{width:min(265px,78%);margin:0 auto 0 0}
+ .about-work-photo-frame{padding:8px}
+}
+@media(max-width:480px){
+ .about-personal-portrait{width:min(255px,77%)}
+ .about-photo-meta{font-size:8px}
+ .about-work-portrait{width:min(245px,75%)}
+}
+
+/* V48 / La Persona — centered photograph, clarity on web, people and values */
+.about-story-body{gap:clamp(15px,1.65vw,23px)}
+.about-story-body p{line-height:1.56}
+.about-values-line{border-top:2px solid var(--ink);padding:15px 0 4px;margin-top:5px;display:flex;flex-direction:column;gap:3px;max-width:41ch}
+.about-values-line span{font:900 clamp(14px,1.38vw,19px)/1.17 var(--head);letter-spacing:-.02em}
+.about-values-line em{font:italic 700 clamp(18px,1.65vw,23px)/1.2 Georgia,'Times New Roman',serif;letter-spacing:-.025em;color:var(--accent)}
+@media(max-width:700px){.about-story-body{gap:18px}.about-values-line{margin-top:2px}.about-personal-portrait{margin-left:auto;margin-right:auto}}
+
+/* V49 / Contacto — tres rutas claras, correo como contacto principal. */
+.about-contact-v49{gap:clamp(28px,6vw,95px);align-items:start}
+.about-contact-v49 .about-contact-heading h2{margin-bottom:18px}
+.about-contact-kicker{font:900 10px/1.65 var(--mono);letter-spacing:.065em;display:block;color:var(--accent);max-width:31ch}
+.about-contact-v49 .contact-v49-main>p:first-child{margin:2px 0 25px;max-width:36ch;font-size:clamp(17px,1.85vw,24px);line-height:1.48}
+.contact-v49-actions{display:flex;flex-direction:column;gap:11px;min-width:0}
+.contact-v49-actions a{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;text-decoration:none;min-width:0;transition:transform .25s ease,background-color .25s ease,border-color .25s ease;}
+.contact-v49-actions a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.contact-v49-email{background:var(--accent);color:#fff;border:2px solid var(--accent);padding:clamp(19px,2.1vw,31px);min-height:174px;gap:12px}
+.contact-v49-email::after{content:'';position:absolute;inset:-60% auto -60% -65%;width:35%;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.03) 15%,rgba(255,255,255,.32) 51%,rgba(255,255,255,.02) 84%,transparent);filter:blur(8px);transform:skewX(-22deg);animation:contact-v49-shine 6.7s linear infinite;pointer-events:none;z-index:-1}
+@keyframes contact-v49-shine{0%,10%{left:-65%}70%,100%{left:150%}}
+.contact-v49-actions a:hover{transform:translateY(-2px)}
+.contact-v49-email:hover{background:#1162c8}
+.contact-v49-overline{font:900 clamp(9px,.78vw,11px)/1.25 var(--mono);letter-spacing:.085em;opacity:.8}
+.contact-v49-email strong{font:900 clamp(20px,2.4vw,33px)/1.05 var(--head);letter-spacing:-.035em;text-transform:uppercase;overflow-wrap:anywhere}
+.contact-v49-address{font:900 clamp(13px,1.55vw,20px)/1.35 var(--mono);letter-spacing:-.03em;overflow-wrap:anywhere;word-break:break-word}
+.contact-v49-secondary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.contact-v49-option{min-height:151px;padding:clamp(15px,1.5vw,22px);gap:10px;border:2px solid #171717}
+.contact-v49-option strong{font:900 clamp(18px,2vw,27px)/1.05 var(--head);letter-spacing:-.04em;overflow-wrap:anywhere}
+.contact-v49-option .contact-v49-sub{font:900 clamp(10px,.88vw,12px)/1.3 var(--mono);letter-spacing:-.01em;overflow-wrap:anywhere}
+.contact-v49-whatsapp{background:#171717;color:#f4f0e8}
+.contact-v49-whatsapp:hover{background:#2a2a2a}
+.contact-v49-instagram{background:transparent;color:var(--ink)}
+.contact-v49-instagram:hover{background:#e7e2d9}
+.about-contact-v49 .contact-v49-lastline{border-top:1px solid #aaa49a;margin:23px 0 0;padding-top:12px;font:900 10px/1.6 var(--mono);letter-spacing:.04em;color:#5f5d58}
+@media(max-width:900px){.about-contact-v49{gap:30px}}
+@media(max-width:520px){.contact-v49-secondary{grid-template-columns:1fr}.contact-v49-option{min-height:110px;padding:17px}.contact-v49-email{min-height:159px}.about-contact-v49 .contact-v49-main>p:first-child{margin-top:0}.about-contact-kicker{margin-bottom:6px}}
+@media(prefers-reduced-motion:reduce){.contact-v49-email::after{animation:none}.contact-v49-actions a{transition:none}}
+
 </style>
 </head>
 <body>
@@ -267,6 +344,11 @@
   <div class="about-lead-grid">
     <div class="about-lead-left">
       <h2 class="about-giant" id="about-heading"><span data-es="LA PERSONA" data-en="THE PERSON">LA PERSONA</span><span class="about-accent" data-es="detrás." data-en="behind.">detrás.</span></h2>
+
+      <figure class="about-personal-portrait">
+        <img src="assets/chema-persona-espejo-v47.jpg" alt="Autorretrato de Chema frente a un espejo, con camisa azul" loading="eager" decoding="async" width="1152" height="2048">
+        <figcaption class="about-photo-meta"><span data-es="01 / LA PERSONA" data-en="01 / THE PERSON">01 / LA PERSONA</span><span>CHEMA DURÁN</span></figcaption>
+      </figure>
       <p class="about-sidemark"><span  data-es="CREATIVE MIND. ENTREPRENEURIAL SPIRIT. ALWAYS LEARNING." data-en="CREATIVE MIND. ENTREPRENEURIAL SPIRIT. ALWAYS LEARNING.">CREATIVE MIND. ENTREPRENEURIAL SPIRIT. ALWAYS LEARNING.</span></p>
     </div>
     <div class="about-manifesto-box">
@@ -280,15 +362,21 @@
     <div class="about-story-body">
       <p data-es="Soy Chema Durán. Me interesan las ideas que dejan de ser ideas y se convierten en algo que alguien puede ver, usar o vivir." data-en="I'm Chema Durán. I'm interested in ideas that become something people can actually see, use or experience.">Soy Chema Durán. Me interesan las ideas que dejan de ser ideas y se convierten en algo que alguien puede ver, usar o vivir.</p>
       <p data-es="Me atraen el diseño, la arquitectura y los proyectos propios, pero también el trabajo físico que mantiene las cosas en marcha. He trabajado como dibujante en Puebla y en mantenimiento durante un verano en Vermont, Estados Unidos. Cada experiencia me ha enseñado algo distinto sobre responsabilidad y adaptación." data-en="I'm drawn to design, architecture and independent projects, but also to the hands-on work that keeps things running. I've worked as an architectural drafter in Puebla and in maintenance during a summer in Vermont, USA. Each experience has taught me something different about responsibility and adaptability.">Me atraen el diseño, la arquitectura y los proyectos propios, pero también el trabajo físico que mantiene las cosas en marcha. He trabajado como dibujante en Puebla y en mantenimiento durante un verano en Vermont, Estados Unidos. Cada experiencia me ha enseñado algo distinto sobre responsabilidad y adaptación.</p>
-      <p data-es="No necesito llegar sabiendo todo. Me gusta aprender de quienes tienen experiencia, entender los sistemas que funcionan y contribuir a mejorarlos cuando hay oportunidad. Si toca resolver un problema de diseño o hacerse cargo de una tarea operativa, quiero hacerla bien." data-en="I don't need to arrive knowing everything. I want to learn from experienced people, understand systems that work and help improve them where I can. Whether it's solving a design problem or taking responsibility for an operational task, I want to do it well.">No necesito llegar sabiendo todo. Me gusta aprender de quienes tienen experiencia, entender los sistemas que funcionan y contribuir a mejorarlos cuando hay oportunidad. Si toca resolver un problema de diseño o hacerse cargo de una tarea operativa, quiero hacerla bien.</p>
+      <p data-es="También he creado sitios web, desarrollado contenido y gestionado redes sociales para mis proyectos. Me gusta comunicarme con la gente: escuchar, explicar ideas con claridad y generar confianza para trabajar juntos." data-en="I've also built websites, created content and managed social media for my own projects. I enjoy connecting with people: listening, explaining ideas clearly and building trust to work together.">También he creado sitios web, desarrollado contenido y gestionado redes sociales para mis proyectos. Me gusta comunicarme con la gente: escuchar, explicar ideas con claridad y generar confianza para trabajar juntos.</p>
+      <p data-es="Me adapto a distintos equipos, tareas y maneras de trabajar, sin perder lo que considero esencial: honestidad, respeto y responsabilidad. Quiero aprender de quienes tienen experiencia, entender lo que ya funciona y ayudar a mejorarlo. Sea un problema de diseño o una tarea operativa, mi compromiso es hacerla bien." data-en="I adapt to different teams, tasks and ways of working without compromising what matters to me: honesty, respect and responsibility. I want to learn from experienced people, understand what already works and help make it better. Whether it's a design challenge or an operational task, I'm committed to doing it well.">Me adapto a distintos equipos, tareas y maneras de trabajar, sin perder lo que considero esencial: honestidad, respeto y responsabilidad. Quiero aprender de quienes tienen experiencia, entender lo que ya funciona y ayudar a mejorarlo. Sea un problema de diseño o una tarea operativa, mi compromiso es hacerla bien.</p>
+      <div class="about-values-line"><span data-es="ADAPTABLE EN EL TRABAJO." data-en="FLEXIBLE IN HOW I WORK.">ADAPTABLE EN EL TRABAJO.</span><em data-es="Firme en mis principios." data-en="Steady in my values.">Firme en mis principios.</em></div>
     </div>
+    <figure class="about-work-portrait">
+      <div class="about-work-photo-frame"><img src="assets/chema-persona-trabajando-v47.jpg" alt="Chema realizando trabajo físico de mantenimiento con herramientas junto a una ventana" loading="eager" decoding="async" width="1152" height="2048"></div>
+      <figcaption class="about-photo-meta"><span data-es="02 / EN ACCIÓN" data-en="02 / AT WORK">02 / EN ACCIÓN</span><span>HANDS-ON / MX</span></figcaption>
+    </figure>
   </div>
 </section>
 <section class="about-proof" aria-label="Experiencia y proyectos reales">
   <div class="about-proof-heading"><div><span class="about-story-index"><span  data-es="NO SOLO PALABRAS / TRABAJO REAL" data-en="NOT JUST WORDS / REAL WORK">NO SOLO PALABRAS / TRABAJO REAL</span></span><h3><span  data-es="HECHO &lt;em&gt;(en la vida real).&lt;/em&gt;" data-en="DONE &lt;em&gt;(in real life).&lt;/em&gt;">HECHO <em>(en la vida real).</em></span></h3></div><p><span  data-es="DOS EXPERIENCIAS LABORALES DIFERENTES. LA MISMA DISPOSICIÓN PARA APRENDER Y APORTAR." data-en="TWO VERY DIFFERENT WORK EXPERIENCES. THE SAME WILLINGNESS TO LEARN AND CONTRIBUTE.">DOS EXPERIENCIAS LABORALES DIFERENTES. LA MISMA DISPOSICIÓN PARA APRENDER Y APORTAR.</span></p></div>
   <div class="about-proof-grid">
-    <a class="about-proof-card" href="experiencias.html#ambiente-de-diseno" aria-label="Ver experiencia en Ambiente de Diseño"><div class="about-proof-image"><img src="assets/experiencia-ambiente-de-diseno-original.jpg" loading="lazy" alt="Fotografía original de Chema en Ambiente de Diseño"><span class="about-proof-photo-label">PUEBLA / MÉXICO</span></div><div class="about-proof-meta"><span>01 / <span  data-es="EXPERIENCIA" data-en="EXPERIENCE">EXPERIENCIA</span></span><span>2026</span></div><h4>AMBIENTE DE DISEÑO</h4><p><span  data-es="Dibujo arquitectónico · Lomas de Angelópolis, Puebla." data-en="Architectural drafting · Lomas de Angelópolis, Puebla.">Dibujo arquitectónico · Lomas de Angelópolis, Puebla.</span></p></a>
-    <a class="about-proof-card" href="experiencias.html#vermont" aria-label="Ver experiencia de mantenimiento en Vermont"><div class="about-proof-image"><img src="assets/experiencia-vermont-original.jpg" loading="lazy" alt="Retrato original de Chema con uniforme de trabajo en Vermont"><span class="about-proof-photo-label">VERMONT / USA</span></div><div class="about-proof-meta"><span>02 / <span  data-es="EXPERIENCIA" data-en="EXPERIENCE">EXPERIENCIA</span></span><span>2026</span></div><h4><span  data-es="MANTENIMIENTO" data-en="MAINTENANCE">MANTENIMIENTO</span></h4><p><span  data-es="Trabajo operativo y físico durante una temporada de verano en Estados Unidos." data-en="Hands-on operational work during a summer season in the United States.">Trabajo operativo y físico durante una temporada de verano en Estados Unidos.</span></p></a>
+    <a class="about-proof-card" href="experiencias.html#ambiente-de-diseno" aria-label="Ver experiencia en Ambiente de Diseño"><div class="about-proof-image"><img src="assets/experiencia-ambiente-de-diseno-v46.png" loading="lazy" alt="Composición arquitectónica de Ambiente de Diseño: render de viviendas, logotipo y contraste editorial"><span class="about-proof-photo-label">PUEBLA / MÉXICO</span></div><div class="about-proof-meta"><span>01 / <span  data-es="EXPERIENCIA" data-en="EXPERIENCE">EXPERIENCIA</span></span><span>2026</span></div><h4>AMBIENTE DE DISEÑO</h4><p><span  data-es="Dibujo arquitectónico · Lomas de Angelópolis, Puebla." data-en="Architectural drafting · Lomas de Angelópolis, Puebla.">Dibujo arquitectónico · Lomas de Angelópolis, Puebla.</span></p></a>
+    <a class="about-proof-card" href="experiencias.html#vermont" aria-label="Ver experiencia de mantenimiento en Vermont"><div class="about-proof-image"><img src="assets/experiencia-vermont-v46.jpg" loading="lazy" alt="Fotografía grupal del equipo de trabajo de Camp Lochearn en Vermont"><span class="about-proof-photo-label">VERMONT / USA</span></div><div class="about-proof-meta"><span>02 / <span  data-es="EXPERIENCIA" data-en="EXPERIENCE">EXPERIENCIA</span></span><span>2026</span></div><h4><span  data-es="MANTENIMIENTO" data-en="MAINTENANCE">MANTENIMIENTO</span></h4><p><span  data-es="Trabajo operativo y físico durante una temporada de verano en Estados Unidos." data-en="Hands-on operational work during a summer season in the United States.">Trabajo operativo y físico durante una temporada de verano en Estados Unidos.</span></p></a>
     <a class="about-proof-card" href="#work" aria-label="Explorar proyectos creativos independientes"><div class="about-proof-image"><img src="assets/salsa-foto-01.jpg" loading="lazy" alt="Fotografía real de la marca independiente Salsa Pacheco"><span class="about-proof-photo-label">INDEPENDENT / MX</span></div><div class="about-proof-meta"><span>03 / <span  data-es="INICIATIVA" data-en="INITIATIVE">INICIATIVA</span></span><span><span  data-es="EN DESARROLLO" data-en="ONGOING">EN DESARROLLO</span></span></div><h4><span  data-es="PROYECTOS PROPIOS" data-en="INDEPENDENT PROJECTS">PROYECTOS PROPIOS</span></h4><p><span  data-es="Diseño, editorial y emprendimiento: ideas que también me toca llevar a la práctica." data-en="Design, editorial work and entrepreneurship: ideas I take responsibility for bringing to life.">Diseño, editorial y emprendimiento: ideas que también me toca llevar a la práctica.</span></p></a>
   </div>
 </section>
@@ -303,7 +391,36 @@
   </div>
 </section>
 <section class="section text-section about-cv-v45" id="cv"><div><span class="label" data-es="03 / TRAYECTORIA" data-en="03 / CAREER">03 / TRAYECTORIA</span><h2 data-es="EL<br>RECORRIDO." data-en="THE<br>JOURNEY.">EL<br>RECORRIDO.</h2></div><div><p data-es="Mi experiencia combina dibujo arquitectónico, trabajo operativo y proyectos independientes. Cada etapa representa nuevas habilidades, distintas responsabilidades y mucho aprendizaje." data-en="My experience brings together architectural drafting, operational work and independent projects. Each chapter represents new skills, different responsibilities and continued learning.">Mi experiencia combina dibujo arquitectónico, trabajo operativo y proyectos independientes. Cada etapa representa nuevas habilidades, distintas responsabilidades y mucho aprendizaje.</p><a class="contactline" href="experiencias.html" data-es="EXPLORAR EXPERIENCIAS" data-en="EXPLORE EXPERIENCE">EXPLORAR EXPERIENCIAS</a><span class="cv-kicker" data-es="CV FORMAL / DISPONIBLE BAJO SOLICITUD" data-en="FORMAL RESUME / AVAILABLE UPON REQUEST">CV FORMAL / DISPONIBLE BAJO SOLICITUD</span></div></section>
-<section class="section text-section about-contact-v45" id="contact"><div><span class="label" data-es="04 / CONTACTO" data-en="04 / CONTACT">04 / CONTACTO</span><h2 data-es="HAGAMOS<br>ALGO<br>REAL." data-en="LET’S<br>MAKE IT<br>REAL.">HAGAMOS<br>ALGO<br>REAL.</h2></div><div><p data-es="¿Buscas a alguien con curiosidad, iniciativa y ganas de trabajar? Me interesa conocer oportunidades laborales, equipos y proyectos donde pueda contribuir." data-en="Looking for someone curious, proactive and willing to work? I’m interested in employment opportunities, teams and projects where I can contribute.">¿Buscas a alguien con curiosidad, iniciativa y ganas de trabajar? Me interesa conocer oportunidades laborales, equipos y proyectos donde pueda contribuir.</p><a class="contactline" href="https://www.instagram.com/chemadurann/" target="_blank" rel="noopener noreferrer" data-es="ESCRIBIRME / @CHEMADURANN" data-en="MESSAGE ME / @CHEMADURANN">ESCRIBIRME / @CHEMADURANN</a><span class="contact-note" data-es="CONTACTO DISPONIBLE POR MENSAJE DIRECTO. CORREO PROFESIONAL Y CV DESCARGABLE PENDIENTES DE INCORPORAR." data-en="CONTACT AVAILABLE VIA DIRECT MESSAGE. PROFESSIONAL EMAIL AND DOWNLOADABLE RESUME TO BE ADDED.">CONTACTO DISPONIBLE POR MENSAJE DIRECTO. CORREO PROFESIONAL Y CV DESCARGABLE PENDIENTES DE INCORPORAR.</span></div></section>
+<section class="section text-section about-contact-v45 about-contact-v49" id="contact">
+  <div class="about-contact-heading">
+    <span class="label" data-es="04 / CONTACTO" data-en="04 / CONTACT">04 / CONTACTO</span>
+    <h2 data-es="HAGAMOS<br>ALGO<br>REAL." data-en="LET’S<br>MAKE IT<br>REAL.">HAGAMOS<br>ALGO<br>REAL.</h2>
+    <span class="about-contact-kicker" data-es="ABIERTOS A NUEVAS CONVERSACIONES / 2026" data-en="OPEN TO NEW CONVERSATIONS / 2026">ABIERTOS A NUEVAS CONVERSACIONES / 2026</span>
+  </div>
+  <div class="contact-v49-main">
+    <p data-es="¿Tienes una oportunidad laboral, una propuesta o una idea que quieras compartir? Me encantará conocerla. Estas son las formas más sencillas de ponernos en contacto." data-en="Have a job opportunity, a proposal or an idea to share? I’d love to hear about it. Here are the easiest ways to get in touch.">¿Tienes una oportunidad laboral, una propuesta o una idea que quieras compartir? Me encantará conocerla. Estas son las formas más sencillas de ponernos en contacto.</p>
+    <div class="contact-v49-actions" aria-label="Opciones de contacto">
+      <a class="contact-v49-email" href="mailto:chemaduu10@gmail.com" aria-label="Enviar correo a chemaduu10@gmail.com">
+        <span class="contact-v49-overline" data-es="01 / CONTACTO PRINCIPAL" data-en="01 / PRIMARY CONTACT">01 / CONTACTO PRINCIPAL</span>
+        <strong data-es="ESCRÍBEME POR CORREO" data-en="EMAIL ME DIRECTLY">ESCRÍBEME POR CORREO</strong>
+        <span class="contact-v49-address">chemaduu10@gmail.com</span>
+      </a>
+      <div class="contact-v49-secondary">
+        <a class="contact-v49-option contact-v49-whatsapp" href="https://wa.me/qr/AISZKAAFXSFYL1?s=r" target="_blank" rel="noopener noreferrer" aria-label="Abrir mi contacto de WhatsApp">
+          <span class="contact-v49-overline" data-es="02 / CONVERSACIÓN" data-en="02 / CONVERSATION">02 / CONVERSACIÓN</span>
+          <strong>WHATSAPP</strong>
+          <span class="contact-v49-sub" data-es="INICIAR UN CHAT" data-en="START A CHAT">INICIAR UN CHAT</span>
+        </a>
+        <a class="contact-v49-option contact-v49-instagram" href="https://www.instagram.com/chemadurann/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @chemadurann">
+          <span class="contact-v49-overline" data-es="03 / REDES SOCIALES" data-en="03 / SOCIAL MEDIA">03 / REDES SOCIALES</span>
+          <strong>INSTAGRAM</strong>
+          <span class="contact-v49-sub">@CHEMADURANN</span>
+        </a>
+      </div>
+    </div>
+    <p class="contact-v49-lastline" data-es="MÉXICO / OPORTUNIDADES NACIONALES E INTERNACIONALES" data-en="MEXICO / NATIONAL AND INTERNATIONAL OPPORTUNITIES">MÉXICO / OPORTUNIDADES NACIONALES E INTERNACIONALES</p>
+  </div>
+</section>
 </main>
 <footer class="page-footer"><span>CHEMA DURÁN © 2026</span><span>DESIGNED TO KEEP EVOLVING</span></footer>
 <script>
