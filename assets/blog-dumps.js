@@ -1,20 +1,47 @@
 // CHEMA DURÁN / BLOG PERSONAL
-// Para agregar un dump, añade un objeto a la lista. Usa fotos dentro de assets/.
-// Puedes incluir varias fotos y un enlace de canción de Spotify por publicación.
+// Publicaciones reales. Fotos y video originales, sin retoques de contenido.
+// Para agregar un dump, añade un objeto en el arreglo manteniendo este formato.
 window.CHEMA_BLOG_POSTS = [
   {
-    id: 'visual-stories-001',
-    number: '001',
-    location: 'NEW YORK',
-    date_es: 'ARCHIVO PERSONAL',
-    date_en: 'PERSONAL ARCHIVE',
-    title_es: 'Primer dump / vista de ejemplo',
-    title_en: 'First dump / sample layout',
-    caption_es: 'Este es un ejemplo de cómo se verá tu feed. Cuando elijas las fotografías definitivas, aquí pondremos el caption con tus propias palabras.',
-    caption_en: 'This is a preview of how your feed will look. Once you choose the final photos, we’ll use your own words for the caption.',
-    photos: [
-      {src:'assets/visual-stories-foto-original.jpg',alt_es:'Fotografía original en Nueva York',alt_en:'Original photograph in New York'}
+    "id": "puebla-city-001",
+    "number": "001",
+    "location": "PUEBLA CITY",
+    "date_es": "ARCHIVO PERSONAL",
+    "date_en": "PERSONAL ARCHIVE",
+    "title_es": "PUEBLA CITY",
+    "title_en": "PUEBLA CITY",
+    "caption_es": "AMO PUEBLA, ES MI HOGAR",
+    "caption_en": "AMO PUEBLA, ES MI HOGAR",
+    "photos": [
+      {
+        "src": "assets/puebla-city-001-01.jpg",
+        "alt_es": "Vista nocturna de Puebla desde las alturas",
+        "alt_en": "Vista nocturna de Puebla desde las alturas"
+      },
+      {
+        "src": "assets/puebla-city-001-02.jpg",
+        "alt_es": "Mirador de cristal iluminado de noche en Puebla",
+        "alt_en": "Mirador de cristal iluminado de noche en Puebla"
+      },
+      {
+        "src": "assets/puebla-city-001-03.jpg",
+        "alt_es": "Mesa con mapas y cuadernos de trabajo creativo",
+        "alt_en": "Mesa con mapas y cuadernos de trabajo creativo"
+      },
+      {
+        "src": "assets/puebla-city-001-04.jpg",
+        "alt_es": "Visita a exposición de arquitectura en Puebla",
+        "alt_en": "Visita a exposición de arquitectura en Puebla"
+      },
+      {
+        "type": "video",
+        "src": "assets/puebla-city-dump-001.mp4",
+        "poster": "assets/puebla-city-video-cover.jpg",
+        "alt_es": "Video original del dump Puebla City",
+        "alt_en": "Original video from the Puebla City photo dump"
+      }
     ],
-    spotify: '' // Ejemplo futuro: https://open.spotify.com/track/IDENTIFICADOR
+    "spotify": "https://open.spotify.com/track/4MZSqgwlE71CWZ6qQ3gkKm",
+    "spotify_label": "<3 — BAD BUNNY"
   }
 ];
