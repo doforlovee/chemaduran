@@ -133,27 +133,14 @@
 @media(max-width:700px){.project-visual .visual-art{aspect-ratio:1.15}.project-visual .visual-actions{grid-template-columns:1fr;gap:6px;padding-left:6%;padding-right:6%;padding-bottom:6%}.project-visual .visual-actions a{min-height:39px;font-size:10px}.project-visual .visual-photo{object-position:50% center}}
 @media(prefers-reduced-motion:reduce){.project-visual .visual-photo,.project-visual .visual-actions{transition:none}.project-visual .visual-actions a::before{animation:none}}
 
-/* V43 / Prompt is away from the left arrow so both remain usable. */
-.project-visual .experience-image-link .experience-link-prompt{top:25%;transform:none}
-@media(hover:none),(pointer:coarse){.project-visual .experience-image-link .experience-link-prompt{top:25%}}
-/* V43 / Portrait experience photographs: original image fully visible. */
-.project-visual .visual-photo.experience-portrait{object-fit:contain;object-position:center center;background:#171717}
-/* V42 - visual stories: experience carousel, separate from personal blog */
+/* Visual Stories: one original New York photo links to the independent experience notes. */
 .project-visual .experience-image-link{position:absolute;inset:0;z-index:1;text-decoration:none;cursor:pointer;outline-offset:-5px}
 .project-visual .experience-image-link .experience-link-prompt{position:absolute;left:6.7%;top:50%;transform:translateY(-50%);display:inline-flex;gap:9px;align-items:center;padding:10px 13px;color:#f7f4eb;background:#111b;border:1px solid #ffffff73;font:900 10px/1.3 var(--mono);letter-spacing:.06em;backdrop-filter:blur(4px);opacity:0;transition:opacity .3s ease}
 .project-visual .visual-art:hover .experience-link-prompt,.project-visual .experience-image-link:focus-visible .experience-link-prompt{opacity:1}
-.project-visual .experience-count{position:absolute;top:7%;right:6.7%;color:#fff;z-index:2;font:900 11px var(--mono);letter-spacing:.1em;text-shadow:0 2px 8px #000a;pointer-events:none}
-.project-visual .experience-controls{position:absolute;left:6.7%;right:6.7%;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:space-between;pointer-events:none;z-index:4}
-.project-visual .experience-arrow{pointer-events:auto;display:flex;align-items:center;justify-content:center;border:1px solid #fff9;background:#101010a8;color:#fff;width:36px;height:45px;font:400 30px Georgia,serif;transition:background .2s,transform .2s}
-.project-visual .experience-arrow:hover{background:#1877f2;transform:scale(1.065)}
-.project-visual .experience-arrow[hidden],.project-visual .experience-controls[hidden]{display:none}
 .project-visual .visual-photo{transition:opacity .25s ease,transform .65s cubic-bezier(.2,.75,.22,1)}
 .project-visual .visual-photo.is-changing{opacity:.35}
 @media(hover:none),(pointer:coarse){.project-visual .experience-image-link .experience-link-prompt{opacity:1;top:46%;font-size:9px;padding:9px 10px}}
 @media(prefers-reduced-motion:reduce){.project-visual .experience-image-link .experience-link-prompt,.project-visual .visual-photo{transition:none}}
-/* V43 / Keep story prompt distinct from the carousel controls. */
-.project-visual .experience-image-link .experience-link-prompt{top:24%;transform:none}
-@media(hover:none),(pointer:coarse){.project-visual .experience-image-link .experience-link-prompt{top:24%}}
 </style>
 </head>
 <body>
@@ -219,8 +206,6 @@
     <img id="experience-image" class="visual-photo" src="assets/visual-stories-foto-original.jpg" alt="Fotografía original de dos jóvenes en una avenida de Nueva York, con edificios y espectaculares al fondo" loading="lazy" decoding="async">
     <a id="experience-open" class="experience-image-link" href="experiencias.html#new-york" aria-label="Abrir nota breve: experiencia en Nueva York"><span class="experience-link-prompt" data-es="VER HISTORIA / NEW YORK" data-en="OPEN STORY / NEW YORK">VER HISTORIA / NEW YORK</span></a>
     <small>004 / VISUAL STORIES</small>
-    <span class="experience-count" id="experience-count" aria-live="polite">01 / 01</span>
-    <div class="experience-controls" id="experience-controls" aria-label="Carrusel de experiencias laborales" hidden><button class="experience-arrow" id="experience-prev" type="button" aria-label="Experiencia anterior">‹</button><button class="experience-arrow" id="experience-next" type="button" aria-label="Siguiente experiencia">›</button></div>
     <div class="visual-actions" role="group" aria-label="Explorar historias visuales">
       <a href="blog-personal.html" data-es="BLOG PERSONAL" data-en="PERSONAL BLOG">BLOG PERSONAL</a>
       <a href="https://www.instagram.com/chemadurann/" target="_blank" rel="noopener noreferrer" data-es="INSTAGRAM" data-en="INSTAGRAM" aria-label="Abrir Instagram personal @chemadurann en una pestaña nueva">INSTAGRAM</a>
@@ -243,40 +228,5 @@ document.querySelectorAll('[data-en][data-es]').forEach(el=>{el.innerHTML=el.dat
 document.querySelectorAll('[data-label-en][data-label-es]').forEach(el=>el.setAttribute('aria-label',el.dataset['label'+chosenLang[0].toUpperCase()+chosenLang.slice(1)]));
 const toggle=document.querySelector('.menu-trigger'),menu=document.querySelector('.mobile-menu');toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'CLOSE':'MENU';document.body.style.overflow=open?'hidden':''});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='MENU';document.body.style.overflow=''}));document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>{let lang=btn.dataset.lang;document.documentElement.lang=lang;document.querySelectorAll('[data-en][data-es]').forEach(el=>el.innerHTML=el.dataset[lang]);document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));document.querySelectorAll('[data-label-en][data-label-es]').forEach(el=>el.setAttribute('aria-label',el.dataset['label'+lang[0].toUpperCase()+lang.slice(1)]))}));})();
 
-// A second, independent content system: brief notes on professional experiences.
-// Add one object per photograph; the main blog/Photo Dumps are NOT used here.
-const experienceSlides=[
- {src:'assets/visual-stories-foto-original.jpg',href:'experiencias.html#new-york',
-  alt_es:'Fotografía original en Nueva York',alt_en:'Original photo in New York',
-  prompt_es:'VER HISTORIA / NEW YORK',prompt_en:'OPEN STORY / NEW YORK',
-  label_es:'Abrir nota breve: Nueva York',label_en:'Open short note: New York'},
- {src:'assets/experiencia-ambiente-de-diseno-original.jpg',href:'experiencias.html#ambiente-de-diseno',
-  alt_es:'Fotografía original en Ambiente de Diseño, Puebla',alt_en:'Original photograph at Ambiente de Diseño, Puebla',
-  prompt_es:'VER HISTORIA / PUEBLA',prompt_en:'OPEN STORY / PUEBLA',
-  label_es:'Abrir nota breve: Ambiente de Diseño, Puebla',label_en:'Open short note: Ambiente de Diseño, Puebla'},
- {src:'assets/experiencia-vermont-original.jpg',href:'experiencias.html#vermont',
-  alt_es:'Fotografía original del verano trabajando en Vermont',alt_en:'Original photograph from summer work in Vermont',
-  prompt_es:'VER HISTORIA / VERMONT',prompt_en:'OPEN STORY / VERMONT',
-  label_es:'Abrir nota breve: mantenimiento en Vermont',label_en:'Open short note: maintenance work in Vermont'}
-];
-(()=>{
- const image=document.getElementById('experience-image'),link=document.getElementById('experience-open'),
- prompt=link.querySelector('.experience-link-prompt'),count=document.getElementById('experience-count'),
- controls=document.getElementById('experience-controls'),prev=document.getElementById('experience-prev'),next=document.getElementById('experience-next');
- let index=0;
- function draw(){
-  const s=experienceSlides[index],lang=document.documentElement.lang==='en'?'en':'es';
-  image.src=s.src;image.classList.toggle('experience-portrait',index>0);image.alt=s['alt_'+lang];link.href=s.href;link.setAttribute('aria-label',s['label_'+lang]);
-  prompt.textContent=s['prompt_'+lang];count.textContent=String(index+1).padStart(2,'0')+' / '+String(experienceSlides.length).padStart(2,'0');
-  controls.hidden=experienceSlides.length<2;
- }
- function step(direction){index=(index+direction+experienceSlides.length)%experienceSlides.length;draw()}
- prev.addEventListener('click',()=>step(-1));next.addEventListener('click',()=>step(1));
- const surface=link.closest('.visual-art');let touchX=null;
- surface.addEventListener('touchstart',e=>{if(e.target.closest('a,button')&&e.target!==link)return;touchX=e.touches[0].clientX},{passive:true});
- surface.addEventListener('touchend',e=>{if(touchX===null)return;const dx=e.changedTouches[0].clientX-touchX;touchX=null;if(Math.abs(dx)>50&&experienceSlides.length>1)step(dx<0?1:-1)},{passive:true});
- document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',draw));
- draw();
-})();
 </script>
 </body></html>
