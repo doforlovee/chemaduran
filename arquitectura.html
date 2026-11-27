@@ -128,6 +128,49 @@
 .skills .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
 .skills .skill p{overflow-wrap:normal}
 @media(max-width:650px){.skills .grid{grid-template-columns:1fr}}
+
+/* V39 — independently featured parametric study, respectful of the 2 primary projects */
+.param-feature{padding-top:clamp(66px,9vw,134px);padding-bottom:clamp(65px,9vw,120px);background:#171717;color:#eeeae2}
+.param-feature .kicker{border-color:#eeeae2}
+.param-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:clamp(22px,5vw,86px);align-items:end;margin:clamp(32px,4vw,64px) 0 clamp(30px,5vw,72px)}
+.param-top h2{font-size:clamp(58px,6vw,112px);line-height:.88;margin:0;min-width:0}
+.param-top h2 em{color:var(--rose);font-style:normal}
+.param-intro{align-self:end;border-top:1px solid rgba(255,255,255,.38);padding-top:20px}
+.param-intro p{font:500 clamp(15px,1.5vw,21px)/1.55 var(--mono);margin:0}
+.param-intro .param-under{font:800 10px/1.6 var(--mono);letter-spacing:.08em;color:var(--rose);margin:16px 0 0}
+.param-hero{margin:0;position:relative;overflow:hidden;border:1px solid #443936}
+.param-hero img{display:block;width:100%;height:auto;transition:transform .75s cubic-bezier(.2,.7,.2,1)}
+.param-hero:hover img{transform:scale(1.015)}
+.param-hero figcaption{display:flex;justify-content:space-between;gap:15px;padding:14px 0;color:#e7ddd3;font:800 10px/1.5 var(--mono);letter-spacing:.045em}
+.param-hero figcaption span:last-child{color:var(--rose)}
+.param-bottom{background:#ebe8e0;color:#151515;padding:clamp(28px,4vw,60px);margin-top:clamp(30px,5vw,74px);border-top:7px solid var(--rose)}
+.param-bottom-title{display:flex;justify-content:space-between;align-items:end;gap:25px;border-bottom:1px solid #97918b;padding:0 0 23px}
+.param-bottom-title h3{font:900 clamp(36px,5.4vw,80px)/.95 var(--head);margin:0;letter-spacing:-.015em}
+.param-bottom-title h3 em{color:var(--rose-deep);font-style:normal}
+.param-bottom-title p{font:700 11px/1.55 var(--mono);max-width:31ch;margin:0}
+.param-slideshow{margin-top:clamp(20px,3vw,35px);display:grid;grid-template-columns:minmax(0,1.6fr) minmax(190px,.64fr);gap:clamp(15px,3vw,50px);align-items:center}
+.param-visual{aspect-ratio:16/9;background:#dcd7ce;border:1px solid #b7afa5;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-width:0}
+.param-visual img{display:none;width:100%;height:100%;object-fit:contain}
+.param-visual[data-loaded=true] img{display:block}
+.param-visual[data-loaded=true] .param-missing{display:none}
+.param-missing{text-align:center;padding:30px;max-width:390px;color:#66605a;font:700 12px/1.6 var(--mono)}
+.param-missing strong{display:block;font:900 clamp(30px,4vw,56px)/.9 var(--head);color:#8e877f;margin-bottom:14px}
+.param-info{display:flex;flex-direction:column;gap:25px;align-self:stretch;justify-content:center}
+.param-info .param-tag{font:900 11px var(--mono);color:var(--rose-deep)}
+.param-info h4{font:900 clamp(25px,3.2vw,49px)/1.02 var(--head);margin:0}
+.param-info .param-text{font:500 12px/1.8 var(--mono);margin:0;max-width:35ch}
+.param-switch{display:flex;gap:11px;align-items:center}
+.param-switch button{width:49px;height:49px;display:flex;align-items:center;justify-content:center;color:var(--ink);background:transparent;border:1px solid #827c75;font-size:24px;transition:background .2s,border-color .2s}
+.param-switch button:hover{background:var(--rose);border-color:var(--rose-deep)}
+.param-switch .param-counter{font:900 12px var(--mono);margin-left:6px}
+.param-indicators{display:flex;gap:8px;align-items:center;margin-top:22px}
+.param-indicators button{width:clamp(30px,5.5vw,66px);height:4px;background:#b8b0a5;border:0;padding:0;transition:background .2s,height .2s}
+.param-indicators button[aria-current=true]{background:var(--rose-deep);height:6px}
+.param-feature .param-note{font:500 10px/1.65 var(--mono);opacity:.75;margin:20px 0 0}
+@media(max-width:1050px){.param-top{grid-template-columns:1fr}.param-top h2{font-size:clamp(55px,9vw,100px)}}
+@media(max-width:760px){.param-top{grid-template-columns:1fr}.param-top h2{font-size:clamp(46px,10.6vw,78px)}.param-slideshow{grid-template-columns:1fr}.param-bottom-title{flex-direction:column;align-items:start}.param-hero figcaption{font-size:9px}.param-bottom{padding:25px}.param-info{gap:13px}.param-info h4{font-size:34px}.param-visual{aspect-ratio:4/3}}
+@media(prefers-reduced-motion:reduce){.param-hero img,.param-indicators button{transition:none}}
+
 </style></head>
 <body>
 <header class="header"><a class="brand" href="index.html#work">CHEMA DURÁN / SPACE &amp; FORM</a><nav class="links"><a data-en="BACK" data-es="VOLVER" href="index.html#work">VOLVER</a><a data-en="ARCHIVE" data-es="ARCHIVO" href="#archivo">ARCHIVO</a><a href="#skills">SKILLS</a><button aria-pressed="true" data-lang="es">ES</button><button aria-pressed="false" data-lang="en">EN</button></nav></header>
@@ -150,6 +193,25 @@
 
 
 </section>
+
+<section class="block param-feature" id="estudio-parametrico" aria-labelledby="parametric-title">
+  <div class="kicker"><span data-es="03 / MENCIÓN ESPECIAL" data-en="03 / SPECIAL FEATURE">03 / MENCIÓN ESPECIAL</span><span data-es="GRASSHOPPER / ESTUDIO DE DISEÑO" data-en="GRASSHOPPER / DESIGN STUDY">GRASSHOPPER / ESTUDIO DE DISEÑO</span></div>
+  <div class="param-top">
+    <h2 id="parametric-title"><span data-es="DISEÑO" data-en="DESIGN">DISEÑO</span><br/><em data-es="PARAMÉTRICO." data-en="PARAMETRIC.">PARAMÉTRICO.</em></h2>
+    <div class="param-intro"><p data-es="Una exploración entre la geometría, la repetición y la materialidad. El proceso parte de reglas paramétricas y desemboca en una propuesta de mobiliario y espacio que busca una experiencia cálida, habitable y expresiva." data-en="An exploration of geometry, repetition and materiality. The process begins with parametric rules and develops into furniture and spatial design that aim for a warm, inhabitable and expressive experience.">Una exploración entre la geometría, la repetición y la materialidad. El proceso parte de reglas paramétricas y desemboca en una propuesta de mobiliario y espacio que busca una experiencia cálida, habitable y expresiva.</p><p class="param-under">RHINO + GRASSHOPPER / VISUALIZATION</p></div>
+  </div>
+  <figure class="param-hero"><img alt="Render original de un interior cálido con mobiliario de geometría paramétrica en lamas de madera" loading="lazy" decoding="async" src="assets/arquitectura-parametrico-render-original.png"/><figcaption><span data-es="ESTUDIO DE MOBILIARIO / VISUALIZACIÓN" data-en="FURNITURE STUDY / VISUALIZATION">ESTUDIO DE MOBILIARIO / VISUALIZACIÓN</span><span data-es="DISEÑO MEDIANTE REGLAS / 001" data-en="DESIGN THROUGH RULES / 001">DISEÑO MEDIANTE REGLAS / 001</span></figcaption></figure>
+  <div class="param-bottom" id="proceso-parametrico">
+    <div class="param-bottom-title"><h3 data-es="DEL CÓDIGO<br>&lt;em&gt;A LA FORMA.&lt;/em&gt;" data-en="FROM CODE<br>&lt;em&gt;TO FORM.&lt;/em&gt;">DEL CÓDIGO<br/><em>A LA FORMA.</em></h3><p data-es="CINCO REGISTROS DE PROCESO / GRASSHOPPER" data-en="FIVE PROCESS RECORDS / GRASSHOPPER">CINCO REGISTROS DE PROCESO / GRASSHOPPER</p></div>
+    <div class="param-slideshow" aria-label="Galería del proceso paramétrico">
+      <div class="param-visual" id="param-visual" data-loaded="false"><img id="param-process-image" alt="" loading="lazy"/><div class="param-missing" id="param-fallback"><strong id="param-missing-id">01 / 05</strong><span data-es="Espacio reservado para la captura original del proceso en Grasshopper. La imagen todavía no está disponible como archivo del sitio." data-en="Reserved for the original Grasshopper process image. This image has not yet been added to the site files.">Espacio reservado para la captura original del proceso en Grasshopper. La imagen todavía no está disponible como archivo del sitio.</span></div></div>
+      <div class="param-info"><span class="param-tag" id="param-tag">PROCESO / 01</span><h4 data-es="CAPTURA DE PROCESO" data-en="PROCESS CAPTURE" id="param-info-title">CAPTURA DE PROCESO</h4><p class="param-text" data-es="Documentación visual del desarrollo paramétrico, conservada sin redibujo ni alteraciones." data-en="Visual documentation of the parametric development, preserved without redrawing or alteration.">Documentación visual del desarrollo paramétrico, conservada sin redibujo ni alteraciones.</p><div class="param-switch"><button type="button" id="param-prev" aria-label="Imagen de proceso anterior">←</button><button type="button" id="param-next" aria-label="Siguiente imagen de proceso">→</button><span class="param-counter" id="param-counter" aria-live="polite">01 / 05</span></div></div>
+    </div>
+    <nav class="param-indicators" aria-label="Seleccionar registro del proceso"><button type="button" data-param-slide="0" aria-label="Registro 1" aria-current="true"></button><button type="button" data-param-slide="1" aria-label="Registro 2" aria-current="false"></button><button type="button" data-param-slide="2" aria-label="Registro 3" aria-current="false"></button><button type="button" data-param-slide="3" aria-label="Registro 4" aria-current="false"></button><button type="button" data-param-slide="4" aria-label="Registro 5" aria-current="false"></button></nav>
+    <p class="param-note" data-es="El desarrollo se muestra como una secuencia de registros. Las capturas originales se insertarán sin retocar ni reconstruir su contenido." data-en="The development is organized as a sequence of records. Original images will be inserted without retouching or reconstructing them.">El desarrollo se muestra como una secuencia de registros. Las capturas originales se insertarán sin retocar ni reconstruir su contenido.</p>
+  </div>
+</section>
+
 <section class="block skills" id="skills"><div class="kicker"><span>04 / SKILLS</span><span data-en="TOOLS AND PROCESS" data-es="HERRAMIENTAS Y PROCESOS">HERRAMIENTAS Y PROCESOS</span></div><h2>SKILLS<span class="skills-period">.</span></h2><div class="grid"><p class="large" data-en="Drawing, modeling and representation. Always seeking functionality, respecting each project’s context and carefully considering aesthetics to create an enjoyable experience through design." data-es="Dibujo, modelo y representación. Siempre buscando funcionalidad, respetando el contexto de cada proyecto y cuidando la estética para crear una experiencia agradable a través del diseño.">Dibujo, modelo y representación. Siempre buscando funcionalidad, respetando el contexto de cada proyecto y cuidando la estética para crear una experiencia agradable a través del diseño.</p><div><div class="skill"><h3 data-en="DRAWING &amp; MODELING" data-es="DIBUJO Y MODELADO">DIBUJO Y MODELADO</h3><p>AutoCAD / Rhino / SketchUp / Grasshopper</p></div><div class="skill"><h3 data-en="VISUAL REPRESENTATION" data-es="REPRESENTACIÓN VISUAL">REPRESENTACIÓN VISUAL</h3><p>Photoshop / Illustrator</p></div><div class="skill"><h3 data-en="WORKING APPROACH" data-es="FORMA DE TRABAJAR">FORMA DE TRABAJAR</h3><p data-en="Spatial and contextual exploration / Study of analogous projects / Concept development / Representation / Continuous learning" data-es="Exploración espacial y contextual / Estudio de casos análogos / Desarrollo conceptual / Representación / Aprendizaje continuo">Exploración espacial y contextual / Estudio de casos análogos / Desarrollo conceptual / Representación / Aprendizaje continuo</p></div></div></div><p data-en="Initial outline of tools and skills; proficiency levels will be expanded and verified before use in applications." data-es="Primer esquema de herramientas y habilidades; pendiente de ampliar y verificar niveles de dominio antes de usarlo en postulaciones." style="font:500 11px/1.5 var(--mono);margin-top:40px;opacity:.7">Primer esquema de herramientas y habilidades; pendiente de ampliar y verificar niveles de dominio antes de usarlo en postulaciones.</p></section>
 </main><footer class="footer"><span>CHEMA DURÁN © 2026</span><a data-en="BACK TO SELECTED WORK" data-es="VOLVER A SELECTED WORK" href="index.html#work">VOLVER A SELECTED WORK</a></footer>
 <script>(()=>{let bs=document.querySelectorAll('[data-lang]');bs.forEach(b=>b.addEventListener('click',()=>{const l=b.dataset.lang;document.documentElement.lang=l;document.querySelectorAll('[data-es][data-en]').forEach(el=>el.innerHTML=el.dataset[l]);bs.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));}));})();</script>
@@ -193,4 +255,30 @@ car.addEventListener('touchstart',e=>{startX=e.changedTouches[0]?.clientX??null}
 car.addEventListener('touchend',e=>{if(startX==null)return;const dx=(e.changedTouches[0]?.clientX??startX)-startX;startX=null;if(Math.abs(dx)>50){choose(current+(dx<0?1:-1));start()}},{passive:true});
 car.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();choose(current+(e.key==='ArrowRight'?1:-1));start()}});
 display(false);start();
-})();</script></body></html>
+})();</script>
+<script>
+(()=>{
+  'use strict';
+  const images=['assets/arquitectura-parametrico-proceso-01.png','assets/arquitectura-parametrico-proceso-02.png','assets/arquitectura-parametrico-proceso-03.png','assets/arquitectura-parametrico-proceso-04.png','assets/arquitectura-parametrico-proceso-05.png'];
+  const stage=document.getElementById('param-visual');if(!stage)return;
+  const img=document.getElementById('param-process-image');
+  const num=document.getElementById('param-counter');const tag=document.getElementById('param-tag');
+  const placeholder=document.getElementById('param-missing-id');const dots=[...document.querySelectorAll('[data-param-slide]')];
+  let index=0, version=0;
+  function show(n){index=(n+images.length)%images.length;const count=String(index+1).padStart(2,'0')+' / 05';
+    num.textContent=count;placeholder.textContent=count;tag.textContent=(document.documentElement.lang==='en'?'PROCESS / ':'PROCESO / ')+String(index+1).padStart(2,'0');
+    dots.forEach((d,i)=>d.setAttribute('aria-current',String(i===index)));
+    stage.dataset.loaded='false';img.removeAttribute('src');img.alt='';
+    const thisVersion=++version;const next=new Image();next.onload=()=>{if(version!==thisVersion)return;img.src=next.src;img.alt='Registro original '+String(index+1)+' del proceso paramétrico en Grasshopper';stage.dataset.loaded='true'};
+    next.onerror=()=>{if(version===thisVersion)stage.dataset.loaded='false'};next.src=images[index];
+  }
+  document.getElementById('param-prev').addEventListener('click',()=>show(index-1));
+  document.getElementById('param-next').addEventListener('click',()=>show(index+1));
+  dots.forEach(d=>d.addEventListener('click',()=>show(Number(d.dataset.paramSlide))));
+  let startX=null;stage.addEventListener('touchstart',e=>{startX=e.changedTouches[0]?.clientX??null},{passive:true});
+  stage.addEventListener('touchend',e=>{if(startX===null)return;let dx=(e.changedTouches[0]?.clientX??startX)-startX;startX=null;if(Math.abs(dx)>45)show(index+(dx<0?1:-1))},{passive:true});
+  document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>show(index)));
+  show(0);
+})();
+</script>
+</body></html>
